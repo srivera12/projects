@@ -7,7 +7,9 @@ import useInputState from './useInputState';
 export function TrackerForm({ setShowAddForm }) {
   const { addSubject } = useContext(SubjectContext);
   const [newSubject, setNewSubject] = useState({});
-  const [value, handleChange, reset] = useInputState('');
+  const [value, handleChange, reset, isPristine] = useInputState('');
+  const isEmpty = value === '' && !isPristine;
+  const isNotNumber = value !== '' && isNaN(parseInt(value));
   const subjectNameSubmit = (e) => {
     e.preventDefault();
     setNewSubject({ ...newSubject, name: value, id: uuid() });
@@ -31,8 +33,15 @@ export function TrackerForm({ setShowAddForm }) {
     <>
       {!newSubject.name ? (
         <form onSubmit={subjectNameSubmit}>
-          <TextField label="Class Name" value={value} onChange={handleChange} fullWidth autoFocus />
-          <Button type="submit" variant="contained" style={{ margin: '10px' }}>
+          <TextField
+            label={isEmpty ? 'Class must have a name.' : 'Class Name'}
+            value={value}
+            onChange={handleChange}
+            fullWidth
+            autoFocus
+            error={isEmpty}
+          />
+          <Button type="submit" variant="contained" style={{ margin: '10px' }} disabled={isEmpty}>
             Add Class
           </Button>
         </form>
@@ -40,13 +49,16 @@ export function TrackerForm({ setShowAddForm }) {
       {newSubject.name && !newSubject.assignments ? (
         <form onSubmit={subjectAssignmentsSubmit}>
           <TextField
-            label={`Number of Assignments for ${newSubject.name}`}
+            label={
+              isNotNumber || isEmpty ? 'You must enter a number here.' : `Number of Assignments for ${newSubject.name}`
+            }
             value={value}
             onChange={handleChange}
             fullWidth
             autoFocus
+            error={isNotNumber || isEmpty}
           />
-          <Button type="submit" variant="contained" style={{ margin: '10px' }}>
+          <Button type="submit" variant="contained" style={{ margin: '10px' }} disabled={isNotNumber || isEmpty}>
             Add Assignments
           </Button>
         </form>
