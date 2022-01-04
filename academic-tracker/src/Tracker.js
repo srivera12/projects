@@ -1,41 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { TrackerForm } from './TrackerForm';
-import { SubjectList } from './SubjectList';
-import { Grid, Paper, AppBar, Toolbar, Typography, Button, TextField, List } from '@mui/material';
-import useInputState from './useInputState';
-import uuid from 'uuid/dist/v4';
+import { AppBar, Button, Grid, Paper, Toolbar, Typography } from '@mui/material';
 import { emojisplosions } from 'emojisplosion';
+import React, { useContext, useEffect, useState } from 'react';
+import { SubjectContext } from './subjectContext';
+import { SubjectList } from './SubjectList';
+import { TrackerForm } from './TrackerForm';
 
-export function Tracker() {
-  const initialSubjects = JSON.parse(window.localStorage.getItem('subjects')) || [];
-  const [subjects, setSubjects] = useState(initialSubjects);
+export function Tracker(props) {
+  const { subjects, resetSubjects } = useContext(SubjectContext);
   const [showAddForm, setShowAddForm] = useState(false);
-  const addSubject = (subject) => {
-    setSubjects([...subjects, subject]);
-  };
-  const decrementAssignments = (id) => {
-    const updatedSubjects = subjects.map((subject) =>
-      subject.id === id ? { ...subject, assignmentsLeft: subject.assignmentsLeft - 1 } : subject
-    );
-    setSubjects(updatedSubjects);
-  };
-  const resetSubjects = () => {
-    setSubjects([]);
-    window.location.reload();
-  };
-  const completeCelebration = (id) => {
-    const updatedSubjects = subjects.map((subject) =>
-      subject.id === id ? { ...subject, hasCelebrated: true } : subject
-    );
-    setSubjects(updatedSubjects);
-  };
+  const incompleteSubjects = subjects.filter((subject) => subject.assignmentsLeft !== 0);
   useEffect(() => {
     window.localStorage.setItem('subjects', JSON.stringify(subjects));
-    const incompleteSubjects = subjects.filter((subject) => subject.assignmentsLeft !== 0);
     if (subjects.length !== 0 && incompleteSubjects.length === 0) {
       emojisplosions();
     }
-  }, [subjects]);
+  }, [subjects, incompleteSubjects.length]);
   return (
     <>
       <Paper
@@ -65,13 +44,13 @@ export function Tracker() {
             {subjects.length === 0 ? (
               <Typography variant="h4">Use the button below to start adding classes. Have a great week!</Typography>
             ) : null}
-            <SubjectList
-              subjects={subjects}
-              decrementAssignments={decrementAssignments}
-              completeCelebration={completeCelebration}
-            />
+            {subjects.length !== 0 && incompleteSubjects.length === 0 ? (
+              <Typography variant="h3">YOU FINISHED EVERYTHING FOR THIS WEEK! FANTASTIC JOB!</Typography>
+            ) : (
+              <SubjectList />
+            )}
             {showAddForm ? (
-              <TrackerForm addSubject={addSubject} setShowAddForm={setShowAddForm} />
+              <TrackerForm setShowAddForm={setShowAddForm} />
             ) : (
               <Button
                 onClick={() => {
@@ -80,6 +59,7 @@ export function Tracker() {
                 variant="contained"
                 color="secondary"
                 style={{ marginTop: '2rem' }}
+                disabled={subjects.length !== 0 && incompleteSubjects.length === 0}
               >
                 Add A Class!!
               </Button>

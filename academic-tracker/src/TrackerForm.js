@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
-import {
-  Select,
-  TextField,
-  Button,
-  List,
-  ListItem,
-  ListItemSecondaryAction,
-  ListItemText,
-  FormLabel,
-  Typography,
-} from '@mui/material';
-import useInputState from './useInputState';
+import { Button, TextField, Typography } from '@mui/material';
+import React, { useContext, useState } from 'react';
 import uuid from 'uuid/dist/v4';
+import { SubjectContext } from './subjectContext';
+import useInputState from './useInputState';
 
-export function TrackerForm({ addSubject, setShowAddForm }) {
+export function TrackerForm({ setShowAddForm }) {
+  const { addSubject } = useContext(SubjectContext);
   const [newSubject, setNewSubject] = useState({});
   const [value, handleChange, reset] = useInputState('');
   const subjectNameSubmit = (e) => {
@@ -39,7 +31,7 @@ export function TrackerForm({ addSubject, setShowAddForm }) {
     <>
       {!newSubject.name ? (
         <form onSubmit={subjectNameSubmit}>
-          <TextField label="Class Name" value={value} onChange={handleChange} fullWidth />
+          <TextField label="Class Name" value={value} onChange={handleChange} fullWidth autoFocus />
           <Button type="submit" variant="contained" style={{ margin: '10px' }}>
             Add Class
           </Button>
@@ -52,6 +44,7 @@ export function TrackerForm({ addSubject, setShowAddForm }) {
             value={value}
             onChange={handleChange}
             fullWidth
+            autoFocus
           />
           <Button type="submit" variant="contained" style={{ margin: '10px' }}>
             Add Assignments
