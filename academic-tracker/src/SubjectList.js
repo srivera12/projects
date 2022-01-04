@@ -1,9 +1,11 @@
-import React from 'react';
-import { Subject } from './Subject';
 import { List } from '@mui/material';
+import React, { useContext } from 'react';
 import uuid from 'uuid/dist/v4';
+import { Subject } from './Subject';
+import { SubjectContext } from './subjectContext';
 
-export function SubjectList({ subjects, decrementAssignments, completeCelebration }) {
+export function SubjectList() {
+  const { subjects } = useContext(SubjectContext);
   return (
     <List>
       {subjects.map((subject) => (
@@ -13,8 +15,6 @@ export function SubjectList({ subjects, decrementAssignments, completeCelebratio
           id={subject.id}
           assignments={subject.assignments}
           assignmentsLeft={subject.assignmentsLeft}
-          decrementAssignments={decrementAssignments}
-          completeCelebration={completeCelebration}
           hasCelebrated={subject.hasCelebrated}
         />
       ))}

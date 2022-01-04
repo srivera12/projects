@@ -1,8 +1,10 @@
-import { Button, ListItem, ListItemText, ListItemSecondaryAction } from '@mui/material';
-import React, { useEffect, useState, useCallback } from 'react';
+import { Button, ListItem, ListItemSecondaryAction, ListItemText } from '@mui/material';
 import confetti from 'canvas-confetti';
+import React, { useCallback, useContext, useEffect } from 'react';
+import { SubjectContext } from './subjectContext';
 
-export function Subject({ name, id, assignmentsLeft, decrementAssignments, hasCelebrated, completeCelebration }) {
+export function Subject({ name, id, assignmentsLeft, hasCelebrated }) {
+  const { decrementAssignments, completeCelebration } = useContext(SubjectContext);
   const celebrate = useCallback(() => {
     confetti({
       particleCount: 150,
@@ -14,7 +16,7 @@ export function Subject({ name, id, assignmentsLeft, decrementAssignments, hasCe
       celebrate();
       completeCelebration(id);
     }
-  }, [assignmentsLeft]);
+  }, [assignmentsLeft, celebrate, completeCelebration, hasCelebrated, id]);
   return (
     <ListItem>
       {assignmentsLeft !== 0 ? (

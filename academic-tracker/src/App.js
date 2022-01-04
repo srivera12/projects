@@ -1,9 +1,12 @@
+import { SubjectProvider } from './subjectContext';
 import { Tracker } from './Tracker';
 
 function App() {
   return (
     <div className="App">
-      <Tracker />
+      <SubjectProvider>
+        <Tracker />
+      </SubjectProvider>
     </div>
   );
 }
