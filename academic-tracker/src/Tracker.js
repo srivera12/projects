@@ -1,12 +1,13 @@
-import { AppBar, Button, Grid, Paper, Toolbar, Typography } from '@mui/material';
+import { Button, Grid, Paper, Typography } from '@mui/material';
 import { emojisplosions } from 'emojisplosion';
 import React, { useContext, useEffect, useState } from 'react';
+import { NavBar } from './NavBar';
 import { SubjectContext } from './subjectContext';
 import { SubjectList } from './SubjectList';
 import { TrackerForm } from './TrackerForm';
 
 export function Tracker(props) {
-  const { subjects, resetSubjects } = useContext(SubjectContext);
+  const { subjects } = useContext(SubjectContext);
   const [showAddForm, setShowAddForm] = useState(false);
   const incompleteSubjects = subjects.filter((subject) => subject.assignmentsLeft !== 0);
   useEffect(() => {
@@ -26,21 +27,9 @@ export function Tracker(props) {
         }}
         className="TodoApp"
       >
-        <AppBar color="secondary" position="static" style={{ height: '64px' }}>
-          <Toolbar>
-            <Typography color="inherit">Academic Tracker</Typography>
-            <Button
-              onClick={resetSubjects}
-              variant="contained"
-              color="error"
-              style={{ marginRight: '10px', marginLeft: 'auto' }}
-            >
-              RESET
-            </Button>
-          </Toolbar>
-        </AppBar>
+        <NavBar />
         <Grid container justifyContent="center" style={{ marginTop: '1rem' }}>
-          <Grid item xs={11} md={8} lg={6}>
+          <Grid item xs={11} md={8} lg={6} style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '2rem' }}>
             {subjects.length === 0 ? (
               <Typography variant="h4">Use the button below to start adding classes. Have a great week!</Typography>
             ) : null}
