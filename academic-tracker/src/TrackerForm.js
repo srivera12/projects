@@ -1,15 +1,20 @@
 import { Button, TextField, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import uuid from 'uuid/dist/v4';
-import { SubjectContext } from './subjectContext';
-import useInputState from './useInputState';
+import { SubjectContext } from './contexts/subjectContext';
+import useInputState from './hooks/useInputState';
+import './styles/TrackerForm.css';
 
 export function TrackerForm({ setShowAddForm }) {
+  // stateful variables
   const { addSubject } = useContext(SubjectContext);
   const [newSubject, setNewSubject] = useState({});
   const [value, handleChange, reset, isPristine] = useInputState('');
+
+  // validators
   const isEmpty = value === '' && !isPristine;
   const isNotNumber = value !== '' && isNaN(parseInt(value));
+
   const subjectNameSubmit = (e) => {
     e.preventDefault();
     setNewSubject({ ...newSubject, name: value, id: uuid() });
@@ -25,12 +30,15 @@ export function TrackerForm({ setShowAddForm }) {
     });
     reset();
   };
+  // adds subject to state and closes form
   const addFullClass = () => {
     addSubject(newSubject);
     setShowAddForm(false);
   };
+
   return (
     <>
+      {/* renders different forms based on what info is already known */}
       {!newSubject.name ? (
         <form onSubmit={subjectNameSubmit}>
           <TextField
@@ -41,7 +49,7 @@ export function TrackerForm({ setShowAddForm }) {
             autoFocus
             error={isEmpty}
           />
-          <Button type="submit" variant="contained" style={{ margin: '10px' }} disabled={isEmpty}>
+          <Button className="TrackerForm-button" type="submit" variant="contained" disabled={isEmpty}>
             Add Class
           </Button>
         </form>
@@ -58,26 +66,27 @@ export function TrackerForm({ setShowAddForm }) {
             autoFocus
             error={isNotNumber || isEmpty}
           />
-          <Button type="submit" variant="contained" style={{ margin: '10px' }} disabled={isNotNumber || isEmpty}>
+          <Button className="TrackerForm-button" type="submit" variant="contained" disabled={isNotNumber || isEmpty}>
             Add Assignments
           </Button>
         </form>
       ) : null}
       {newSubject.name && newSubject.assignments ? (
         <>
-          <Typography style={{ marginBottom: '10px' }}>
+          <Typography className="typography">
             Add a class named {newSubject.name} with {newSubject.assignments} assignments?
           </Typography>
-          <Button onClick={addFullClass} variant="contained" color="secondary">
+          <Button className="TrackerForm-button" onClick={addFullClass} variant="contained" color="secondary">
             Finish Adding Class
           </Button>
           <Button
+            className="TrackerForm-button"
             onClick={() => {
               setNewSubject({});
+              setShowAddForm(false);
             }}
             variant="contained"
             color="error"
-            style={{ marginLeft: '10px' }}
           >
             No, Cancel
           </Button>
