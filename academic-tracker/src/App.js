@@ -1,12 +1,15 @@
-import { SubjectProvider } from './subjectContext';
+import { CustomizationProvider } from './contexts/customizationContext';
+import { SubjectProvider } from './contexts/subjectContext';
 import { Tracker } from './Tracker';
 
 function App() {
   return (
     <div className="App">
-      <SubjectProvider>
-        <Tracker />
-      </SubjectProvider>
+      <CustomizationProvider>
+        <SubjectProvider>
+          <Tracker />
+        </SubjectProvider>
+      </CustomizationProvider>
     </div>
   );
 }

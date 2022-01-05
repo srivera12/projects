@@ -1,11 +1,12 @@
 import { List } from '@mui/material';
 import React, { useContext } from 'react';
 import uuid from 'uuid/dist/v4';
+import { SubjectContext } from './contexts/subjectContext';
 import { Subject } from './Subject';
-import { SubjectContext } from './subjectContext';
 
 export function SubjectList() {
   const { subjects } = useContext(SubjectContext);
+
   return (
     <List>
       {subjects.map((subject) => (
