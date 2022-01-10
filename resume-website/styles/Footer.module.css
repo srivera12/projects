@@ -1,0 +1,29 @@
+.footer {
+  width: 100vw;
+  margin-bottom: 0px;
+  border-top: 2px solid #43e9e1;
+  color: #b8b5ff;
+  height: 10vh;
+}
+
+.copyright {
+  width: 100vw;
+  padding: 0 39.5vw;
+}
+
+.namelink {
+  color: #43e9e1;
+}
+
+.contact {
+  width: 100%;
+  padding: 0 30%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact button {
+  background-color: #1cef9e;
+  color: #333;
+}

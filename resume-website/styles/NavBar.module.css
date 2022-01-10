@@ -1,0 +1,28 @@
+.navbar {
+  background-color: inherit;
+  border-bottom: 2px solid #43e9e1;
+  height: 4.5vh;
+}
+
+.navbar a {
+  margin: 0 20px 0 20px;
+}
+
+.activelink {
+  font-size: 1.2rem;
+  color: #1cef9e;
+}
+
+.home {
+  align-self: flex-start;
+  color: #43e9e1;
+  padding: 20px;
+  height: inherit;
+  font-size: 1.5rem;
+}
+
+.pages {
+  color: #b8b5ff;
+  padding: 20px;
+  margin: 0 20px 0 auto;
+}
