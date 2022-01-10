@@ -1,0 +1,9 @@
+.layout {
+  height: 100vh;
+}
+
+.main {
+  height: 85vh;
+  display: block;
+  margin-top: 4.5vh;
+}
