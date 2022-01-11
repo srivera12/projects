@@ -18,7 +18,9 @@ export default function Footer() {
         <a href="https://github.com/srivera12">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <Button variant="contained">CONTACT ME</Button>
+        <Button variant="contained" color="secondary">
+          CONTACT ME
+        </Button>
         <a href="https://www.linkedin.com/in/sarahkrivera/">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
