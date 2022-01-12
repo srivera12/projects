@@ -3,13 +3,14 @@ import React, { FC } from 'react';
 import { Divider, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export interface ParagraphProps {
+interface ParagraphProps {
+  key: number;
   icon: IconDefinition;
   subtitle: string;
   text: string;
 }
 
-export const CharacterSheetParagraph: FC<ParagraphProps> = ({ icon, subtitle, text }): JSX.Element => {
+const CharacterSheetParagraph: FC<ParagraphProps> = ({ icon, subtitle, text }): JSX.Element => {
   return (
     <>
       <>
@@ -23,3 +24,5 @@ export const CharacterSheetParagraph: FC<ParagraphProps> = ({ icon, subtitle, te
     </>
   );
 };
+
+export default CharacterSheetParagraph;

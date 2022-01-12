@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import characterSheetText from '../public/characterSheetText';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
-import { CharacterSheetParagraph, ParagraphProps } from '../components/CharacterSheetParagraph';
+import CharacterSheetParagraph from '../components/CharacterSheetParagraph';
 
 const AboutPage: NextPage = () => {
   return (
@@ -22,8 +22,13 @@ const AboutPage: NextPage = () => {
             <p>Feared by bugs far and wide.</p>
           </div>
           <div className={styles.characterText}>
-            {characterSheetText.map((paragraph) => (
-              <CharacterSheetParagraph icon={paragraph.icon} subtitle={paragraph.subtitle} text={paragraph.text} />
+            {characterSheetText.map((paragraph, i) => (
+              <CharacterSheetParagraph
+                key={i}
+                icon={paragraph.icon}
+                subtitle={paragraph.subtitle}
+                text={paragraph.text}
+              />
             ))}
           </div>
         </Grid>

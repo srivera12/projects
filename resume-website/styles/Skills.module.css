@@ -1,0 +1,19 @@
+.skills {
+  padding: 40px;
+  color: #b8b5ff;
+}
+
+.additionalSkills {
+  background-color: #b8b5ff;
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  margin-top: 150px;
+  padding: 50px 100px;
+}
+
+.additionalSkills h1 {
+  color: #333;
+  margin: 0 auto 20px auto;
+  border-bottom: 5px solid #43e9e1;
+}
