@@ -1,4 +1,4 @@
-import { Dialog, Grid } from '@mui/material';
+import { Dialog, Grid, DialogContent, Typography, DialogTitle } from '@mui/material';
 import type { NextPage } from 'next';
 import styles from '../styles/Skills.module.css';
 import react from '../public/react.png';
@@ -12,8 +12,11 @@ import mui from '../public/mui.png';
 import vscode from '../public/vscode.png';
 import nextjs from '../public/nextjs.png';
 import bootstrap from '../public/bootstrap.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SkillDialog from '../components/SkillDialog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import skillData from '../public/skillData';
+import { createSecureContext } from 'tls';
 
 const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
@@ -23,18 +26,36 @@ const SkillsPage: NextPage = () => {
         <h1>Select A Skill To Learn More</h1>
       </Grid>
       <Grid container justifyContent="center" spacing={4} alignItems="center">
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          onClick={() => {
+            setSkillDialogType('react');
+          }}
+        >
           <Image src={react} layout="responsive" />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          onClick={() => {
+            setSkillDialogType('JS');
+          }}
+        >
           <Image src={js} layout="responsive" />
         </Grid>
-        <Grid item xs={3}>
+        <Grid
+          item
+          xs={3}
+          onClick={() => {
+            setSkillDialogType('HTML/CSS');
+          }}
+        >
           <Image src={htmlAndCss} layout="responsive" />
         </Grid>
       </Grid>
       <Grid container justifyContent="center" alignItems="center">
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <div className={styles.additionalSkills}>
             <h1>ADDITIONAL SKILLS</h1>
             <Grid container alignItems="center" justifyContent="center" spacing={10}>
@@ -63,9 +84,7 @@ const SkillsPage: NextPage = () => {
           </div>
         </Grid>
       </Grid>
-      <Dialog open={skillDialogType !== ''}>
-        <SkillDialog skill={skillDialogType} />
-      </Dialog>
+      <SkillDialog skill={skillDialogType} setSkill={setSkillDialogType} />
     </div>
   );
 };

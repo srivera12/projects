@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const [isRolling, setIsRolling] = useState(false);
   return (
     <div className={styles.home}>
-      <Grid container spacing={20} justifyContent="center" alignItems="center">
+      <Grid container spacing={5} justifyContent="center" alignItems="center">
         <Grid item xs={11} className={styles.hero}>
           <Image src={hi} />
           <div className={styles.text}>

@@ -7,12 +7,10 @@
   color: #b8b5ff;
   display: flex;
   align-items: center;
-  margin-top: 70px;
 }
 
 .hero h1 {
   font-size: 100px;
-  margin-bottom: 20px;
 }
 
 .hero span {
@@ -31,6 +29,5 @@
 .d20 button {
   height: 35px;
   margin-left: 30px;
-  /* background-color: #1cef9e; */
   color: #333;
 }
