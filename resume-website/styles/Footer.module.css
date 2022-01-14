@@ -3,7 +3,12 @@
   margin-bottom: 0px;
   border-top: 2px solid #43e9e1;
   color: #b8b5ff;
-  height: 10vh;
+  height: fit-content;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 5px;
+  z-index: 5;
 }
 
 .copyright {
@@ -18,7 +23,7 @@
 .contact {
   width: 100%;
   padding: 0 30%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
 }

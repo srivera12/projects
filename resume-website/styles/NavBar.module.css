@@ -1,7 +1,8 @@
 .navbar {
   background-color: inherit;
   border-bottom: 2px solid #43e9e1;
-  height: 4.5vh;
+  height: fit-content;
+  z-index: 5;
 }
 
 .navbar a {
