@@ -1,3 +1,16 @@
-.dialog {
+/* .dialog {
   color: #ddd;
+}
+
+.dialog h2 {
+  justify-content: space-between;
+}
+
+.dialog svg,
+.dialog button {
+  margin: 0 10px;
+} */
+
+.dialog a {
+  color: #1cef9e;
 }
