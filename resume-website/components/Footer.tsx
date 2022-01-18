@@ -15,13 +15,13 @@ export default function Footer() {
         in 2022
       </h4>
       <div className={styles.contact}>
-        <a href="https://github.com/srivera12">
+        <a href="https://github.com/srivera12" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <Button variant="contained" color="secondary">
           CONTACT ME
         </Button>
-        <a href="https://www.linkedin.com/in/sarahkrivera/">
+        <a href="https://www.linkedin.com/in/sarahkrivera/" target="_blank">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>

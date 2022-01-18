@@ -1,0 +1,24 @@
+.course {
+  height: 100%;
+  padding: 5vh 2vw;
+}
+
+.course img {
+  height: 500px;
+}
+
+.course h1 {
+  color: #b8b5ff;
+}
+
+.course h3 {
+  color: #1cef9e;
+}
+
+.course h4 {
+  color: #43e9e1;
+}
+
+.course button {
+  margin-right: 20px;
+}

@@ -1,0 +1,30 @@
+.projects {
+  height: 100%;
+  padding: 5vh 2vw;
+}
+
+.projects h1 {
+  color: #1cef9e;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.idvProject {
+  border: 5px solid #43e9e1;
+  background-color: #b8b5ff;
+  color: #333;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.idvProject button {
+  margin: 0 10px 20px 10px;
+}
+
+.idvProject p {
+  margin-bottom: 20px;
+}
+
+.idvProject img {
+  height: 200px;
+}

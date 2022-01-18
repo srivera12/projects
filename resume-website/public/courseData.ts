@@ -1,6 +1,7 @@
 interface CourseData {
   skill: string;
   name: string;
+  pathName: string;
   instructor: string;
   certPath: string;
   blurb: string;
@@ -10,6 +11,7 @@ const courseData: CourseData[] = [
   {
     skill: 'HTML/CSS',
     name: 'HTML, CSS, and JavaScript - Certification Class for Beginners',
+    pathName: 'HTML-CSS-JS-cert',
     instructor: 'YouAccel Training',
     certPath: '/beginner.png',
     blurb:
@@ -18,6 +20,7 @@ const courseData: CourseData[] = [
   {
     skill: 'HTML/CSS',
     name: 'The Complete Front-End Web Development Course!',
+    pathName: 'complete-frontend',
     instructor: 'Joseph Delgadillo',
     certPath: '/complete.png',
     blurb:
@@ -26,6 +29,7 @@ const courseData: CourseData[] = [
   {
     skill: 'JS',
     name: 'JavaScript Beginner Bootcamp',
+    pathName: 'JS-bootcamp',
     instructor: 'Rob Merrill',
     certPath: '/jsBootcamp.png',
     blurb:
@@ -34,6 +38,7 @@ const courseData: CourseData[] = [
   {
     skill: 'HTML/CSS',
     name: 'The Complete Web Developer Course: Build 20 Websites',
+    pathName: 'build-20-websites',
     instructor: 'John Bura',
     certPath: '/build20.png',
     blurb:
@@ -42,6 +47,7 @@ const courseData: CourseData[] = [
   {
     skill: 'JS',
     name: "TypeScript: The Complete Developer's Guide",
+    pathName: 'TS',
     instructor: 'Stephen Grider',
     certPath: '/typescript.jpeg',
     blurb:
@@ -50,6 +56,7 @@ const courseData: CourseData[] = [
   {
     skill: 'react',
     name: 'The Modern React Bootcamp',
+    pathName: 'react-bootcamp',
     instructor: 'Colt Steele',
     certPath: '/reactBootcamp.png',
     blurb:
