@@ -12,21 +12,25 @@ const ProjectsPage: NextPage = () => {
           <h1>My Projects</h1>
         </Grid>
         <Grid container item justifyContent="center" spacing={3}>
-          {projectData.map((project) => (
-            <Grid item xs={4}>
+          {projectData.map((project, i) => (
+            <Grid item xs={4} key={i}>
               <div className={styles.idvProject}>
                 <h3>{project.name}</h3>
                 <img src={project.picPath} />
                 <div>
                   <Link href={project.projectLink}>
-                    <Button variant="contained" color="info">
-                      See Project
-                    </Button>
+                    <a target="_blank">
+                      <Button variant="contained" color="info">
+                        See Project
+                      </Button>
+                    </a>
                   </Link>
                   <Link href={project.githubLink}>
-                    <Button variant="contained" color="info">
-                      See Code
-                    </Button>
+                    <a target="_blank">
+                      <Button variant="contained" color="info">
+                        See Code
+                      </Button>
+                    </a>
                   </Link>
                 </div>
                 <Typography>{project.blurb}</Typography>

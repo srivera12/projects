@@ -16,7 +16,7 @@ const projectData: ProjectData[] = [
     name: 'JavaScript To-Do App',
     picPath: '/JSTodo.png',
     projectLink: '/projects/JS-todo/index.html',
-    githubLink: '',
+    githubLink: 'https://github.com/srivera12/projects/tree/master/JS-todo',
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     approach:
@@ -37,7 +37,7 @@ const projectData: ProjectData[] = [
     name: 'Montessori Quotes App',
     picPath: '/quoteApp.png',
     projectLink: '/projects/montessori-quote/index.html',
-    githubLink: '',
+    githubLink: 'https://github.com/srivera12/projects/tree/master/montessori-quote',
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     approach:
@@ -57,8 +57,8 @@ const projectData: ProjectData[] = [
     pathName: 'd20-roller',
     name: 'D20 Roller',
     picPath: '/d20Roller.png',
-    projectLink: '/projects/d20-roller',
-    githubLink: '',
+    projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
+    githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     approach:
@@ -77,9 +77,9 @@ const projectData: ProjectData[] = [
   {
     pathName: 'react-todo-app',
     name: 'React To-Do App',
-    picPath: '',
-    projectLink: '',
-    githubLink: '',
+    picPath: '/reactTodo.png',
+    projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
+    githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     approach:
@@ -99,7 +99,7 @@ const projectData: ProjectData[] = [
     pathName: 'academic-tracker',
     name: 'Academic Tracker',
     picPath: '/academicTracker.png',
-    projectLink: '/projects/academic-tracker',
+    projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
