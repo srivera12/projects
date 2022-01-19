@@ -1,0 +1,22 @@
+.contact {
+  height: 100%;
+  padding: 5vh 2vw;
+}
+
+.contact h1 {
+  color: #b5b8ff;
+  font-size: 80px;
+}
+
+.contact h3 {
+  margin: 5vh 0;
+}
+
+.contact span {
+  color: #43e9e1;
+  margin-right: 10px;
+}
+
+.contact h3 a {
+  text-decoration: underline;
+}

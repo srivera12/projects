@@ -1,0 +1,27 @@
+.archive {
+  height: 100%;
+  padding: 5vh 2vw;
+}
+
+.archive h1 {
+  color: #b5b8ff;
+  font-size: 80px;
+  margin-bottom: 2vh;
+}
+
+.previousSite {
+  border: 5px solid #43e9e1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #b5b8ff;
+}
+
+.previousSite img {
+  width: 100%;
+}
+
+.previousSite button {
+  margin: 10px auto 0 auto;
+}
