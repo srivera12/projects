@@ -1,0 +1,65 @@
+.roller {
+  height: 100%;
+  width: 70vw;
+  border: 2px solid #1cef9e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: #333;
+}
+
+.roller img {
+  z-index: 5;
+}
+
+.roller h1 {
+  color: #1cef9e;
+  position: absolute;
+  z-index: 100;
+  top: 810px;
+  left: 320px;
+}
+
+.rolledText {
+  background-color: #b8b5ff;
+  height: 90%;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.rolledText button {
+  background-color: transparent;
+  font-weight: bolder;
+  border-color: #333;
+}
+
+.d20Rolling {
+  animation-name: roll;
+  animation-duration: 500ms;
+}
+
+@keyframes roll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

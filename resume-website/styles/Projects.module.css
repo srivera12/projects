@@ -1,20 +1,20 @@
 .projects {
   height: 100%;
-  padding: 5vh 2vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .projects h1 {
-  color: #1cef9e;
+  color: #b8b5ff;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
 .idvProject {
-  border: 5px solid #43e9e1;
-  background-color: #b8b5ff;
-  color: #333;
+  border: 2px solid #43e9e1;
   border-radius: 20px;
   padding: 10px;
+  color: #b8b5ff;
 }
 
 .idvProject button {
@@ -22,9 +22,6 @@
 }
 
 .idvProject p {
+  color: #ddd;
   margin-bottom: 20px;
-}
-
-.idvProject img {
-  height: 200px;
 }

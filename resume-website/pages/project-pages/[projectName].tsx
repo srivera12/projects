@@ -1,9 +1,10 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import projectData from '../../public/projectData';
+import projectData from '../../public/data/projectData';
 import { Grid, Typography, List, ListItem, Button } from '@mui/material';
 import Link from 'next/link';
 import styles from '../../styles/[projectName].module.css';
+import Image from 'next/image';
 
 const ProjectPage: NextPage = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const ProjectPage: NextPage = () => {
               <h1>{p.name}</h1>
             </Grid>
             <Grid item xs={6}>
-              <img src={p.picPath} />
+              <Image src={p.pic} layout="responsive" />
             </Grid>
             <Grid item xs={11}>
               <Typography>{p.blurb}</Typography>

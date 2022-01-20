@@ -2,21 +2,23 @@ import { Button, Grid } from '@mui/material';
 import type { NextPage } from 'next';
 import styles from '../styles/Contact.module.css';
 import Image from 'next/image';
-import working from '../public/working.png';
+import working from '../public/images/working.png';
 import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
   return (
     <div className={styles.contact}>
       <Grid container justifyContent="center" alignItems="center" spacing={5}>
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <h1>Contact Me</h1>
         </Grid>
         <Grid container justifyContent="center" alignItems="center" className={styles.contactLinks}>
           <Grid item xs={5}>
             <h3>
               <span>Email:</span>
-              <a href="">sarahkrivera@gmail.com</a>
+              <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
+                sarahkrivera@gmail.com
+              </a>
             </h3>
             <h3>
               <span>GitHub:</span>

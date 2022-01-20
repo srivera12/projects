@@ -1,8 +1,15 @@
+import beginner from '../images/beginner.png';
+import complete from '../images/complete.png';
+import jsBootcamp from '../images/jsBootcamp.png';
+import build20 from '../images/build20.png';
+import typescript from '../images/typescript.jpeg';
+import reactBootcamp from '../images/reactBootcamp.png';
+
 interface CoursePageData {
   pathName: string;
   name: string;
   instructor: string;
-  certPath: string;
+  cert: StaticImageData;
   blurb: string;
   skillsLearned: string[];
   projectHighligts: Project[];
@@ -19,7 +26,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'HTML-CSS-JS-cert',
     name: 'HTML, CSS, and JavaScript - Certification Class for Beginners',
     instructor: 'YouAccel Training',
-    certPath: '/beginner.png',
+    cert: beginner,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [
@@ -47,7 +54,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'complete-frontend',
     name: 'The Complete Front-End Web Development Course!',
     instructor: 'Joseph Delgadillo',
-    certPath: '/complete.png',
+    cert: complete,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [
@@ -75,7 +82,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'JS-bootcamp',
     name: 'JavaScript Beginner Bootcamp',
     instructor: 'Rob Merrill',
-    certPath: '/jsBootcamp.png',
+    cert: jsBootcamp,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [
@@ -103,7 +110,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'build-20-websites',
     name: 'The Complete Web Developer Course: Build 20 Websites',
     instructor: 'John Bura',
-    certPath: '/build20.png',
+    cert: build20,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [
@@ -131,7 +138,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'TS',
     name: "TypeScript: The Complete Developer's Guide",
     instructor: 'Stephen Grider',
-    certPath: '/typescript.jpeg',
+    cert: typescript,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [
@@ -159,7 +166,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'react-bootcamp',
     name: 'The Modern React Bootcamp',
     instructor: 'Colt Steele',
-    certPath: '/reactBootcamp.png',
+    cert: reactBootcamp,
     blurb:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     skillsLearned: [

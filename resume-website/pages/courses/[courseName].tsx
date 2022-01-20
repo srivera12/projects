@@ -1,11 +1,12 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import coursePageData from '../../public/coursePageData';
+import coursePageData from '../../public/data/coursePageData';
 import { Grid, List, ListItem, Typography } from '@mui/material';
 import styles from '../../styles/[courseName].module.css';
 import Link from 'next/link';
 import { Button } from '@mui/material';
+import Image from 'next/image';
 
 const CoursePage: NextPage = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const CoursePage: NextPage = () => {
               <h3>Taught By: {c.instructor}</h3>
             </Grid>
             <Grid item xs={6}>
-              <img src={c.certPath} />
+              <Image src={c.cert} layout="responsive" />
             </Grid>
             <Grid item xs={11}>
               <Typography>{c.blurb}</Typography>

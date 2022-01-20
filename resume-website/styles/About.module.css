@@ -1,11 +1,8 @@
-.about {
-  height: 100%;
-  padding: 3vh 2vw;
-}
-
 .about h1 {
-  font-size: 80px;
+  font-size: 60px;
   color: #b8b5ff;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .picture {
@@ -13,19 +10,21 @@
   flex-direction: column;
   width: 30vw;
   align-items: center;
-  border: 2px solid #1cef9e;
+  border: 2px solid #43e9e1;
   border-radius: 10px;
   font-style: italic;
   float: left;
   margin: 0 25px 25px 0;
+  padding: 10px;
 }
 
 .characterText h3 {
-  color: #43e9e1;
+  color: #b8b5ff;
 }
 
 .characterText h3 svg {
   margin-right: 10px;
+  color: #43e9e1;
 }
 
 .characterText hr {

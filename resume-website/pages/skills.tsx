@@ -1,22 +1,23 @@
 import { Dialog, Grid, DialogContent, Typography, DialogTitle } from '@mui/material';
 import type { NextPage } from 'next';
 import styles from '../styles/Skills.module.css';
-import react from '../public/react.png';
+import react from '../public/images/react.png';
 import Image from 'next/image';
-import js from '../public/js.png';
-import htmlAndCss from '../public/htmlAndCss.png';
-import ts from '../public/ts.png';
-import git from '../public/git.png';
-import node from '../public/node.png';
-import mui from '../public/mui.png';
-import vscode from '../public/vscode.png';
-import nextjs from '../public/nextjs.png';
-import bootstrap from '../public/bootstrap.png';
+import js from '../public/images/js.png';
+import tsAndJS from '../public/images/tsAndJS.jpeg';
+import htmlAndCss from '../public/images/htmlAndCss.png';
+import ts from '../public/images/ts.png';
+import git from '../public/images/git.png';
+import node from '../public/images/node.png';
+import mui from '../public/images/mui.png';
+import vscode from '../public/images/vscode.png';
+import nextjs from '../public/images/nextjs.png';
+import bootstrap from '../public/images/bootstrap.png';
 import { useEffect, useState } from 'react';
 import SkillDialog from '../components/SkillDialog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import skillData from '../public/skillData';
-import { createSecureContext } from 'tls';
+import skillData from '../public/data/skillData';
+import additionalSkillsData from '../public/data/additionalSkillsData';
 
 const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
@@ -25,61 +26,30 @@ const SkillsPage: NextPage = () => {
       <Grid container justifyContent="center">
         <h1>Select A Skill To Learn More</h1>
       </Grid>
-      <Grid container justifyContent="center" spacing={4} alignItems="center">
-        <Grid
-          item
-          xs={3}
-          onClick={() => {
-            setSkillDialogType('react');
-          }}
-        >
-          <Image src={react} layout="responsive" />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          onClick={() => {
-            setSkillDialogType('JS');
-          }}
-        >
-          <Image src={js} layout="responsive" />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          onClick={() => {
-            setSkillDialogType('HTML/CSS');
-          }}
-        >
-          <Image src={htmlAndCss} layout="responsive" />
-        </Grid>
+      <Grid container justifyContent="center" spacing={7} alignItems="center">
+        {skillData.map((s, i) => (
+          <Grid
+            key={i}
+            item
+            xs={3}
+            onClick={() => {
+              setSkillDialogType(s.skill);
+            }}
+          >
+            <Image src={s.pic} layout="responsive" />
+          </Grid>
+        ))}
       </Grid>
-      <Grid container justifyContent="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center" className={styles.additionalSkillsContainer}>
         <Grid item xs={6}>
           <div className={styles.additionalSkills}>
             <h1>ADDITIONAL SKILLS</h1>
-            <Grid container alignItems="center" justifyContent="center" spacing={10}>
-              <Grid item xs={3}>
-                <Image src={ts} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={git} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={node} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={mui} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={vscode} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={nextjs} />
-              </Grid>
-              <Grid item xs={3}>
-                <Image src={bootstrap} />
-              </Grid>
+            <Grid container alignItems="center" justifyContent="center" columnSpacing={10} rowSpacing={5}>
+              {additionalSkillsData.map((skill, i) => (
+                <Grid item xs={4} key={i}>
+                  <Image src={skill} layout="responsive" />
+                </Grid>
+              ))}
             </Grid>
           </div>
         </Grid>

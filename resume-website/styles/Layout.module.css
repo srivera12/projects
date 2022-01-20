@@ -1,9 +1,13 @@
 .layout {
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .main {
-  height: 85vh;
-  display: block;
-  z-index: 1;
+  margin-top: 6vh;
+  height: 82vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

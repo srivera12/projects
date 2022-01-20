@@ -3,16 +3,16 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import hi from '../public/hiPic.png';
-import d20 from '../public/d20Pic.png';
+import hi from '../public/images/hiPic.png';
+import d20 from '../public/images/d20Pic.png';
 import { useState } from 'react';
 import D20Roller from '../components/D20Roller';
 
 const Home: NextPage = () => {
-  const [isRolling, setIsRolling] = useState(false);
+  const [showRoller, setShowRoller] = useState(false);
   return (
     <div className={styles.home}>
-      <Grid container justifyContent="center" alignItems="center" rowSpacing={20}>
+      <Grid container justifyContent="center" alignItems="center" rowSpacing={5}>
         <Grid item xs={11} className={styles.hero}>
           <Image src={hi} />
           <div className={styles.text}>
@@ -25,8 +25,8 @@ const Home: NextPage = () => {
           </div>
         </Grid>
         <Grid item className={styles.d20}>
-          {isRolling ? (
-            <D20Roller setIsRolling={setIsRolling} />
+          {showRoller ? (
+            <D20Roller setShowRoller={setShowRoller} />
           ) : (
             <>
               <Image src={d20} />
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
                 variant="contained"
                 color="secondary"
                 onClick={() => {
-                  setIsRolling(true);
+                  setShowRoller(true);
                 }}
               >
                 ROLL THE d20!
