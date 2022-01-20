@@ -1,6 +1,4 @@
 .skills {
-  height: 100%;
-  padding: 10vh 2vw;
   color: #b8b5ff;
 }
 
@@ -9,7 +7,7 @@
   border-radius: 10px;
   width: 100%;
   height: fit-content;
-  margin-top: 150px;
+  margin-top: 5vh;
   padding: 50px 100px;
 }
 

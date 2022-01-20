@@ -1,7 +1,13 @@
+import jsTodo from '../images/JSTodo.png';
+import quoteApp from '../images/quoteApp.png';
+import D20Roller from '../images/D20Roller.png';
+import reactTodo from '../images/reactTodo.png';
+import academicTracker from '../images/academicTracker.png';
+
 interface ProjectData {
   pathName: string;
   name: string;
-  picPath: string;
+  pic: StaticImageData;
   projectLink: string;
   githubLink: string;
   blurb: string;
@@ -14,7 +20,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'JS-todo-app',
     name: 'JavaScript To-Do App',
-    picPath: '/JSTodo.png',
+    pic: jsTodo,
     projectLink: '/projects/JS-todo/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/JS-todo',
     blurb:
@@ -35,7 +41,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'montessori-quotes-app',
     name: 'Montessori Quotes App',
-    picPath: '/quoteApp.png',
+    pic: quoteApp,
     projectLink: '/projects/montessori-quote/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/montessori-quote',
     blurb:
@@ -56,7 +62,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'd20-roller',
     name: 'D20 Roller',
-    picPath: '/d20Roller.png',
+    pic: D20Roller,
     projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
@@ -77,7 +83,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'react-todo-app',
     name: 'React To-Do App',
-    picPath: '/reactTodo.png',
+    pic: reactTodo,
     projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
@@ -98,7 +104,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'academic-tracker',
     name: 'Academic Tracker',
-    picPath: '/academicTracker.png',
+    pic: academicTracker,
     projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:

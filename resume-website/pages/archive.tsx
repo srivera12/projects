@@ -1,7 +1,8 @@
 import { Button, Grid } from '@mui/material';
 import type { NextPage } from 'next';
-import previousWebsitesData from '../public/previousWebsitesData';
+import previousWebsitesData from '../public/data/previousWebsitesData';
 import styles from '../styles/Archive.module.css';
+import Image from 'next/image';
 
 const ArchivePage: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const ArchivePage: NextPage = () => {
             <Grid item xs={4}>
               <div className={styles.previousSite}>
                 <h2>Retired: {site.retiredDate}</h2>
-                <img src={site.picPath} />
+                <Image src={site.pic} layout="responsive" />
                 <a href={site.link} target="_blank">
                   <Button variant="contained" color="secondary">
                     Vist Site

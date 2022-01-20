@@ -1,6 +1,6 @@
 import NavBar from './NavBar';
 import Footer from './Footer';
-import styles from '../styles/layout.module.css';
+import styles from '../styles/Layout.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -29,7 +29,7 @@ export default function DashboardLayout({ children }: LayoutProps) {
     <div className={styles.layout}>
       <ThemeProvider theme={theme}>
         <NavBar />
-        <main className={styles.main}>{children}</main>
+        <div className={styles.main}>{children}</div>
         <Footer />
       </ThemeProvider>
     </div>

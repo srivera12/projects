@@ -1,10 +1,10 @@
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import type { NextPage } from 'next';
 import styles from '../styles/About.module.css';
 import Image from 'next/image';
-import character from '../public/characterPic.png';
+import character from '../public/images/characterPic.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import characterSheetText from '../public/characterSheetText';
+import characterSheetText from '../public/data/characterSheetText';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import CharacterSheetParagraph from '../components/CharacterSheetParagraph';
@@ -20,6 +20,11 @@ const AboutPage: NextPage = () => {
           <div className={styles.picture}>
             <Image src={character} />
             <p>Feared by bugs far and wide.</p>
+            <a href="">
+              <Button variant="contained" color="secondary">
+                View My Resume
+              </Button>
+            </a>
           </div>
           <div className={styles.characterText}>
             {characterSheetText.map((paragraph, i) => (
