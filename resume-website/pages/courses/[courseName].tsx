@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import coursePageData from '../../public/data/coursePageData';
+import courseData from '../../public/data/courseData';
 import { Grid, List, ListItem, Typography } from '@mui/material';
 import styles from '../../styles/[courseName].module.css';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ const CoursePage: NextPage = () => {
   const pathName = router.query.courseName;
   return (
     <>
-      {coursePageData
+      {courseData
         .filter((course) => course.pathName === pathName)
         .map((c) => (
           <Grid container justifyContent="center" spacing={1} className={styles.course}>

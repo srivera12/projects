@@ -22,7 +22,7 @@ const ProjectsPage: NextPage = () => {
             </a>
           </Grid>
         </Grid>
-        <Grid container item justifyContent="center" spacing={3}>
+        <Grid container item justifyContent="center" spacing={3} xs={11}>
           {projectData.map((project, i) => (
             <Grid item xs={4} key={i}>
               <div className={styles.idvProject}>
@@ -46,7 +46,7 @@ const ProjectsPage: NextPage = () => {
                 </div>
                 <Typography>{project.blurb}</Typography>
                 <Link href={`/project-pages/${project.pathName}`}>
-                  <Button variant="outlined" color="warning">
+                  <Button variant="outlined" color="primary">
                     Read More
                   </Button>
                 </Link>

@@ -24,7 +24,7 @@ const projectData: ProjectData[] = [
     projectLink: '/projects/JS-todo/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/JS-todo',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'This is a simple task tracker made using JavaScript. The first project I continued to develop by adding my own styles, features, and functionality. Saves tasks to local storage.',
     approach:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     challenges: [
@@ -45,7 +45,7 @@ const projectData: ProjectData[] = [
     projectLink: '/projects/montessori-quote/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/montessori-quote',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Simple quote app I made for my mom, who is a Montessori teacher. I modified it from simply giving random quotes from an API to allowig you to search for quotes by topic or source.',
     approach:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     challenges: [
@@ -66,7 +66,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll. It's been used in the place of a real d20 in a pinch.",
     approach:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     challenges: [
@@ -87,7 +87,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'The newer and more complex version of my first task tracker. Made in React with hooks, a context, and a dispatch, it has all of the features of the JS one, but with the addition of editing tasks, deleting individual tasks, and a celebration when all tasks are complete.',
     approach:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     challenges: [
@@ -108,7 +108,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'I made this for my little sister, who is in high school. She needed something that determined if she made her assignment quotas for the week in each class, with as little effort as possible. Also features the ability to customize the background, and saves classes and customizations in local storage.',
     approach:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id cursus metus aliquam eleifend. Tincidunt dui ut ornare lectus. Consectetur adipiscing elit ut aliquam purus. Bibendum est ultricies integer quis auctor elit sed vulputate.',
     challenges: [
