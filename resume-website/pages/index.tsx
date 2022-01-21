@@ -20,7 +20,7 @@ const Home: NextPage = () => {
               SARAH <span>K</span> RIVERA
             </h1>
             <h2 className={styles.subtitle}>
-              A Level 6 <span>Software Sorcerer</span> With A Passion For Learning
+              A Fledgling <span>Software Sorcerer</span> With A Passion For Learning
             </h2>
           </div>
         </Grid>

@@ -6,7 +6,7 @@ import courseData from '../public/data/courseData';
 import styles from '../styles/SkillDialog.module.css';
 import { ClassNames } from '@emotion/react';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
-import coursePageData from '../public/data/coursePageData';
+import coursePageData from '../public/data/courseData';
 import Link from 'next/link';
 import Image from 'next/image';
 
