@@ -13,7 +13,7 @@ const D20Roller: FC<RollerProps> = ({ setShowRoller }): JSX.Element => {
   const [hasRolled, setHasRolled] = useState(false);
   const [isRolling, setIsRolling] = useState(false);
   const [rolledNumber, setRolledNumber] = useState(0);
-  const [funFact, setFunFact] = useState('');
+  const [funFact, setFunFact] = useState(<></>);
   const [imgSrc, setImgSrc] = useState(d20);
 
   function roll() {
@@ -38,12 +38,13 @@ const D20Roller: FC<RollerProps> = ({ setShowRoller }): JSX.Element => {
           <h2>Click the d20 to roll it!</h2>
         ) : (
           <>
-            <h2>You rolled a {rolledNumber}! The d20 says...</h2>
+            <h2>You rolled a {rolledNumber}! The DM says...</h2>
             <h4>{funFact}</h4>
           </>
         )}
         <Button
-          variant="outlined"
+          variant="contained"
+          color="secondary"
           onClick={() => {
             setShowRoller(false);
           }}
