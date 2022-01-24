@@ -37,11 +37,7 @@ const ProjectPage: NextPage = () => {
             </Grid>
             <Grid item xs={8}>
               <h4>Reflections:</h4>
-              <List>
-                {p.reflections.map((reflection) => (
-                  <ListItem>{reflection}</ListItem>
-                ))}
-              </List>
+              <Typography>{p.reflections}</Typography>
             </Grid>
             <Grid item xs={10}>
               <Button variant="contained">

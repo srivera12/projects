@@ -1,38 +1,32 @@
 .roller {
   height: 100%;
   width: 70vw;
-  border: 2px solid #1cef9e;
+  border: 2px solid #43e9e1;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 30px;
-  color: #333;
+  padding: 10px;
+  color: #ddd;
 }
 
 .roller img {
   z-index: 5;
 }
 
-.roller h1 {
-  color: #1cef9e;
-  position: absolute;
-  z-index: 100;
-  top: 810px;
-  left: 320px;
-}
-
 .rolledText {
-  background-color: #b8b5ff;
   height: 90%;
   width: 80%;
   border-radius: 10px;
   padding: 10px 20px;
 }
 
-.rolledText button {
-  background-color: transparent;
-  font-weight: bolder;
-  border-color: #333;
+.rolledText h2 {
+  color: #b8b5ff;
+}
+
+.rolledText a {
+  text-decoration: underline;
+  color: #1cef9e;
 }
 
 .d20Rolling {

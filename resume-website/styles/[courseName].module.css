@@ -18,3 +18,8 @@
 .course button {
   margin-right: 20px;
 }
+
+.course li a {
+  color: #1cef9e;
+  text-decoration: underline;
+}
