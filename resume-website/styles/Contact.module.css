@@ -1,21 +1,42 @@
-.contact {
+.contactPage {
   height: 100%;
 }
 
-.contact h1 {
+.contactPage h1 {
   color: #b5b8ff;
   font-size: 80px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.contact h3 {
+.contactPage h3 {
   margin: 5vh 0;
 }
 
-.contact span {
+.contactPage span {
   color: #43e9e1;
   margin-right: 10px;
 }
 
-.contact h3 a {
+.contactPage h3 a {
   text-decoration: underline;
+}
+
+.contactPage hr {
+  border-color: #43e9e1;
+  height: 300px;
+}
+
+.contactLinks {
+  border: 3px dashed #43e9e1;
+  margin-left: 30px;
+  padding: 40px;
+}
+
+.contactLinks h2 {
+  color: #b5b8ff;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }

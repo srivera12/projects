@@ -1,5 +1,25 @@
 .skills {
   color: #b8b5ff;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.skills h1 {
+  font-size: 60px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.skills h3 {
+  color: #1cef9e;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.skills img:hover {
+  cursor: pointer;
 }
 
 .additionalSkills {
@@ -11,8 +31,14 @@
   padding: 50px 100px;
 }
 
-.additionalSkills h1 {
+.skills .additionalSkills h1 {
+  font-size: 2em;
   color: #333;
   margin: 0 auto 20px auto;
   border-bottom: 5px solid #43e9e1;
+  padding: 0;
+}
+
+.skills .additionalSkills img:hover {
+  cursor: default;
 }

@@ -6,6 +6,15 @@
   color: #b5b8ff;
   font-size: 80px;
   margin-bottom: 2vh;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.archive h4 {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .previousSite {
@@ -17,6 +26,15 @@
   color: #b5b8ff;
 }
 
-.previousSite button {
-  margin: 10px auto 0 auto;
+.previousSite h2 {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.previousSite a {
+  margin-top: 10px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }

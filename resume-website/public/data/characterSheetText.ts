@@ -21,7 +21,7 @@ const characterSheetText: Paragraph[] = [
   {
     icon: faSchool,
     subtitle: 'My Journey to Coding',
-    text: "I loved studying Environmental Science, but I wasn't excited by the idea of staying in academia. Since I enjoyed my time tutoring, and loved learning and sharing my knowledge, I decided to pursue a career in education. I recieved a Masters in Elementary Education will teaching full time, and taught for 4 years in total. It was a privilege working with the wonderful children I taught, and my experience in that career greatly increased my skills in problem-solving, creative thinking, time management, and resiliency.",
+    text: "I loved studying Environmental Science, but I wasn't excited by the idea of staying in academia. Since I enjoyed my time tutoring, and loved learning and sharing my knowledge, I decided to pursue a career in education. I received a Masters in Elementary Education will teaching full time, and taught for 4 years in total. It was a privilege working with the wonderful children I taught, and my experience in that career greatly increased my skills in problem-solving, creative thinking, adaptability, and resiliency.",
   },
   {
     icon: faLaptopCode,

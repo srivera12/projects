@@ -5,24 +5,45 @@ import funFacts from '../public/data/funFacts';
 import { Button } from '@mui/material';
 import d20 from '../public/images/d20Pic.png';
 
-interface RollerProps {
-  setShowRoller: Function;
-}
-
-const D20Roller: FC<RollerProps> = ({ setShowRoller }): JSX.Element => {
+const D20Roller: FC = (): JSX.Element => {
   const [hasRolled, setHasRolled] = useState(false);
   const [isRolling, setIsRolling] = useState(false);
-  const [rolledNumber, setRolledNumber] = useState(0);
-  const [funFact, setFunFact] = useState(<></>);
-  const [imgSrc, setImgSrc] = useState(d20);
+  const [rollText, setRollText] = useState(<></>);
+  const [rollState, setRollState] = useState({ rolledNumber: 0, funFact: <></>, imgSrc: d20 });
+
+  useEffect(() => {
+    if (isRolling) {
+      setRollText(
+        <>
+          <h2>The DM awaits your roll...</h2>
+        </>
+      );
+    } else if (!hasRolled && !isRolling) {
+      setRollText(
+        <>
+          <h1>Click the d20 to roll it!</h1>
+        </>
+      );
+    } else if (hasRolled && !isRolling) {
+      setRollText(
+        <>
+          <h2>You rolled a {rollState.rolledNumber}! The DM says...</h2>
+          <h4>{rollState.funFact}</h4>
+        </>
+      );
+    }
+  }, [isRolling, hasRolled]);
 
   function roll() {
     setIsRolling(true);
     setHasRolled(true);
     const roll = Math.floor(Math.random() * 20) + 1;
-    setRolledNumber(roll);
-    setFunFact(funFacts[roll - 1].funFact);
-    setImgSrc(funFacts[roll - 1].d20Pic);
+    const rollResult = funFacts.filter((fact) => fact.rolledNumber === roll);
+    setRollState({
+      rolledNumber: rollResult[0].rolledNumber,
+      funFact: rollResult[0].funFact,
+      imgSrc: rollResult[0].d20Pic,
+    });
     setTimeout(() => {
       setIsRolling(false);
     }, 500);
@@ -30,27 +51,9 @@ const D20Roller: FC<RollerProps> = ({ setShowRoller }): JSX.Element => {
 
   return (
     <div className={styles.roller}>
+      <div className={styles.rolledText}>{rollText}</div>
       <div onClick={roll} className={isRolling ? styles.d20Rolling : undefined}>
-        <Image src={isRolling ? d20 : imgSrc} height="300px" width="300px" />
-      </div>
-      <div className={styles.rolledText}>
-        {!hasRolled || isRolling ? (
-          <h2>Click the d20 to roll it!</h2>
-        ) : (
-          <>
-            <h2>You rolled a {rolledNumber}! The DM says...</h2>
-            <h4>{funFact}</h4>
-          </>
-        )}
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => {
-            setShowRoller(false);
-          }}
-        >
-          Close d20 Roller
-        </Button>
+        <Image src={isRolling ? d20 : rollState.imgSrc} height="300px" width="300px" />
       </div>
     </div>
   );

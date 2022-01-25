@@ -1,3 +1,5 @@
-.dialog a {
-  color: #1cef9e;
+.heading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }

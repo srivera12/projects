@@ -1,4 +1,4 @@
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Divider } from '@mui/material';
 import type { NextPage } from 'next';
 import styles from '../styles/Contact.module.css';
 import Image from 'next/image';
@@ -7,13 +7,21 @@ import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contactPage}>
       <Grid container justifyContent="center" alignItems="center" spacing={5}>
-        <Grid item xs={5}>
+        <Grid item xs={11}>
           <h1>Contact Me</h1>
         </Grid>
-        <Grid container justifyContent="center" alignItems="center" className={styles.contactLinks}>
-          <Grid item xs={5}>
+        <Grid
+          item
+          container
+          xs={11}
+          justifyContent="space-around"
+          alignItems="center"
+          className={styles.contactLinks}
+          columnSpacing={5}
+        >
+          <Grid item xs={4}>
             <h3>
               <span>Email:</span>
               <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
@@ -26,7 +34,7 @@ const ContactPage: NextPage = () => {
             </h3>
             <h3>
               <span>LinkedIn:</span>
-              <a href="https://www.linkedin.com/in/sarahkrivera/">Sarah Rivera - Software Developer v0.0.1</a>
+              <a href="https://www.linkedin.com/in/sarahkrivera/">Sarah Rivera</a>
             </h3>
             <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
               <Button variant="contained" color="secondary" size="large">
@@ -34,8 +42,14 @@ const ContactPage: NextPage = () => {
               </Button>
             </a>
           </Grid>
-          <Grid item xs={5}>
-            <Image src={working} layout="responsive" />
+          <Grid item xs={1}>
+            <Divider orientation="vertical" />
+          </Grid>
+          <Grid item xs={4}>
+            <div>
+              <Image src={working} layout="responsive" />
+              <h2>Sarah Rivera</h2>
+            </div>
           </Grid>
         </Grid>
       </Grid>

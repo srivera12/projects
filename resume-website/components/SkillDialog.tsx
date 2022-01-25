@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Dialog, DialogContent, DialogTitle, Grid, Typography } from '@mui/material';
+import { Button, Dialog, DialogContent, DialogTitle, Divider, Grid, Typography } from '@mui/material';
 import React, { FC } from 'react';
 import skillData from '../public/data/skillData';
 import courseData from '../public/data/courseData';
@@ -28,23 +28,15 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
             }}
           >
             <DialogTitle>
-              <div>
+              <div className={styles.heading}>
                 <FontAwesomeIcon icon={s.icon} />
                 {s.name}
-                <Button
-                  color="error"
-                  variant="outlined"
-                  onClick={() => {
-                    setSkill('');
-                  }}
-                >
-                  Close
-                </Button>
               </div>
               <Typography>{s.blurb}</Typography>
             </DialogTitle>
+            <Divider variant="middle" />
             <DialogContent>
-              <Grid container justifyContent="center" alignItems="center">
+              <Grid container justifyContent="center" alignItems="center" rowSpacing={5}>
                 {courseData
                   .filter((course) => course.skill === skill)
                   .map((c) => (
@@ -54,12 +46,23 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
                       <Image src={c.cert} layout="responsive" />
                       <p>{c.blurb}</p>
                       <Link href={`/courses/${c.pathName}`}>
-                        <a>Read More</a>
+                        <Button variant="outlined" color="primary">
+                          Read More
+                        </Button>
                       </Link>
                     </Grid>
                   ))}
               </Grid>
             </DialogContent>
+            <Button
+              color="secondary"
+              variant="contained"
+              onClick={() => {
+                setSkill('');
+              }}
+            >
+              Close
+            </Button>
           </Dialog>
         ))}
     </>

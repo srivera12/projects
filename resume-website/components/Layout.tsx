@@ -18,6 +18,42 @@ const theme = createTheme({
       main: '#333',
     },
   },
+  components: {
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: '#333',
+          color: '#ddd',
+          borderRadius: '10px',
+          '& hr': {
+            color: '#ddd',
+            borderColor: '#ddd',
+          },
+          '& h2, h3': {
+            color: '#b5b8ff',
+            '& p': {
+              color: '#ddd',
+              width: '100%',
+            },
+            '& svg': {
+              color: '#43e9e1',
+              marginRight: '10px',
+            },
+          },
+          '& h4': {
+            color: '#43e9e1',
+          },
+        },
+      },
+    },
+    // MuiGrid: {
+    //   styleOverrides: {
+    //     container: {
+    //       paddingBottom: '20x',
+    //     },
+    //   },
+    // },
+  },
 });
 
 type LayoutProps = {

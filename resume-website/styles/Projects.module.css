@@ -1,27 +1,51 @@
 .projects {
-  height: 100%;
+  height: fit-content;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .projects h1 {
   color: #b8b5ff;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  font-size: 70px;
 }
 
 .idvProject {
   border: 2px solid #43e9e1;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   color: #b8b5ff;
 }
 
-.idvProject button {
-  margin: 0 10px 20px 10px;
+.projectImg {
+  height: 250px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectName {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectName h2 {
+  margin: 10px 0;
+}
+
+.projects button {
+  margin: 10px;
+}
+
+.seeButtons {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .idvProject p {
   color: #ddd;
-  margin-bottom: 20px;
 }

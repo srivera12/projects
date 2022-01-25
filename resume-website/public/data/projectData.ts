@@ -42,7 +42,7 @@ const projectData: ProjectData[] = [
     projectLink: '/projects/montessori-quote/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/montessori-quote',
     blurb:
-      'Simple quote app I made for my mom, who is a Montessori teacher. I modified it from simply giving random quotes from an API to allowig you to search for quotes by topic or source.',
+      'Simple quote app I made for my mom, who is a Montessori teacher. I modified it from simply giving random quotes from an API to allowing you to search for quotes by topic or source.',
     approach:
       'The original project simply displayed a random quote from an API. Since I wanted to create something that would be useful for when my mom was in need of quotes, I needed to find a source of Montessori quotes, as well as ways to search for quotes for specific purposes.',
     challenges: [
@@ -60,7 +60,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
-      "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll. It's been used in the place of a real d20 in a pinch.",
+      "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll.",
     approach:
       "This was originally just something I made for fun, because I thought it would be more interesting than simply making a dice roller that used an additional six-sided die. However, once I started, I was committed to making it as functional as I knew it should be, particularly once the course introduced me to the idea of adding a 'rolling' state and using that to render various texts.",
     challenges: [
@@ -78,7 +78,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
-      'The newer and more complex version of my first task tracker. Made in React with hooks, a context, and a dispatch, it has all of the features of the JS one, but with the addition of editing tasks, deleting individual tasks, and a celebration when all tasks are complete.',
+      'The newer and more complex version of my first task tracker. Made in React with hooks and a context, it has all of the features of the JS one, but with the addition of some new features.',
     approach:
       'This was designed to be in contrast with the first to-do app shown here, that was just JavaScript. This was a refactored version of a simple React to-do app created in a course, but this one uses hooks, contexts, and a dispatch.',
     challenges: [
@@ -96,7 +96,7 @@ const projectData: ProjectData[] = [
     projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:
-      'I made this for my little sister, who is in high school. She needed something that determined if she made her assignment quotas for the week in each class, with as little effort as possible. Also features the ability to customize the background, and saves classes and customizations in local storage.',
+      'I made this for my little sister, who is in high school. She needed to keep tracker of completed assignments for each class as simply as possible, but also wanted some fun features.',
     approach:
       'This was the first project that was completely my own from start to finish, so I chose to use what I had been working with most frequently - Create React App and Material UI. I also talked with my sister at length about what she needed from this app so that it would actually be useful for her.',
     challenges: [

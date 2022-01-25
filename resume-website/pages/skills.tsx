@@ -23,8 +23,11 @@ const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
   return (
     <div className={styles.skills}>
-      <Grid container justifyContent="center">
-        <h1>Select A Skill To Learn More</h1>
+      <Grid container flexDirection="column">
+        <div>
+          <h1>Skills and Courses</h1>
+          <h3>Click on a skill to learn more</h3>
+        </div>
       </Grid>
       <Grid container justifyContent="center" spacing={7} alignItems="center">
         {skillData.map((s, i) => (

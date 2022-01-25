@@ -7,10 +7,10 @@ import { Button, BottomNavigation, Typography } from '@mui/material';
 export default function Footer() {
   return (
     <div className={styles.footer}>
-      <h4 className={styles.copyright}>
+      <h4>
         Hand-coded by{' '}
         <Link href="/about">
-          <a className={styles.namelink}>Sarah Rivera</a>
+          <a className={styles.nameLink}>Sarah Rivera</a>
         </Link>{' '}
         in 2022
       </h4>
