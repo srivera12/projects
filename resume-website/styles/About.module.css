@@ -2,7 +2,9 @@
   font-size: 60px;
   color: #b8b5ff;
   margin-top: 3vh;
-  margin-bottom: 3vh;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .picture {

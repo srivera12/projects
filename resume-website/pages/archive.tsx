@@ -8,7 +8,7 @@ const ArchivePage: NextPage = () => {
   return (
     <div className={styles.archive}>
       <Grid container justifyContent="center" alignItems="center" rowSpacing={10}>
-        <Grid item xs={6}>
+        <Grid item xs={11}>
           <h1>Website Archive</h1>
           <h4>
             Here you can see previous versions of my portfolio website. As I continue to learn more and refine what I
@@ -23,7 +23,7 @@ const ArchivePage: NextPage = () => {
                 <Image src={site.pic} layout="responsive" />
                 <a href={site.link} target="_blank">
                   <Button variant="contained" color="secondary">
-                    Vist Site
+                    Visit Site
                   </Button>
                 </a>
               </div>

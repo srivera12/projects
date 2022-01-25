@@ -8,15 +8,15 @@
   left: 0;
   bottom: 0;
   padding-bottom: 5px;
-  z-index: 5;
 }
 
-.copyright {
-  width: 100vw;
-  padding: 0 39.5vw;
+.footer h4 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.namelink {
+.nameLink {
   color: #43e9e1;
 }
 

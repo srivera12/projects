@@ -9,10 +9,6 @@
   color: #ddd;
 }
 
-.roller img {
-  z-index: 5;
-}
-
 .rolledText {
   height: 90%;
   width: 80%;
@@ -20,12 +16,21 @@
   padding: 10px 20px;
 }
 
+.rolledText h1,
 .rolledText h2 {
   color: #b8b5ff;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rolledText h4 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rolledText a {
-  text-decoration: underline;
   color: #1cef9e;
 }
 

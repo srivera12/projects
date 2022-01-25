@@ -11,7 +11,7 @@ const ProjectsPage: NextPage = () => {
       <Grid container justifyContent="center">
         <Grid item container xs={12} justifyContent="space-between" alignItems="center">
           <Grid item xs={3}></Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3.5}>
             <h1>My Projects</h1>
           </Grid>
           <Grid item xs={3}>
@@ -26,9 +26,13 @@ const ProjectsPage: NextPage = () => {
           {projectData.map((project, i) => (
             <Grid item xs={4} key={i}>
               <div className={styles.idvProject}>
-                <h2>{project.name}</h2>
-                <Image src={project.pic} height={250} width={350} />
-                <div>
+                <div className={styles.projectName}>
+                  <h2>{project.name}</h2>
+                </div>
+                <div className={styles.projectImg}>
+                  <Image src={project.pic} height={250} width={350} />
+                </div>
+                <div className={styles.seeButtons}>
                   <Link href={project.projectLink}>
                     <a target="_blank">
                       <Button variant="contained" color="secondary">

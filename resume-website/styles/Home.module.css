@@ -1,11 +1,26 @@
+.home {
+  margin-top: 15vh;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
 .hero {
   color: #b8b5ff;
   display: flex;
   align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h1 {
   font-size: 100px;
+}
+
+.hero h2 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero span {
@@ -18,7 +33,7 @@
 }
 
 .d20 img {
-  filter: invert(100%) sepia(88%) saturate(3090%) hue-rotate(137deg) brightness(95%) contrast(90%);
+  filter: invert(67%) sepia(93%) saturate(420%) hue-rotate(97deg) brightness(101%) contrast(88%);
 }
 
 .d20 button {

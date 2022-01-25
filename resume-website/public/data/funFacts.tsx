@@ -33,7 +33,7 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll1,
     funFact: (
       <>
-        Unlucky! If you'd like to practice, try using my<Link href="/project-pages/d20-roller"> d20 roller app</Link>!
+        Unlucky! If you'd like to practice, try using my <Link href="/project-pages/d20-roller">d20 roller app</Link>!
       </>
     ),
   },
@@ -42,8 +42,8 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll2,
     funFact: (
       <>
-        Everyone has to start somewhere! Check out my earliest coding project,
-        <Link href="/project-pages/JS-todo-app"> a to-do app using JavaScript</Link>!
+        Everyone has to start somewhere! Check out my earliest coding project, a{' '}
+        <Link href="/project-pages/JS-todo-app">to-do app using JavaScript</Link>!
       </>
     ),
   },
@@ -52,41 +52,76 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll3,
     funFact: (
       <>
-        Did you know that I started learning to code in April 2021? Check out the
-        <Link href="/courses/HTML-CSS-JS-cert"> very first course </Link>I took!
+        Did you know that I started learning to code in April 2021? Check out the{' '}
+        <Link href="/courses/HTML-CSS-JS-cert">very first course</Link> I took!
       </>
     ),
   },
-  { rolledNumber: 4, d20Pic: roll4, funFact: <>Unlucky! </> },
+  {
+    rolledNumber: 4,
+    d20Pic: roll4,
+    funFact: (
+      <>
+        Did you know I used to be a teacher? Read all about it, and the great skills that experience taught me, on my{' '}
+        <Link href="/about">character sheet</Link>.
+      </>
+    ),
+  },
   {
     rolledNumber: 5,
     d20Pic: roll5,
     funFact: (
       <>
-        Feeling swamped? Why don't you try out my<Link href="/project-pages/react-todo-app"> React To-Do App </Link>to
+        Feeling swamped? Why don't you try out my <Link href="/project-pages/react-todo-app">React To-Do App</Link> to
         help keep track of things!
       </>
     ),
   },
-  { rolledNumber: 6, d20Pic: roll6, funFact: <>Unlucky! </> },
-  { rolledNumber: 7, d20Pic: roll7, funFact: <>Unlucky! </> },
+  {
+    rolledNumber: 6,
+    d20Pic: roll6,
+    funFact: (
+      <>
+        When I was in college, I studied environmental science and geology. You can read all about it and more on the{' '}
+        <Link href="/about">about page</Link>.
+      </>
+    ),
+  },
+  {
+    rolledNumber: 7,
+    d20Pic: roll7,
+    funFact: (
+      <>
+        You can check out previous versions of my portfolio website in the <Link href="/archive">archive</Link>.
+      </>
+    ),
+  },
   {
     rolledNumber: 8,
     d20Pic: roll8,
     funFact: (
       <>
-        Would you like to take a look at some of the <Link href="/projects"> projects </Link> I've made?
+        Would you like to take a look at some of the <Link href="/projects">projects</Link> I've made?
       </>
     ),
   },
-  { rolledNumber: 9, d20Pic: roll9, funFact: <>Unlucky! </> },
+  {
+    rolledNumber: 9,
+    d20Pic: roll9,
+    funFact: (
+      <>
+        What do you like to do when you are offline? You can find out what I do in my spare time on the{' '}
+        <Link href="/about">about page</Link>.
+      </>
+    ),
+  },
   {
     rolledNumber: 10,
     d20Pic: roll10,
     funFact: (
       <>
-        Have you ever played a Fallout game? I made a mock Pip-Boy for
-        <Link href="/courses/complete-frontend"> one of my coding courses</Link>.
+        Have you ever played a Fallout game? I made a mock Pip-Boy for{' '}
+        <Link href="/courses/complete-frontend">one of my coding courses</Link>.
       </>
     ),
   },
@@ -95,8 +130,8 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll11,
     funFact: (
       <>
-        Did you know I made an academic tracker for my teenaged sister? Check it out
-        <Link href="/project-pages/academic-tracker"> here</Link>!
+        Did you know I made an academic tracker for my teenaged sister? Check it out{' '}
+        <Link href="/project-pages/academic-tracker">here</Link>!
       </>
     ),
   },
@@ -105,20 +140,38 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll12,
     funFact: (
       <>
-        I completed a JavaScript Bootcamp and made some pretty cool projects. Check them out
-        <Link href="/courses/JS-bootcamp"> here</Link>!
+        I completed a JavaScript Bootcamp and made some pretty cool projects. Check them out{' '}
+        <Link href="/courses/JS-bootcamp">here</Link>!
       </>
     ),
   },
-  { rolledNumber: 13, d20Pic: roll13, funFact: <>Unlucky! </> },
-  { rolledNumber: 14, d20Pic: roll14, funFact: <>Unlucky! </> },
+  {
+    rolledNumber: 13,
+    d20Pic: roll13,
+    funFact: (
+      <>
+        If you'd like to jump straight to my code you can check it out{' '}
+        <Link href="https://github.com/srivera12">on GitHub</Link>.
+      </>
+    ),
+  },
+  {
+    rolledNumber: 14,
+    d20Pic: roll14,
+    funFact: (
+      <>
+        If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, you can over on the{' '}
+        <Link href="/contact">contact page</Link>.
+      </>
+    ),
+  },
   {
     rolledNumber: 15,
     d20Pic: roll15,
     funFact: (
       <>
-        I've had practice making a variety of webpages during my
-        <Link href="/courses/build-20-websites"> Build 20 Websites course</Link>!
+        I've had practice making a variety of webpages during my{' '}
+        <Link href="/courses/build-20-websites">Build 20 Websites course</Link>!
       </>
     ),
   },
@@ -127,8 +180,8 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll16,
     funFact: (
       <>
-        It always feels great to make something that people find helpful. Check out this
-        <Link href="/project-pages/montessori-quote-app"> quote app </Link>I made for my mom, who is a Montessori
+        It always feels great to make something that people find helpful. Check out this{' '}
+        <Link href="/project-pages/montessori-quotes-app">quote app</Link> I made for my mom, who is a Montessori
         teacher.
       </>
     ),
@@ -138,19 +191,28 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll17,
     funFact: (
       <>
-        Did you know I coded this website using TypeScript! I learned how to when I completed
-        <Link href="/courses/TS"> this course</Link>.
+        Did you know I coded this website using TypeScript! I learned how to when I completed{' '}
+        <Link href="/courses/TS">this course</Link>.
       </>
     ),
   },
-  { rolledNumber: 18, d20Pic: roll18, funFact: <>Unlucky! </> },
+  {
+    rolledNumber: 18,
+    d20Pic: roll18,
+    funFact: (
+      <>
+        Since I've started learning to code, it's been so much fun to learning new languages and get familiar with
+        various tools and frameworks. Check out what I've learned over on the <Link href="/skills">skills page</Link>.
+      </>
+    ),
+  },
   {
     rolledNumber: 19,
     d20Pic: roll19,
     funFact: (
       <>
-        React is a powerful and popular web framework. I learned how to use it for projects like this website through
-        <Link href="/courses/react-bootcamp"> this bootcamp</Link>.
+        React is a powerful and popular web framework. I learned how to use it for projects like this website through{' '}
+        <Link href="/courses/react-bootcamp">this bootcamp</Link>.
       </>
     ),
   },
@@ -159,8 +221,8 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll20,
     funFact: (
       <>
-        Great roll! Go ahead and
-        <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website"> tell me </a>that you
+        Great roll! Go ahead and{' '}
+        <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">tell me</a> that you
         got a Nat 20!
       </>
     ),

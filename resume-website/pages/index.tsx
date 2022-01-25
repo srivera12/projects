@@ -9,11 +9,10 @@ import { useState } from 'react';
 import D20Roller from '../components/D20Roller';
 
 const Home: NextPage = () => {
-  const [showRoller, setShowRoller] = useState(false);
   return (
     <div className={styles.home}>
-      <Grid container justifyContent="center" alignItems="center" rowSpacing={5}>
-        <Grid item xs={11} className={styles.hero}>
+      <Grid container justifyContent="center" alignItems="center" rowSpacing={15}>
+        <div className={styles.hero}>
           <Image src={hi} />
           <div className={styles.text}>
             <h1 className={styles.name}>
@@ -23,24 +22,9 @@ const Home: NextPage = () => {
               A Fledgling <span>Software Sorcerer</span> With A Passion For Learning
             </h2>
           </div>
-        </Grid>
+        </div>
         <Grid item className={styles.d20}>
-          {showRoller ? (
-            <D20Roller setShowRoller={setShowRoller} />
-          ) : (
-            <>
-              <Image src={d20} />
-              <Button
-                variant="contained"
-                color="secondary"
-                onClick={() => {
-                  setShowRoller(true);
-                }}
-              >
-                ROLL THE d20!
-              </Button>
-            </>
-          )}
+          <D20Roller />
         </Grid>
       </Grid>
     </div>
