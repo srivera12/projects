@@ -10,7 +10,7 @@ const ContactPage: NextPage = () => {
     <div className={styles.contactPage}>
       <Grid container justifyContent="center" alignItems="center" spacing={5}>
         <Grid item xs={11}>
-          <h1>Contact Me</h1>
+          <h1 className={styles.title}>CONTACT ME</h1>
         </Grid>
         <Grid
           item
@@ -22,34 +22,34 @@ const ContactPage: NextPage = () => {
           columnSpacing={5}
         >
           <Grid item xs={4}>
-            <h3>
-              <span>Email:</span>
-              <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
-                sarahkrivera@gmail.com
-              </a>
-            </h3>
-            <h3>
-              <span>GitHub:</span>
-              <a href="https://github.com/srivera12">srivera12</a>
-            </h3>
-            <h3>
-              <span>LinkedIn:</span>
-              <a href="https://www.linkedin.com/in/sarahkrivera/">Sarah Rivera</a>
-            </h3>
-            <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
-              <Button variant="contained" color="secondary" size="large">
-                Contact Me
-              </Button>
-            </a>
+            <div>
+              <Image src={working} layout="responsive" />
+              <h1>Sarah K Rivera</h1>
+            </div>
           </Grid>
           <Grid item xs={1}>
             <Divider orientation="vertical" />
           </Grid>
           <Grid item xs={4}>
-            <div>
-              <Image src={working} layout="responsive" />
-              <h2>Sarah Rivera</h2>
-            </div>
+            <h2>
+              <span>Email:</span>
+              <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
+                sarahkrivera@gmail.com
+              </a>
+            </h2>
+            <h2>
+              <span>GitHub:</span>
+              <a href="https://github.com/srivera12">srivera12</a>
+            </h2>
+            <h2>
+              <span>LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/sarahkrivera/">Sarah Rivera</a>
+            </h2>
+            <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
+              <Button variant="contained" color="secondary" size="large">
+                Contact Me
+              </Button>
+            </a>
           </Grid>
         </Grid>
       </Grid>

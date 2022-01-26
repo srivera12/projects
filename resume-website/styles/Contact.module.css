@@ -2,15 +2,19 @@
   height: 100%;
 }
 
+.contactPage .title {
+  font-size: 80px;
+}
+
 .contactPage h1 {
   color: #b5b8ff;
-  font-size: 80px;
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  font-size: 40px;
 }
 
-.contactPage h3 {
+.contactPage h2 {
   margin: 5vh 0;
 }
 
@@ -19,24 +23,22 @@
   margin-right: 10px;
 }
 
-.contactPage h3 a {
+.contactPage h2 a {
   text-decoration: underline;
+  letter-spacing: 0.5px;
+  color: #b5b8ff;
+  /* color: #1cef9e; */
 }
 
 .contactPage hr {
   border-color: #43e9e1;
-  height: 300px;
+  height: 400px;
+  border-right-width: 2px;
 }
 
 .contactLinks {
-  border: 3px dashed #43e9e1;
+  border: 2px solid #43e9e1;
   margin-left: 30px;
   padding: 40px;
-}
-
-.contactLinks h2 {
-  color: #b5b8ff;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 10px;
 }

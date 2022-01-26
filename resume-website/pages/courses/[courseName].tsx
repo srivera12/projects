@@ -50,12 +50,16 @@ const CoursePage: NextPage = () => {
               </List>
             </Grid>
             <Grid item xs={10}>
-              <Button variant="contained">
-                <Link href={c.githubLink}>
-                  <a target="_blank">See course code on GitHub</a>
+              <div className={styles.courseButtons}>
+                <Button variant="contained" color="secondary">
+                  <Link href={c.githubLink}>
+                    <a target="_blank">See course code on GitHub</a>
+                  </Link>
+                </Button>
+                <Link href="/skills">
+                  <Button variant="outlined">Back to Skills</Button>
                 </Link>
-              </Button>
-              <Link href="/skills">Back to Skills</Link>
+              </div>
             </Grid>
           </Grid>
         ))}

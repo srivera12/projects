@@ -2,7 +2,7 @@ import styles from '../styles/Footer.module.css';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { Button, BottomNavigation, Typography } from '@mui/material';
+import { Button, BottomNavigation, Typography, Grid } from '@mui/material';
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
       <h4>
         Hand-coded by{' '}
         <Link href="/about">
-          <a className={styles.nameLink}>Sarah Rivera</a>
+          <a className={styles.nameLink}>Sarah K Rivera</a>
         </Link>{' '}
         in 2022
       </h4>

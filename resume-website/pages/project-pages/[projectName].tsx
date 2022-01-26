@@ -40,17 +40,21 @@ const ProjectPage: NextPage = () => {
               <Typography>{p.reflections}</Typography>
             </Grid>
             <Grid item xs={10}>
-              <Button variant="contained">
-                <Link href={p.projectLink}>
-                  <a target="_blank">See Project</a>
+              <div className={styles.projectButtons}>
+                <Button variant="contained" color="secondary">
+                  <Link href={p.projectLink}>
+                    <a target="_blank">See Project</a>
+                  </Link>
+                </Button>
+                <Button variant="contained" color="secondary">
+                  <Link href={p.githubLink}>
+                    <a target="_blank">See Code</a>
+                  </Link>
+                </Button>
+                <Link href="/projects">
+                  <Button variant="outlined">Back to All Projects</Button>
                 </Link>
-              </Button>
-              <Button variant="contained">
-                <Link href={p.githubLink}>
-                  <a target="_blank">See Code</a>
-                </Link>
-              </Button>
-              <Link href="/projects">Back to All Projects</Link>
+              </div>
             </Grid>
           </Grid>
         ))}

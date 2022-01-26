@@ -1,5 +1,10 @@
 .course {
-  height: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+
+.course img {
+  padding-bottom: 2vh !important;
 }
 
 .course h1 {
@@ -21,5 +26,8 @@
 
 .course li a {
   color: #1cef9e;
-  text-decoration: underline;
+}
+
+.courseButtons {
+  margin-top: 20px;
 }
