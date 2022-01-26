@@ -1,10 +1,11 @@
 .project {
-  height: 100%;
+  height: fit-content;
   padding-bottom: 20px;
 }
 
 .project img {
   height: 500px;
+  padding-bottom: 2vh !important;
 }
 
 .project h1 {
@@ -21,4 +22,8 @@
 
 .project button {
   margin-right: 20px;
+}
+
+.projectButtons {
+  margin-top: 20px;
 }

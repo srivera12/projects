@@ -9,7 +9,7 @@ const ArchivePage: NextPage = () => {
     <div className={styles.archive}>
       <Grid container justifyContent="center" alignItems="center" rowSpacing={10}>
         <Grid item xs={11}>
-          <h1>Website Archive</h1>
+          <h1>WEBSITE ARCHIVE</h1>
           <h4>
             Here you can see previous versions of my portfolio website. As I continue to learn more and refine what I
             learn, previous iterations of this site can be found here.

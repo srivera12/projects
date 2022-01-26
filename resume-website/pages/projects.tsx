@@ -11,8 +11,8 @@ const ProjectsPage: NextPage = () => {
       <Grid container justifyContent="center">
         <Grid item container xs={12} justifyContent="space-between" alignItems="center">
           <Grid item xs={3}></Grid>
-          <Grid item xs={3.5}>
-            <h1>My Projects</h1>
+          <Grid item xs={4.5}>
+            <h1>MY PROJECTS</h1>
           </Grid>
           <Grid item xs={3}>
             <a href="">
@@ -22,7 +22,7 @@ const ProjectsPage: NextPage = () => {
             </a>
           </Grid>
         </Grid>
-        <Grid container item justifyContent="center" spacing={3} xs={11}>
+        <Grid container item justifyContent="center" spacing={6} xs={11}>
           {projectData.map((project, i) => (
             <Grid item xs={4} key={i}>
               <div className={styles.idvProject}>
@@ -49,11 +49,13 @@ const ProjectsPage: NextPage = () => {
                   </Link>
                 </div>
                 <Typography>{project.blurb}</Typography>
-                <Link href={`/project-pages/${project.pathName}`}>
-                  <Button variant="outlined" color="primary">
-                    Read More
-                  </Button>
-                </Link>
+                <div className={styles.readMore}>
+                  <Link href={`/project-pages/${project.pathName}`}>
+                    <Button variant="outlined" color="primary">
+                      Read More
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </Grid>
           ))}

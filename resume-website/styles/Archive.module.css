@@ -30,6 +30,7 @@
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .previousSite a {
@@ -37,4 +38,5 @@
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 20px;
 }

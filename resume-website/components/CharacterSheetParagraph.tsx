@@ -2,6 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import React, { FC } from 'react';
 import { Divider, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from '../styles/CharacterSheetParagraph.module.css';
 
 interface ParagraphProps {
   key: number;
@@ -12,16 +13,14 @@ interface ParagraphProps {
 
 const CharacterSheetParagraph: FC<ParagraphProps> = ({ icon, subtitle, text }): JSX.Element => {
   return (
-    <>
-      <>
-        <Typography variant="h3">
-          <FontAwesomeIcon icon={icon} />
-          {subtitle}
-        </Typography>
-        <Typography>{text}</Typography>
-        <Divider />
-      </>
-    </>
+    <div className={styles.paragraph}>
+      <Typography variant="h3">
+        <FontAwesomeIcon icon={icon} />
+        {subtitle}
+      </Typography>
+      <Typography>{text}</Typography>
+      <Divider />
+    </div>
   );
 };
 

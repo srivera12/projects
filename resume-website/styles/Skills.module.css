@@ -9,17 +9,29 @@
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 1vh;
 }
 
 .skills h3 {
-  color: #1cef9e;
+  color: #43e9e1;
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 1vh;
 }
 
 .skills img:hover {
   cursor: pointer;
+}
+
+.mainSkill {
+  padding: 10px;
+  border: 3px solid #333;
+  border-radius: 10px;
+}
+
+.skills .mainSkill:hover {
+  border: 3px solid #1cef9e;
 }
 
 .additionalSkills {

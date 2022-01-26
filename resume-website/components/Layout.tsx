@@ -26,8 +26,8 @@ const theme = createTheme({
           color: '#ddd',
           borderRadius: '10px',
           '& hr': {
-            color: '#ddd',
-            borderColor: '#ddd',
+            color: '#43e9e1',
+            borderColor: '#43e9e1',
           },
           '& h2, h3': {
             color: '#b5b8ff',
@@ -46,13 +46,16 @@ const theme = createTheme({
         },
       },
     },
-    // MuiGrid: {
-    //   styleOverrides: {
-    //     container: {
-    //       paddingBottom: '20x',
-    //     },
-    //   },
-    // },
+    MuiDrawer: {
+      styleOverrides: {
+        root: { width: 240 },
+        paper: {
+          backgroundColor: '#333',
+          color: '#b5b8ff',
+          fontSize: '30px',
+        },
+      },
+    },
   },
 });
 

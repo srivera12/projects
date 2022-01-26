@@ -15,16 +15,15 @@
 
 .hero h1 {
   font-size: 100px;
+  margin-bottom: 1vh;
 }
 
 .hero h2 {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero span {
   color: #43e9e1;
+  margin-top: 1vh;
 }
 
 .d20 {
@@ -36,8 +35,14 @@
   filter: invert(67%) sepia(93%) saturate(420%) hue-rotate(97deg) brightness(101%) contrast(88%);
 }
 
-.d20 button {
-  height: 35px;
-  margin-left: 30px;
-  color: #333;
+@media (max-width: 500px) {
+  .home {
+    padding: 0 30px 20px 30px;
+  }
+  .hero h1 {
+    font-size: 70px;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
 }

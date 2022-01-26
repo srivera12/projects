@@ -11,7 +11,7 @@ import D20Roller from '../components/D20Roller';
 const Home: NextPage = () => {
   return (
     <div className={styles.home}>
-      <Grid container justifyContent="center" alignItems="center" rowSpacing={15}>
+      <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>
         <div className={styles.hero}>
           <Image src={hi} />
           <div className={styles.text}>

@@ -1,14 +1,42 @@
 import styles from '../styles/NavBar.module.css';
+import React, { FC } from 'react';
 import Link from 'next/link';
 import NavLink from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
-import { AppBar, Toolbar, Typography, Container, Grid } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Container,
+  Grid,
+  useMediaQuery,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+} from '@mui/material';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { useTheme } from '@emotion/react';
+import pageData from '../public/data/pageData';
+import MenuIcon from '@mui/material/Menu';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export default function NavBar() {
+const NavBar: FC = (): JSX.Element => {
   const router = useRouter();
   const currentPath = router.pathname;
+  const [isMobile, setIsMobile] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setIsMobile(true);
+      console.log('is mobile');
+    } else {
+      setIsMobile(false);
+      console.log('is not mobile');
+    }
+  });
   return (
     <AppBar className={styles.navbar}>
       <Toolbar>
@@ -21,23 +49,45 @@ export default function NavBar() {
           </Link>
         </div>
         <div className={styles.pages}>
-          <Link href="/about">
-            <a className={currentPath === '/about' ? styles.activeLink : ''}>About</a>
-          </Link>
-          <Link href="/skills">
-            <a className={currentPath === '/skills' ? styles.activeLink : ''}>Skills</a>
-          </Link>
-          <Link href="/projects">
-            <a className={currentPath === '/projects' ? styles.activeLink : ''}>Projects</a>
-          </Link>
-          <Link href="/contact">
-            <a className={currentPath === '/contact' ? styles.activeLink : ''}>Contact</a>
-          </Link>
-          <Link href="/archive">
-            <a className={currentPath === '/archive' ? styles.activeLink : ''}>Archive</a>
-          </Link>
+          {isMobile ? (
+            <>
+              <FontAwesomeIcon
+                icon={faBars}
+                size="2x"
+                onClick={() => {
+                  setDrawerOpen(true);
+                }}
+              />
+              <Drawer
+                open={drawerOpen}
+                anchor="right"
+                onClose={() => {
+                  setDrawerOpen(false);
+                }}
+                ModalProps={{ keepMounted: true }}
+              >
+                <List>
+                  {pageData.map((page) => (
+                    <ListItem>
+                      <Link href={page.pageRoute}>
+                        <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
+                      </Link>
+                    </ListItem>
+                  ))}
+                </List>
+              </Drawer>
+            </>
+          ) : (
+            pageData.map((page) => (
+              <Link href={page.pageRoute}>
+                <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
+              </Link>
+            ))
+          )}
         </div>
       </Toolbar>
     </AppBar>
   );
-}
+};
+
+export default NavBar;

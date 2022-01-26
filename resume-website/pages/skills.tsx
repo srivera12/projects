@@ -25,7 +25,7 @@ const SkillsPage: NextPage = () => {
     <div className={styles.skills}>
       <Grid container flexDirection="column">
         <div>
-          <h1>Skills and Courses</h1>
+          <h1>SKILLS AND COURSES</h1>
           <h3>Click on a skill to learn more</h3>
         </div>
       </Grid>
@@ -39,7 +39,9 @@ const SkillsPage: NextPage = () => {
               setSkillDialogType(s.skill);
             }}
           >
-            <Image src={s.pic} layout="responsive" />
+            <div className={styles.mainSkill}>
+              <Image src={s.pic} layout="responsive" />
+            </div>
           </Grid>
         ))}
       </Grid>
