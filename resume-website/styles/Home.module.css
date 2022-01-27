@@ -1,5 +1,6 @@
 .home {
-  margin-top: 15vh;
+  margin-top: 9vh;
+  height: fit-content;
   padding-bottom: 20px;
   width: 100%;
 }
@@ -44,5 +45,12 @@
   }
   .hero h2 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 44px;
+    margin-top: 0;
   }
 }

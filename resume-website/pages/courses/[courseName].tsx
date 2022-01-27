@@ -23,13 +23,13 @@ const CoursePage: NextPage = () => {
             <Grid item xs={11}>
               <h3>Taught By: {c.instructor}</h3>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={10} md={6}>
               <Image src={c.cert} layout="responsive" />
             </Grid>
             <Grid item xs={11}>
               <Typography>{c.blurb}</Typography>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={10} md={8}>
               <h4>Skills Learned:</h4>
               <List>
                 {c.skillsLearned.map((skill) => (
@@ -37,7 +37,7 @@ const CoursePage: NextPage = () => {
                 ))}
               </List>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={10} md={8}>
               <h4>Project Highlights:</h4>
               <List>
                 {c.projectHighligts.map((project) => (

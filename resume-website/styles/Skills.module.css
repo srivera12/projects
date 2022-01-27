@@ -44,7 +44,7 @@
 }
 
 .skills .additionalSkills h1 {
-  font-size: 2em;
+  font-size: 35px;
   color: #333;
   margin: 0 auto 20px auto;
   border-bottom: 5px solid #43e9e1;
@@ -53,4 +53,18 @@
 
 .skills .additionalSkills img:hover {
   cursor: default;
+}
+
+@media (max-width: 500px) {
+  .skills h1 {
+    font-size: 35px;
+  }
+
+  .additionalSkills {
+    padding: 20px 50px;
+  }
+
+  .skills .additionalSkills h1 {
+    font-size: 28px;
+  }
 }

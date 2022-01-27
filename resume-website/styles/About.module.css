@@ -33,3 +33,17 @@
   height: 40px;
   border-color: transparent;
 }
+
+@media (max-width: 500px) {
+  .about h1 {
+    font-size: 40px;
+  }
+
+  .characterText h3 {
+    font-size: 30px;
+  }
+
+  .picture {
+    width: 100%;
+  }
+}

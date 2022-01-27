@@ -4,17 +4,27 @@ import { Button, Grid, List, Typography } from '@mui/material';
 import projectData from '../public/data/projectData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useContext } from 'react';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 const ProjectsPage: NextPage = () => {
+  const { isMobile } = useContext(IsMobileContext);
   return (
     <div className={styles.projects}>
       <Grid container justifyContent="center">
-        <Grid item container xs={12} justifyContent="space-between" alignItems="center">
-          <Grid item xs={3}></Grid>
-          <Grid item xs={4.5}>
+        <Grid
+          item
+          container
+          xs={12}
+          justifyContent="space-between"
+          alignItems="center"
+          flexDirection={isMobile ? 'column' : 'row'}
+        >
+          {!isMobile ? <Grid item xs={3} md={3} lg={4} xl={5}></Grid> : null}
+          <Grid item xs={11} md={6} lg={5} xl={4}>
             <h1>MY PROJECTS</h1>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={11} md={2} lg={3} xl={3}>
             <a href="">
               <Button variant="contained" color="secondary">
                 Website Design Plan
@@ -24,13 +34,13 @@ const ProjectsPage: NextPage = () => {
         </Grid>
         <Grid container item justifyContent="center" spacing={6} xs={11}>
           {projectData.map((project, i) => (
-            <Grid item xs={4} key={i}>
+            <Grid item xs={12} md={6} lg={4} key={i}>
               <div className={styles.idvProject}>
                 <div className={styles.projectName}>
                   <h2>{project.name}</h2>
                 </div>
                 <div className={styles.projectImg}>
-                  <Image src={project.pic} height={250} width={350} />
+                  <Image src={project.pic} height={200} width={300} />
                 </div>
                 <div className={styles.seeButtons}>
                   <Link href={project.projectLink}>
