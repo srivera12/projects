@@ -18,7 +18,7 @@ const ProjectPage: NextPage = () => {
             <Grid item xs={11}>
               <h1>{p.name}</h1>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={10} md={6}>
               <Image src={p.pic} layout="responsive" />
             </Grid>
             <Grid item xs={11}>
@@ -27,7 +27,7 @@ const ProjectPage: NextPage = () => {
             <Grid item xs={11}>
               <Typography>{p.approach}</Typography>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={10} md={8}>
               <h4>Challenges:</h4>
               <List>
                 {p.challenges.map((challenge) => (
@@ -35,7 +35,7 @@ const ProjectPage: NextPage = () => {
                 ))}
               </List>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={10} md={8}>
               <h4>Reflections:</h4>
               <Typography>{p.reflections}</Typography>
             </Grid>

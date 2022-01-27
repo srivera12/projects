@@ -31,3 +31,9 @@
 .courseButtons {
   margin-top: 20px;
 }
+
+@media (max-width: 500px) {
+  .courseButtons button {
+    margin-top: 20px;
+  }
+}

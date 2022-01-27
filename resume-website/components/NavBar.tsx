@@ -1,5 +1,5 @@
 import styles from '../styles/NavBar.module.css';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import Link from 'next/link';
 import NavLink from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,21 +22,13 @@ import { useTheme } from '@emotion/react';
 import pageData from '../public/data/pageData';
 import MenuIcon from '@mui/material/Menu';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 const NavBar: FC = (): JSX.Element => {
   const router = useRouter();
   const currentPath = router.pathname;
-  const [isMobile, setIsMobile] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth < 500) {
-      setIsMobile(true);
-      console.log('is mobile');
-    } else {
-      setIsMobile(false);
-      console.log('is not mobile');
-    }
-  });
+  const { isMobile } = useContext(IsMobileContext);
   return (
     <AppBar className={styles.navbar}>
       <Toolbar>

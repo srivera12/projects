@@ -1,9 +1,10 @@
 .contactPage {
-  height: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
 }
 
 .contactPage .title {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .contactPage h1 {
@@ -27,7 +28,6 @@
   text-decoration: underline;
   letter-spacing: 0.5px;
   color: #b5b8ff;
-  /* color: #1cef9e; */
 }
 
 .contactPage hr {
@@ -41,4 +41,33 @@
   margin-left: 30px;
   padding: 40px;
   border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .contactPage .title {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  .contactLinks {
+    border: 2px solid #43e9e1;
+    margin-left: 0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .contactLinks {
+    font-size: 12px;
+  }
+  .contactImg {
+    margin-top: 30px;
+  }
+  .contactLinks h1 {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contactButton {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

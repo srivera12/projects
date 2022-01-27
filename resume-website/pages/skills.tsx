@@ -34,7 +34,9 @@ const SkillsPage: NextPage = () => {
           <Grid
             key={i}
             item
-            xs={3}
+            xs={8}
+            md={3}
+            xl={4}
             onClick={() => {
               setSkillDialogType(s.skill);
             }}
@@ -46,12 +48,12 @@ const SkillsPage: NextPage = () => {
         ))}
       </Grid>
       <Grid container justifyContent="center" alignItems="center" className={styles.additionalSkillsContainer}>
-        <Grid item xs={6}>
+        <Grid item xs={11} md={6}>
           <div className={styles.additionalSkills}>
             <h1>ADDITIONAL SKILLS</h1>
             <Grid container alignItems="center" justifyContent="center" columnSpacing={10} rowSpacing={5}>
               {additionalSkillsData.map((skill, i) => (
-                <Grid item xs={4} key={i}>
+                <Grid item xs={5} md={4} xl={3} key={i}>
                   <Image src={skill} layout="responsive" />
                 </Grid>
               ))}

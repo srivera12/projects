@@ -8,8 +8,8 @@
 .projects h1 {
   color: #b8b5ff;
   margin-top: 2vh;
-  margin-bottom: 2vh;
-  font-size: 70px;
+  margin-bottom: 0;
+  font-size: 60px;
 }
 
 .idvProject {
@@ -20,11 +20,15 @@
 }
 
 .projectImg {
-  height: 250px;
-  width: 350px;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+.projectImg img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projectName {
@@ -41,12 +45,6 @@
   margin: 20px 10px;
 }
 
-/* .readMore {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .seeButtons {
   width: fit-content;
   margin-left: auto;
@@ -55,4 +53,10 @@
 
 .idvProject p {
   color: #ddd;
+}
+
+@media (max-width: 500px) {
+  .projects h1 {
+    font-size: 40px;
+  }
 }

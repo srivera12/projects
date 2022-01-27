@@ -1,10 +1,11 @@
 .archive {
-  height: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
 }
 
 .archive h1 {
   color: #b5b8ff;
-  font-size: 80px;
+  font-size: 60px;
   margin-bottom: 2vh;
   width: fit-content;
   margin-right: auto;
@@ -39,4 +40,10 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .archive h1 {
+    font-size: 40px;
+  }
 }
