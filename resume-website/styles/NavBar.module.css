@@ -21,6 +21,10 @@
   font-size: 1.5rem;
 }
 
+.home sup {
+  font-size: 15px;
+}
+
 .home svg {
   margin-right: 10px;
 }
@@ -43,8 +47,7 @@
   }
 
   .activeLink {
-    font-size: 1.2rem;
     color: #1cef9e;
-    font-size: 40px;
+    font-size: 30px;
   }
 }

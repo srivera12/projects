@@ -191,7 +191,7 @@ const funFacts: d20Rolls[] = [
     d20Pic: roll17,
     funFact: (
       <>
-        Did you know I coded this website using TypeScript! I learned how to when I completed{' '}
+        Did you know I coded this website using TypeScript? I learned how to when I completed{' '}
         <Link href="/courses/TS">this course</Link>.
       </>
     ),

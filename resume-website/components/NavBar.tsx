@@ -36,7 +36,7 @@ const NavBar: FC = (): JSX.Element => {
           <Link href="/">
             <a>
               <FontAwesomeIcon icon={faDiceD20} />
-              HOME
+              HOME <sup>(beta)</sup>
             </a>
           </Link>
         </div>
