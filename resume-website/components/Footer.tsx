@@ -15,7 +15,7 @@ export default function Footer() {
         in 2022
       </h4>
       <div className={styles.contact}>
-        <a href="https://github.com/srivera12" target="_blank">
+        <a href="https://github.com/srivera12" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
@@ -23,7 +23,7 @@ export default function Footer() {
             CONTACT ME
           </Button>
         </a>
-        <a href="https://www.linkedin.com/in/sarahkrivera/" target="_blank">
+        <a href="https://www.linkedin.com/in/sarahkrivera/" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>

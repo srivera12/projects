@@ -18,6 +18,7 @@ import SkillDialog from '../components/SkillDialog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import skillData from '../public/data/skillData';
 import additionalSkillsData from '../public/data/additionalSkillsData';
+import { v4 } from 'uuid';
 
 const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
@@ -30,9 +31,9 @@ const SkillsPage: NextPage = () => {
         </div>
       </Grid>
       <Grid container justifyContent="center" spacing={7} alignItems="center">
-        {skillData.map((s, i) => (
+        {skillData.map((s) => (
           <Grid
-            key={i}
+            key={parseInt(v4())}
             item
             xs={8}
             md={3}
@@ -42,7 +43,7 @@ const SkillsPage: NextPage = () => {
             }}
           >
             <div className={styles.mainSkill}>
-              <Image src={s.pic} layout="responsive" />
+              <img src={s.picPath} alt={`read more about ${s.name} and completed courses relevant to that skill`} />
             </div>
           </Grid>
         ))}
@@ -54,7 +55,7 @@ const SkillsPage: NextPage = () => {
             <Grid container alignItems="center" justifyContent="center" columnSpacing={10} rowSpacing={5}>
               {additionalSkillsData.map((skill, i) => (
                 <Grid item xs={5} md={4} xl={3} key={i}>
-                  <Image src={skill} layout="responsive" />
+                  <img src={skill.imagePath} alt={`${skill.name}`} />
                 </Grid>
               ))}
             </Grid>

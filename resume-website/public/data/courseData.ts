@@ -10,10 +10,10 @@ interface CoursePageData {
   pathName: string;
   name: string;
   instructor: string;
-  cert: StaticImageData;
+  certPath: string;
   blurb: string;
   skillsLearned: string[];
-  projectHighligts: Project[];
+  projectHighlights: Project[];
   githubLink: string;
 }
 
@@ -28,7 +28,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'HTML-CSS-JS-cert',
     name: 'HTML, CSS, and JavaScript - Certification Class for Beginners',
     instructor: 'YouAccel Training',
-    cert: beginner,
+    certPath: '/images/beginner.png',
     blurb:
       'In this course, I took my first formal foray into the world of web development. From the baby steps of basic HTML document structure, to CSS stylings and cool hover effects, to the (at the time) complexities of JavaScript conditionals and loops.',
     skillsLearned: [
@@ -36,7 +36,7 @@ const coursePageData: CoursePageData[] = [
       'How to target elements by class name, id, and/or element type, and apply styles to get desired positions and appearances.',
       'Basic JavaScript. Introduced to the concepts of variables, arrays, loops, conditional statements, etc.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'HTML Project - Webpage Using Only HTML',
         link: 'https://github.com/srivera12/learn-to-code/blob/master/stackskills/beginner-html-css-js/html/project.html',
@@ -57,7 +57,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'complete-frontend',
     name: 'The Complete Front-End Web Development Course!',
     instructor: 'Joseph Delgadillo',
-    cert: complete,
+    certPath: '/images/complete.png',
     blurb:
       "This course included more recent functionalities of HTML5, CSS3, and JS6, but also added jQuery and Bootstrap. My personal favorite part of this course was the Pipboy from Bethesda's Fallout games, a project created with Bootstrap, jQuery, and vanilla Javascript.",
     skillsLearned: [
@@ -65,7 +65,7 @@ const coursePageData: CoursePageData[] = [
       'Bootstrap/using a CSS framework in general.',
       'More comprehensive JavaScript, and jQuery.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'HTML Project - Webpage using more modern HTML.',
         link: 'https://github.com/srivera12/learn-to-code/blob/master/stackskills/complete-front-end/htmlproject.html',
@@ -86,7 +86,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'JS-bootcamp',
     name: 'JavaScript Beginner Bootcamp',
     instructor: 'Rob Merrill',
-    cert: jsBootcamp,
+    certPath: '/images/jsBootcamp.png',
     blurb:
       "With this bootcamp, I was able to really focus in on my Javascript skills to gain a solid foundation. While working through the content, I developed a confidence to write my own JS code to do what I wanted, rather than just repeating the same things I've seen instructors do in previous courses. During this course I made the To-Do Tracker and Quote Machine that you can check out and use in the 'Projects' section of this site.",
     skillsLearned: [
@@ -94,7 +94,7 @@ const coursePageData: CoursePageData[] = [
       'Introduced to algorithm challenges.',
       'Introduced to React.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'Bear, Human, Gun Game (similar to rock, paper, scissors)',
         link: 'https://github.com/srivera12/learn-to-code/tree/master/stackskills/javascript-beginner-bootcamp/bearHumanGunGame',
@@ -115,7 +115,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'build-20-websites',
     name: 'The Complete Web Developer Course: Build 20 Websites',
     instructor: 'John Bura',
-    cert: build20,
+    certPath: '/images/build20.png',
     blurb:
       'This course covered some foundational HTML and CSS skills in a project-based setting. Throughout the course, I made quite a few websites with varying structures, designs and styles. By the time I started this course, I had a fairly strong handle on these skills, so this course was straightforward and I completed it quickly. It was a good opportunity to really drill into my CSS skills and get more confident through repetition.',
     skillsLearned: [
@@ -123,7 +123,7 @@ const coursePageData: CoursePageData[] = [
       'Utilizing tools like Font Awesome.',
       'Using pseudo-elements in CSS designs.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'Minimal Webpage with Columns',
         link: 'https://github.com/srivera12/learn-to-code/tree/master/stackskills/make-20-websites/minimal-site-1',
@@ -144,7 +144,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'TS',
     name: "TypeScript: The Complete Developer's Guide",
     instructor: 'Stephen Grider',
-    cert: typescript,
+    certPath: '/images/typescript.jpeg',
     blurb:
       'This course covered Typescript comprehensively, from the foundational basics of simple type annotations all way to the complexities of using it with various JS libraries and web frameworks. It was exciting to be working on a course designed, not necessarily for beginners to software development, but rather developers who are beginners in this specific content. There was a lot of assumed knowledge, which made this course occasionally challenging, but ultimately was a great experience to move beyond basic tutorial.',
     skillsLearned: [
@@ -152,7 +152,7 @@ const coursePageData: CoursePageData[] = [
       'How to type using interfacts, tuples, generics, etc.',
       'Extracting/refactoring logic in order to make components reusable.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'Sorting App',
         link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/typescript/sort',
@@ -173,7 +173,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'react-bootcamp',
     name: 'The Modern React Bootcamp',
     instructor: 'Colt Steele',
-    cert: reactBootcamp,
+    certPath: '/images/reactBootcamp.png',
     blurb:
       'This projects-based bootcamp covered both original and newer React concepts, so I now have a practical understanding of both class components and functional components that use hooks and contexts. There were a lot of larger and complex projects in this course, and the knowledge I gained from it allowed me to complete React projects completely on my own.',
     skillsLearned: [
@@ -181,7 +181,7 @@ const coursePageData: CoursePageData[] = [
       'How to use tools like Create React App and Next JS.',
       'Made apps with both traditional class components and newer functional components with hooks and contexts.',
     ],
-    projectHighligts: [
+    projectHighlights: [
       {
         name: 'Color Boxes App Using Forms',
         link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/modern-react-bootcamp/color-boxes-with-forms',

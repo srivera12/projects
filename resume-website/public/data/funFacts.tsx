@@ -23,14 +23,14 @@ import Link from 'next/link';
 
 interface d20Rolls {
   rolledNumber: number;
-  d20Pic: StaticImageData;
+  d20PicPath: string;
   funFact: ReactJSXElement;
 }
 
 const funFacts: d20Rolls[] = [
   {
     rolledNumber: 1,
-    d20Pic: roll1,
+    d20PicPath: '/images/1.png',
     funFact: (
       <>
         Unlucky! If you'd like to practice, try using my <Link href="/project-pages/d20-roller">d20 roller app</Link>!
@@ -39,7 +39,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 2,
-    d20Pic: roll2,
+    d20PicPath: '/images/2.png',
     funFact: (
       <>
         Everyone has to start somewhere! Check out my earliest coding project, a{' '}
@@ -49,7 +49,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 3,
-    d20Pic: roll3,
+    d20PicPath: '/images/3.png',
     funFact: (
       <>
         Did you know that I started learning to code in April 2021? Check out the{' '}
@@ -59,7 +59,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 4,
-    d20Pic: roll4,
+    d20PicPath: '/images/4.png',
     funFact: (
       <>
         Did you know I used to be a teacher? Read all about it, and the great skills that experience taught me, on my{' '}
@@ -69,7 +69,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 5,
-    d20Pic: roll5,
+    d20PicPath: '/images/5.png',
     funFact: (
       <>
         Feeling swamped? Why don't you try out my <Link href="/project-pages/react-todo-app">React To-Do App</Link> to
@@ -79,7 +79,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 6,
-    d20Pic: roll6,
+    d20PicPath: '/images/6.png',
     funFact: (
       <>
         When I was in college, I studied environmental science and geology. You can read all about it and more on the{' '}
@@ -89,7 +89,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 7,
-    d20Pic: roll7,
+    d20PicPath: '/images/7.png',
     funFact: (
       <>
         You can check out previous versions of my portfolio website in the <Link href="/archive">archive</Link>.
@@ -98,7 +98,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 8,
-    d20Pic: roll8,
+    d20PicPath: '/images/8.png',
     funFact: (
       <>
         Would you like to take a look at some of the <Link href="/projects">projects</Link> I've made?
@@ -107,7 +107,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 9,
-    d20Pic: roll9,
+    d20PicPath: '/images/9.png',
     funFact: (
       <>
         What do you like to do when you are offline? You can find out what I do in my spare time on the{' '}
@@ -117,7 +117,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 10,
-    d20Pic: roll10,
+    d20PicPath: '/images/10.png',
     funFact: (
       <>
         Have you ever played a Fallout game? I made a mock Pip-Boy for{' '}
@@ -127,7 +127,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 11,
-    d20Pic: roll11,
+    d20PicPath: '/images/11.png',
     funFact: (
       <>
         Did you know I made an academic tracker for my teenaged sister? Check it out{' '}
@@ -137,7 +137,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 12,
-    d20Pic: roll12,
+    d20PicPath: '/images/12.png',
     funFact: (
       <>
         I completed a JavaScript Bootcamp and made some pretty cool projects. Check them out{' '}
@@ -147,7 +147,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 13,
-    d20Pic: roll13,
+    d20PicPath: '/images/13.png',
     funFact: (
       <>
         If you'd like to jump straight to my code you can check it out{' '}
@@ -157,7 +157,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 14,
-    d20Pic: roll14,
+    d20PicPath: '/images/14.png',
     funFact: (
       <>
         If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, you can over on the{' '}
@@ -167,7 +167,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 15,
-    d20Pic: roll15,
+    d20PicPath: '/images/15.png',
     funFact: (
       <>
         I've had practice making a variety of webpages during my{' '}
@@ -177,7 +177,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 16,
-    d20Pic: roll16,
+    d20PicPath: '/images/16.png',
     funFact: (
       <>
         It always feels great to make something that people find helpful. Check out this{' '}
@@ -188,7 +188,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 17,
-    d20Pic: roll17,
+    d20PicPath: '/images/17.png',
     funFact: (
       <>
         Did you know I coded this website using TypeScript? I learned how to when I completed{' '}
@@ -198,7 +198,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 18,
-    d20Pic: roll18,
+    d20PicPath: '/images/18.png',
     funFact: (
       <>
         Since I've started learning to code, it's been so much fun to learning new languages and get familiar with
@@ -208,7 +208,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 19,
-    d20Pic: roll19,
+    d20PicPath: '/images/19.png',
     funFact: (
       <>
         React is a powerful and popular web framework. I learned how to use it for projects like this website through{' '}
@@ -218,7 +218,7 @@ const funFacts: d20Rolls[] = [
   },
   {
     rolledNumber: 20,
-    d20Pic: roll20,
+    d20PicPath: '/images/20.png',
     funFact: (
       <>
         Great roll! Go ahead and{' '}

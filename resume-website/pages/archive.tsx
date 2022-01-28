@@ -5,6 +5,7 @@ import styles from '../styles/Archive.module.css';
 import Image from 'next/image';
 import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import { v4 } from 'uuid';
 
 const ArchivePage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
@@ -20,11 +21,11 @@ const ArchivePage: NextPage = () => {
         </Grid>
         <Grid item container justifyContent="center" alignItems="center">
           {previousWebsitesData.map((site) => (
-            <Grid item xs={11} md={4}>
+            <Grid item xs={11} md={4} key={parseInt(v4())}>
               <div className={styles.previousSite}>
                 <h2>Retired: {site.retiredDate}</h2>
-                <Image src={site.pic} layout="responsive" />
-                <a href={site.link} target="_blank">
+                <img src={site.picPath} alt="homepage of old website" />
+                <a href={site.link} target="_blank" rel="noreferrer">
                   <Button variant="contained" color="secondary">
                     Visit Site
                   </Button>

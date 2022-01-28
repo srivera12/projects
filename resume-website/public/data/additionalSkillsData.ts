@@ -1,10 +1,15 @@
-import git from '../images/git.png';
-import node from '../images/node.png';
-import mui from '../images/mui.png';
-import vscode from '../images/vscode.png';
-import nextjs from '../images/nextjs.png';
-import gitHub from '../images/gitHub.png';
+interface AdditionalSkills {
+  imagePath: string;
+  name: string;
+}
 
-const additionalSkillsData: StaticImageData[] = [git, node, mui, vscode, nextjs, gitHub];
+const additionalSkillsData: AdditionalSkills[] = [
+  { imagePath: '/images/git.png', name: 'Git' },
+  { imagePath: '/images/node.png', name: 'Node JS' },
+  { imagePath: '/images/mui.png', name: 'Material UI' },
+  { imagePath: '/images/vscode.png', name: 'VS Code' },
+  { imagePath: '/images/nextjs.png', name: 'Next JS' },
+  { imagePath: '/images/gitHub.png', name: 'GitHub' },
+];
 
 export default additionalSkillsData;

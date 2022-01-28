@@ -11,7 +11,7 @@ const D20Roller: FC = (): JSX.Element => {
   const [hasRolled, setHasRolled] = useState(false);
   const [isRolling, setIsRolling] = useState(false);
   const [rollText, setRollText] = useState(<></>);
-  const [rollState, setRollState] = useState({ rolledNumber: 0, funFact: <></>, imgSrc: d20 });
+  const [rollState, setRollState] = useState({ rolledNumber: 0, funFact: <></>, imgSrc: '/images/d20Pic.png' });
 
   useEffect(() => {
     if (isRolling) {
@@ -34,7 +34,7 @@ const D20Roller: FC = (): JSX.Element => {
         </>
       );
     }
-  }, [isRolling, hasRolled]);
+  }, [isRolling, hasRolled, rollState.funFact, rollState.rolledNumber]);
 
   function roll() {
     setIsRolling(true);
@@ -44,7 +44,7 @@ const D20Roller: FC = (): JSX.Element => {
     setRollState({
       rolledNumber: rollResult[0].rolledNumber,
       funFact: rollResult[0].funFact,
-      imgSrc: rollResult[0].d20Pic,
+      imgSrc: rollResult[0].d20PicPath,
     });
     setTimeout(() => {
       setIsRolling(false);
@@ -55,7 +55,10 @@ const D20Roller: FC = (): JSX.Element => {
     <div className={!isMobile ? styles.roller : styles.mobileRoller}>
       <div className={isRolling || !hasRolled ? styles.preRolledText : styles.rolledText}>{rollText}</div>
       <div onClick={roll} className={isRolling ? styles.d20Rolling : undefined}>
-        <Image src={isRolling ? d20 : rollState.imgSrc} height="300px" width="300px" />
+        <img
+          src={isRolling ? '/images/d20Pic.png' : rollState.imgSrc}
+          alt={`20-sided die displaying the number ${rollState.rolledNumber}`}
+        />
       </div>
     </div>
   );

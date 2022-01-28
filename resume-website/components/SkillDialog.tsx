@@ -9,6 +9,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import coursePageData from '../public/data/courseData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { v4 } from 'uuid';
 
 interface SkillDialogProps {
   skill: string;
@@ -22,6 +23,7 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
         .filter((s) => s.skill === skill)
         .map((s) => (
           <Dialog
+            key={parseInt(v4())}
             open={skill !== ''}
             onClose={() => {
               setSkill('');
@@ -40,12 +42,12 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
                 {courseData
                   .filter((course) => course.skill === skill)
                   .map((c) => (
-                    <Grid item xs={12}>
+                    <Grid item xs={12} key={parseInt(v4())}>
                       <h3>{c.name}</h3>
                       <h4>Taught By: {c.instructor}</h4>
-                      <Image src={c.cert} layout="responsive" />
+                      <img src={c.certPath} alt={`certification of completion for ${c.name}`} />
                       <p>{c.blurb}</p>
-                      <Link href={`/courses/${c.pathName}`}>
+                      <Link href={`/courses/${c.pathName}`} passHref>
                         <Button variant="outlined" color="primary">
                           Read More
                         </Button>
