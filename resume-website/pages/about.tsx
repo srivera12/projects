@@ -8,6 +8,7 @@ import characterSheetText from '../public/data/characterSheetText';
 import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import CharacterSheetParagraph from '../components/CharacterSheetParagraph';
+import { v4 } from 'uuid';
 
 const AboutPage: NextPage = () => {
   return (
@@ -18,7 +19,10 @@ const AboutPage: NextPage = () => {
         </Grid>
         <Grid item xs={11}>
           <div className={styles.picture}>
-            <Image src={character} />
+            <img
+              src="/images/characterPic.png"
+              alt="cartoon version of Sarah K Rivera casting a magic spell while smiling towards the viewer"
+            />
             <p>Feared by bugs far and wide.</p>
             <a href="">
               <Button variant="contained" color="secondary">
@@ -27,9 +31,9 @@ const AboutPage: NextPage = () => {
             </a>
           </div>
           <div className={styles.characterText}>
-            {characterSheetText.map((paragraph, i) => (
+            {characterSheetText.map((paragraph) => (
               <CharacterSheetParagraph
-                key={i}
+                key={parseInt(v4())}
                 icon={paragraph.icon}
                 subtitle={paragraph.subtitle}
                 text={paragraph.text}

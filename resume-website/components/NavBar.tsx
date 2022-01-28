@@ -30,7 +30,7 @@ const NavBar: FC = (): JSX.Element => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <AppBar className={styles.navbar}>
+    <AppBar className={styles.navbar} color="transparent">
       <Toolbar>
         <div className={styles.home}>
           <Link href="/">
@@ -59,8 +59,8 @@ const NavBar: FC = (): JSX.Element => {
                 ModalProps={{ keepMounted: true }}
               >
                 <List>
-                  {pageData.map((page) => (
-                    <ListItem>
+                  {pageData.map((page, i) => (
+                    <ListItem key={i}>
                       <Link href={page.pageRoute}>
                         <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
                       </Link>
@@ -70,8 +70,8 @@ const NavBar: FC = (): JSX.Element => {
               </Drawer>
             </>
           ) : (
-            pageData.map((page) => (
-              <Link href={page.pageRoute}>
+            pageData.map((page, i) => (
+              <Link href={page.pageRoute} key={i}>
                 <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
               </Link>
             ))

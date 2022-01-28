@@ -6,6 +6,7 @@ import working from '../public/images/working.png';
 import { useContext, useState } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
 import contactData from '../public/data/contactData';
+import { v4 } from 'uuid';
 
 const ContactPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
@@ -27,7 +28,10 @@ const ContactPage: NextPage = () => {
           >
             <Grid item xs={3}>
               <div>
-                <Image src={working} layout="responsive" />
+                <img
+                  src="/images/working.png"
+                  alt="cartoon version of Sarah K Rivera walking and holding a briefcase"
+                />
                 <h1>Sarah K Rivera</h1>
               </div>
             </Grid>
@@ -36,7 +40,7 @@ const ContactPage: NextPage = () => {
             </Grid>
             <Grid item xs={4}>
               {contactData.map((contact) => (
-                <h2>
+                <h2 key={parseInt(v4())}>
                   <span>{contact.contactType}</span>
                   <a href={contact.contactLink}>{contact.contactText}</a>
                 </h2>
@@ -53,7 +57,7 @@ const ContactPage: NextPage = () => {
             <div className={styles.contactLinks}>
               <Grid item xs={11}>
                 {contactData.map((contact) => (
-                  <h2>
+                  <h2 key={parseInt(v4())}>
                     <span>{contact.contactType}</span>
                     <a href={contact.contactLink}>{contact.contactText}</a>
                   </h2>
@@ -68,7 +72,10 @@ const ContactPage: NextPage = () => {
               </Grid>
               <Grid item xs={12}>
                 <div className={styles.contactImg}>
-                  <Image src={working} layout="responsive" />
+                  <img
+                    src="/images/working.png"
+                    alt="cartoon version of Sarah K Rivera walking and holding a briefcase"
+                  />
                   <h1>Sarah K Rivera</h1>
                 </div>
               </Grid>

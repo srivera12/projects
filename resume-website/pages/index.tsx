@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import hi from '../public/images/hiPic.png';
 import d20 from '../public/images/d20Pic.png';
 import { useContext, useState } from 'react';
 import D20Roller from '../components/D20Roller';
@@ -16,7 +15,7 @@ const Home: NextPage = () => {
       <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>
         {!isMobile ? (
           <div className={styles.hero}>
-            <Image src={hi} />
+            <img src="/images/hiPic.png" alt="cartoon version of Sarah K Rivera waving hello" />
             <div className={styles.text}>
               <h1 className={styles.name}>
                 SARAH <span>K</span> RIVERA
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
             </Grid>
             <Grid item container xs={12} alignItems="center" justifyContent="space-around" className={styles.text}>
               <Grid item xs={4}>
-                <Image src={hi} />
+                <img src="/images/hiPic.png" alt="cartoon version of Sarah K Rivera waving hello" />
               </Grid>
               <Grid item xs={6}>
                 <h2 className={styles.subtitle}>A Fledgling Software Sorcerer With A Passion For Learning</h2>

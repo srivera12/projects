@@ -1,13 +1,7 @@
-import jsTodo from '../images/JSTodo.png';
-import quoteApp from '../images/quoteApp.png';
-import D20Roller from '../images/D20Roller.png';
-import reactTodo from '../images/reactTodo.png';
-import academicTracker from '../images/academicTracker.png';
-
 interface ProjectData {
   pathName: string;
   name: string;
-  pic: StaticImageData;
+  picPath: string;
   projectLink: string;
   githubLink: string;
   blurb: string;
@@ -20,7 +14,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'JS-todo-app',
     name: 'JavaScript To-Do App',
-    pic: jsTodo,
+    picPath: '/images/jsTodo.png',
     projectLink: '/projects/JS-todo/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/JS-todo',
     blurb:
@@ -38,7 +32,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'montessori-quotes-app',
     name: 'Montessori Quotes App',
-    pic: quoteApp,
+    picPath: '/images/quoteApp.png',
     projectLink: '/projects/montessori-quote/index.html',
     githubLink: 'https://github.com/srivera12/projects/tree/master/montessori-quote',
     blurb:
@@ -56,11 +50,11 @@ const projectData: ProjectData[] = [
   {
     pathName: 'd20-roller',
     name: 'D20 Roller',
-    pic: D20Roller,
+    picPath: '/images/D20Roller.png',
     projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
-      "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll.",
+      "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll. It's been used for playing DnD in a pinch.",
     approach:
       "This was originally just something I made for fun, because I thought it would be more interesting than simply making a dice roller that used an additional six-sided die. However, once I started, I was committed to making it as functional as I knew it should be, particularly once the course introduced me to the idea of adding a 'rolling' state and using that to render various texts.",
     challenges: [
@@ -74,7 +68,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'react-todo-app',
     name: 'React To-Do App',
-    pic: reactTodo,
+    picPath: '/images/reactTodo.png',
     projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
@@ -92,7 +86,7 @@ const projectData: ProjectData[] = [
   {
     pathName: 'academic-tracker',
     name: 'Academic Tracker',
-    pic: academicTracker,
+    picPath: '/images/academicTracker.png',
     projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:

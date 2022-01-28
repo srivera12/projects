@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import { v4 } from 'uuid';
 
 const ProjectsPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
@@ -40,7 +41,7 @@ const ProjectsPage: NextPage = () => {
                   <h2>{project.name}</h2>
                 </div>
                 <div className={styles.projectImg}>
-                  <Image src={project.pic} height={200} width={300} />
+                  <img src={project.picPath} alt={`${project.name} in use`} />
                 </div>
                 <div className={styles.seeButtons}>
                   <Link href={project.projectLink}>
@@ -60,7 +61,7 @@ const ProjectsPage: NextPage = () => {
                 </div>
                 <Typography>{project.blurb}</Typography>
                 <div className={styles.readMore}>
-                  <Link href={`/project-pages/${project.pathName}`}>
+                  <Link href={`/project-pages/${project.pathName}`} passHref>
                     <Button variant="outlined" color="primary">
                       Read More
                     </Button>

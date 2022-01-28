@@ -8,7 +8,6 @@
 .projects h1 {
   color: #b8b5ff;
   margin-top: 2vh;
-  margin-bottom: 0;
   font-size: 60px;
 }
 
@@ -19,16 +18,19 @@
   color: #b8b5ff;
 }
 
+.idvProject a {
+  margin-top: 20px;
+}
+
 .projectImg {
-  width: fit-content;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
 }
 
 .projectImg img {
-  margin-left: auto;
-  margin-right: auto;
+  height: 200px;
 }
 
 .projectName {
@@ -58,5 +60,6 @@
 @media (max-width: 500px) {
   .projects h1 {
     font-size: 40px;
+    margin-bottom: 0;
   }
 }

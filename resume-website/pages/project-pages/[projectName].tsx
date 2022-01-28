@@ -5,6 +5,7 @@ import { Grid, Typography, List, ListItem, Button } from '@mui/material';
 import Link from 'next/link';
 import styles from '../../styles/[projectName].module.css';
 import Image from 'next/image';
+import { v4 } from 'uuid';
 
 const ProjectPage: NextPage = () => {
   const router = useRouter();
@@ -14,12 +15,12 @@ const ProjectPage: NextPage = () => {
       {projectData
         .filter((project) => project.pathName === pathName)
         .map((p) => (
-          <Grid container justifyContent="center" spacing={1} className={styles.project}>
+          <Grid container justifyContent="center" spacing={1} className={styles.project} key={parseInt(v4())}>
             <Grid item xs={11}>
               <h1>{p.name}</h1>
             </Grid>
             <Grid item xs={10} md={6}>
-              <Image src={p.pic} layout="responsive" />
+              <img src={p.picPath} alt={`${p.name} in use`} />
             </Grid>
             <Grid item xs={11}>
               <Typography>{p.blurb}</Typography>
@@ -31,7 +32,7 @@ const ProjectPage: NextPage = () => {
               <h4>Challenges:</h4>
               <List>
                 {p.challenges.map((challenge) => (
-                  <ListItem>{challenge}</ListItem>
+                  <ListItem key={parseInt(v4())}>{challenge}</ListItem>
                 ))}
               </List>
             </Grid>
@@ -42,12 +43,12 @@ const ProjectPage: NextPage = () => {
             <Grid item xs={10}>
               <div className={styles.projectButtons}>
                 <Button variant="contained" color="secondary">
-                  <Link href={p.projectLink}>
+                  <Link href={p.projectLink} passHref>
                     <a target="_blank">See Project</a>
                   </Link>
                 </Button>
                 <Button variant="contained" color="secondary">
-                  <Link href={p.githubLink}>
+                  <Link href={p.githubLink} passHref>
                     <a target="_blank">See Code</a>
                   </Link>
                 </Button>
