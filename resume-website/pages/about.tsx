@@ -25,7 +25,7 @@ const AboutPage: NextPage = () => {
             />
             <p>Feared by bugs far and wide.</p>
             <a href="">
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="secondary" data-cy="resume-button">
                 View My Resume
               </Button>
             </a>

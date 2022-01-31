@@ -29,8 +29,8 @@ const D20Roller: FC = (): JSX.Element => {
     } else if (hasRolled && !isRolling) {
       setRollText(
         <>
-          <h2>You rolled a {rollState.rolledNumber}! The DM says...</h2>
-          <h4>{rollState.funFact}</h4>
+          <h2 data-cy="rolled-text-title">You rolled a {rollState.rolledNumber}! The DM says...</h2>
+          <h4 data-cy="fun-fact">{rollState.funFact}</h4>
         </>
       );
     }
@@ -54,10 +54,11 @@ const D20Roller: FC = (): JSX.Element => {
   return (
     <div className={!isMobile ? styles.roller : styles.mobileRoller}>
       <div className={isRolling || !hasRolled ? styles.preRolledText : styles.rolledText}>{rollText}</div>
-      <div onClick={roll} className={isRolling ? styles.d20Rolling : undefined}>
+      <div onClick={roll} className={isRolling ? styles.d20Rolling : undefined} data-cy="d20">
         <img
           src={isRolling ? '/images/d20Pic.png' : rollState.imgSrc}
           alt={`20-sided die displaying the number ${rollState.rolledNumber}`}
+          data-cy="d20-img"
         />
       </div>
     </div>

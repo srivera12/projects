@@ -41,6 +41,7 @@ const SkillsPage: NextPage = () => {
             onClick={() => {
               setSkillDialogType(s.skill);
             }}
+            data-cy={`${s.skill}-icon`}
           >
             <div className={styles.mainSkill}>
               <img src={s.picPath} alt={`read more about ${s.name} and completed courses relevant to that skill`} />
