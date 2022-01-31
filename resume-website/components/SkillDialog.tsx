@@ -29,7 +29,7 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
               setSkill('');
             }}
           >
-            <DialogTitle>
+            <DialogTitle data-cy={`${s.skill}-dialog`}>
               <div className={styles.heading}>
                 <FontAwesomeIcon icon={s.icon} />
                 {s.name}
@@ -42,7 +42,7 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
                 {courseData
                   .filter((course) => course.skill === skill)
                   .map((c) => (
-                    <Grid item xs={12} key={parseInt(v4())}>
+                    <Grid item xs={12} key={parseInt(v4())} data-cy={`${c.pathName}`}>
                       <h3>{c.name}</h3>
                       <h4>Taught By: {c.instructor}</h4>
                       <img src={c.certPath} alt={`certification of completion for ${c.name}`} />

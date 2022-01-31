@@ -34,7 +34,7 @@ const NavBar: FC = (): JSX.Element => {
       <Toolbar>
         <div className={styles.home}>
           <Link href="/">
-            <a>
+            <a data-cy="home-link">
               <FontAwesomeIcon icon={faDiceD20} />
               HOME <sup>(beta)</sup>
             </a>
@@ -62,7 +62,12 @@ const NavBar: FC = (): JSX.Element => {
                   {pageData.map((page, i) => (
                     <ListItem key={i}>
                       <Link href={page.pageRoute}>
-                        <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
+                        <a
+                          className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                          data-cy={`${page.pageName.toLowerCase()}-link`}
+                        >
+                          {page.pageName}
+                        </a>
                       </Link>
                     </ListItem>
                   ))}
@@ -72,7 +77,12 @@ const NavBar: FC = (): JSX.Element => {
           ) : (
             pageData.map((page, i) => (
               <Link href={page.pageRoute} key={i}>
-                <a className={currentPath === page.pageRoute ? styles.activeLink : ''}>{page.pageName}</a>
+                <a
+                  className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                  data-cy={`${page.pageName.toLowerCase()}-link`}
+                >
+                  {page.pageName}
+                </a>
               </Link>
             ))
           )}
