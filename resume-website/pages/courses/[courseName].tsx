@@ -41,10 +41,12 @@ const CoursePage: NextPage = () => {
             <Grid item xs={10} md={8}>
               <h4>Project Highlights:</h4>
               <List>
-                {c.projectHighlights.map((project) => (
-                  <ListItem key={parseInt(v4())}>
+                {c.projectHighlights.map((project, i) => (
+                  <ListItem key={i}>
                     <Link href={project.link} passHref>
-                      <a target="_blank">{project.name}</a>
+                      <a target="_blank" data-cy={`link-${i + 1}`}>
+                        {project.name}
+                      </a>
                     </Link>
                   </ListItem>
                 ))}
@@ -54,11 +56,15 @@ const CoursePage: NextPage = () => {
               <div className={styles.courseButtons}>
                 <Button variant="contained" color="secondary">
                   <Link href={c.githubLink} passHref>
-                    <a target="_blank">See course code on GitHub</a>
+                    <a target="_blank" data-cy="github-link">
+                      See course code on GitHub
+                    </a>
                   </Link>
                 </Button>
                 <Link href="/skills">
-                  <Button variant="outlined">Back to Skills</Button>
+                  <Button variant="outlined" data-cy="skills-button">
+                    Back to Skills
+                  </Button>
                 </Link>
               </div>
             </Grid>

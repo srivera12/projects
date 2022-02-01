@@ -1,10 +1,10 @@
-describe('HTML/CSS/JS Cert Course Page', () => {
+describe('Complete Frontend Course Page', () => {
   beforeEach(() => {
-    cy.visit('/courses/HTML-CSS-JS-cert');
+    cy.visit('/courses/complete-frontend');
   });
 
   it('loads successfully', () => {
-    cy.url().should('include', '/courses/HTML-CSS-JS-cert');
+    cy.url().should('include', '/courses/complete-frontend');
   });
 
   describe('Project Links', () => {
@@ -13,25 +13,25 @@ describe('HTML/CSS/JS Cert Course Page', () => {
         .invoke('attr', 'href')
         .should(
           'equal',
-          'https://github.com/srivera12/learn-to-code/blob/master/stackskills/beginner-html-css-js/html/project.html'
+          'https://github.com/srivera12/learn-to-code/blob/master/stackskills/complete-front-end/htmlproject.html'
         );
     });
 
-    it('has functional CSS project link', () => {
+    it('has functional jQuery code link', () => {
       cy.get('[data-cy="link-2"]')
         .invoke('attr', 'href')
         .should(
           'equal',
-          'https://github.com/srivera12/learn-to-code/blob/master/stackskills/beginner-html-css-js/css/cssproject.html'
+          'https://github.com/srivera12/learn-to-code/blob/master/stackskills/complete-front-end/jquery.js'
         );
     });
 
-    it('has functional JS project link', () => {
+    it('has functional Pip-Boy project link', () => {
       cy.get('[data-cy="link-3"]')
         .invoke('attr', 'href')
         .should(
           'equal',
-          'https://github.com/srivera12/learn-to-code/blob/master/stackskills/beginner-html-css-js/js/background-randomizer.html'
+          'https://github.com/srivera12/learn-to-code/tree/master/stackskills/complete-front-end/PipBoy'
         );
     });
   });
@@ -39,7 +39,7 @@ describe('HTML/CSS/JS Cert Course Page', () => {
   it('has functional github button', () => {
     cy.get('[data-cy="github-link"]')
       .invoke('attr', 'href')
-      .should('equal', 'https://github.com/srivera12/learn-to-code/tree/master/stackskills/beginner-html-css-js');
+      .should('equal', 'https://github.com/srivera12/learn-to-code/tree/master/stackskills/complete-front-end');
   });
 
   it('has functional back to skills button', () => {

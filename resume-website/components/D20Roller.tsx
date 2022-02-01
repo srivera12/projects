@@ -29,17 +29,19 @@ const D20Roller: FC = (): JSX.Element => {
     } else if (hasRolled && !isRolling) {
       setRollText(
         <>
-          <h2 data-cy="rolled-text-title">You rolled a {rollState.rolledNumber}! The DM says...</h2>
-          <h4 data-cy="fun-fact">{rollState.funFact}</h4>
+          <h2>You rolled a {rollState.rolledNumber}! The DM says...</h2>
+          <h4>{rollState.funFact}</h4>
         </>
       );
     }
   }, [isRolling, hasRolled, rollState.funFact, rollState.rolledNumber]);
 
   function roll() {
+    const cy = window['Cypress' as any];
+    const forcedRoll = cy['d20_roll' as any];
     setIsRolling(true);
     setHasRolled(true);
-    const roll = Math.floor(Math.random() * 20) + 1;
+    const roll = forcedRoll ? forcedRoll : Math.floor(Math.random() * 20) + 1;
     const rollResult = funFacts.filter((fact) => fact.rolledNumber === roll);
     setRollState({
       rolledNumber: rollResult[0].rolledNumber,

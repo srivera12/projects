@@ -29,7 +29,7 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
               setSkill('');
             }}
           >
-            <DialogTitle data-cy={`${s.skill}-dialog`}>
+            <DialogTitle data-cy={`${s.skillDataCy}-dialog`}>
               <div className={styles.heading}>
                 <FontAwesomeIcon icon={s.icon} />
                 {s.name}

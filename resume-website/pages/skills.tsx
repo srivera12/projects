@@ -31,9 +31,9 @@ const SkillsPage: NextPage = () => {
         </div>
       </Grid>
       <Grid container justifyContent="center" spacing={7} alignItems="center">
-        {skillData.map((s) => (
+        {skillData.map((s, i) => (
           <Grid
-            key={parseInt(v4())}
+            key={i}
             item
             xs={8}
             md={3}
@@ -41,7 +41,7 @@ const SkillsPage: NextPage = () => {
             onClick={() => {
               setSkillDialogType(s.skill);
             }}
-            data-cy={`${s.skill}-icon`}
+            data-cy={`${s.skillDataCy}-icon`}
           >
             <div className={styles.mainSkill}>
               <img src={s.picPath} alt={`read more about ${s.name} and completed courses relevant to that skill`} />

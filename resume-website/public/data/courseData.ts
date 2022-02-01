@@ -7,6 +7,7 @@ import reactBootcamp from '../images/reactBootcamp.png';
 
 interface CoursePageData {
   skill: string;
+  skillDataCy: string;
   pathName: string;
   name: string;
   instructor: string;
@@ -25,6 +26,7 @@ interface Project {
 const coursePageData: CoursePageData[] = [
   {
     skill: 'HTML/CSS',
+    skillDataCy: 'HTML-CSS',
     pathName: 'HTML-CSS-JS-cert',
     name: 'HTML, CSS, and JavaScript - Certification Class for Beginners',
     instructor: 'YouAccel Training',
@@ -54,6 +56,7 @@ const coursePageData: CoursePageData[] = [
   },
   {
     skill: 'HTML/CSS',
+    skillDataCy: 'HTML-CSS',
     pathName: 'complete-frontend',
     name: 'The Complete Front-End Web Development Course!',
     instructor: 'Joseph Delgadillo',
@@ -83,6 +86,7 @@ const coursePageData: CoursePageData[] = [
   },
   {
     skill: 'TS/JS',
+    skillDataCy: 'TS-JS',
     pathName: 'JS-bootcamp',
     name: 'JavaScript Beginner Bootcamp',
     instructor: 'Rob Merrill',
@@ -112,6 +116,7 @@ const coursePageData: CoursePageData[] = [
   },
   {
     skill: 'HTML/CSS',
+    skillDataCy: 'HTML-CSS',
     pathName: 'build-20-websites',
     name: 'The Complete Web Developer Course: Build 20 Websites',
     instructor: 'John Bura',
@@ -141,6 +146,7 @@ const coursePageData: CoursePageData[] = [
   },
   {
     skill: 'TS/JS',
+    skillDataCy: 'TS-JS',
     pathName: 'TS',
     name: "TypeScript: The Complete Developer's Guide",
     instructor: 'Stephen Grider',
@@ -170,6 +176,7 @@ const coursePageData: CoursePageData[] = [
   },
   {
     skill: 'react',
+    skillDataCy: 'react',
     pathName: 'react-bootcamp',
     name: 'The Modern React Bootcamp',
     instructor: 'Colt Steele',

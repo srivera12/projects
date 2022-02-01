@@ -39,8 +39,8 @@ const ContactPage: NextPage = () => {
               <Divider orientation={!isMobile ? 'vertical' : 'horizontal'} />
             </Grid>
             <Grid item xs={4}>
-              {contactData.map((contact) => (
-                <h2 key={parseInt(v4())}>
+              {contactData.map((contact, i) => (
+                <h2 key={i}>
                   <span>{contact.contactType}</span>
                   <a href={contact.contactLink}>{contact.contactText}</a>
                 </h2>
@@ -56,8 +56,8 @@ const ContactPage: NextPage = () => {
           <Grid item container flexDirection="column" justifyContent="center" alignItems="center" xs={11}>
             <div className={styles.contactLinks}>
               <Grid item xs={11}>
-                {contactData.map((contact) => (
-                  <h2 key={parseInt(v4())}>
+                {contactData.map((contact, i) => (
+                  <h2 key={i}>
                     <span>{contact.contactType}</span>
                     <a href={contact.contactLink}>{contact.contactText}</a>
                   </h2>
