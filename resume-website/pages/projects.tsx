@@ -27,7 +27,7 @@ const ProjectsPage: NextPage = () => {
           </Grid>
           <Grid item xs={11} md={2} lg={3} xl={3}>
             <a href="">
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="secondary" data-cy="design-plan-button">
                 Website Design Plan
               </Button>
             </a>
@@ -45,14 +45,14 @@ const ProjectsPage: NextPage = () => {
                 </div>
                 <div className={styles.seeButtons}>
                   <Link href={project.projectLink}>
-                    <a target="_blank">
+                    <a target="_blank" data-cy={`${project.pathName}-project-button`}>
                       <Button variant="contained" color="secondary">
                         See Project
                       </Button>
                     </a>
                   </Link>
                   <Link href={project.githubLink}>
-                    <a target="_blank">
+                    <a target="_blank" data-cy={`${project.pathName}-github-button`}>
                       <Button variant="contained" color="secondary">
                         See Code
                       </Button>
@@ -62,9 +62,11 @@ const ProjectsPage: NextPage = () => {
                 <Typography>{project.blurb}</Typography>
                 <div className={styles.readMore}>
                   <Link href={`/project-pages/${project.pathName}`} passHref>
-                    <Button variant="outlined" color="primary">
-                      Read More
-                    </Button>
+                    <a data-cy={`${project.pathName}-read-more-button`}>
+                      <Button variant="outlined" color="primary">
+                        Read More
+                      </Button>
+                    </a>
                   </Link>
                 </div>
               </div>

@@ -44,16 +44,22 @@ const ProjectPage: NextPage = () => {
               <div className={styles.projectButtons}>
                 <Button variant="contained" color="secondary">
                   <Link href={p.projectLink} passHref>
-                    <a target="_blank">See Project</a>
+                    <a target="_blank" data-cy={`${p.pathName}-project-button`}>
+                      See Project
+                    </a>
                   </Link>
                 </Button>
                 <Button variant="contained" color="secondary">
                   <Link href={p.githubLink} passHref>
-                    <a target="_blank">See Code</a>
+                    <a target="_blank" data-cy={`${p.pathName}-github-button`}>
+                      See Code
+                    </a>
                   </Link>
                 </Button>
                 <Link href="/projects">
-                  <Button variant="outlined">Back to All Projects</Button>
+                  <a data-cy="projects-button">
+                    <Button variant="outlined">Back to All Projects</Button>
+                  </a>
                 </Link>
               </div>
             </Grid>

@@ -33,11 +33,7 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/1.png',
     funFact: (
       <>
-        Unlucky! If you'd like to practice, try using my{' '}
-        <Link href="/project-pages/d20-roller" data-cy="dun-fact-link">
-          d20 roller app
-        </Link>
-        !
+        Unlucky! If you'd like to practice, try using my <Link href="/project-pages/d20-roller">d20 roller app</Link>!
       </>
     ),
   },

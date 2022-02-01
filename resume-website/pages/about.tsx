@@ -31,9 +31,9 @@ const AboutPage: NextPage = () => {
             </a>
           </div>
           <div className={styles.characterText}>
-            {characterSheetText.map((paragraph) => (
+            {characterSheetText.map((paragraph, i) => (
               <CharacterSheetParagraph
-                key={parseInt(v4())}
+                key={i}
                 icon={paragraph.icon}
                 subtitle={paragraph.subtitle}
                 text={paragraph.text}

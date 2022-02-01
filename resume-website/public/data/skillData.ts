@@ -3,6 +3,7 @@ import { faHtml5, faCss3, faJs, faReact } from '@fortawesome/free-brands-svg-ico
 
 interface SkillData {
   skill: string;
+  skillDataCy: string;
   name: string;
   icon: IconDefinition;
   picPath: string;
@@ -12,6 +13,7 @@ interface SkillData {
 const skillData: SkillData[] = [
   {
     skill: 'react',
+    skillDataCy: 'react',
     name: 'React',
     icon: faReact,
     picPath: '/images/react.png',
@@ -20,6 +22,7 @@ const skillData: SkillData[] = [
   },
   {
     skill: 'TS/JS',
+    skillDataCy: 'TS-JS',
     name: 'TypeScript and JavaScript',
     icon: faJs,
     picPath: '/images/tsAndJS.jpeg',
@@ -28,6 +31,7 @@ const skillData: SkillData[] = [
   },
   {
     skill: 'HTML/CSS',
+    skillDataCy: 'HTML-CSS',
     name: 'HTML and CSS',
     icon: faHtml5,
     picPath: '/images/htmlAndCss.png',
