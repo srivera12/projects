@@ -48,9 +48,11 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
                       <img src={c.certPath} alt={`certification of completion for ${c.name}`} />
                       <p>{c.blurb}</p>
                       <Link href={`/courses/${c.pathName}`} passHref>
-                        <Button variant="outlined" color="primary">
-                          Read More
-                        </Button>
+                        <a>
+                          <Button variant="outlined" color="primary">
+                            Read More
+                          </Button>
+                        </a>
                       </Link>
                     </Grid>
                   ))}

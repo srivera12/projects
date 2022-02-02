@@ -85,9 +85,9 @@ describe('Home Page', () => {
           .invoke('text')
           .should(
             'equal',
-            'When I was in college, I studied environmental science and geology. You can read all about it and more on the about page.'
+            'When I was in college, I studied environmental science and geology. You can read all about it and more on my character sheet.'
           );
-        cy.contains('about page').invoke('attr', 'href').should('equal', '/about');
+        cy.contains('character sheet').invoke('attr', 'href').should('equal', '/about');
       });
 
       it('should roll 7', () => {
@@ -166,7 +166,7 @@ describe('Home Page', () => {
           .invoke('text')
           .should(
             'equal',
-            "If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, you can over on the contact page."
+            "If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, head over to the contact page."
           );
         cy.contains('contact page').invoke('attr', 'href').should('equal', '/contact');
       });
@@ -199,7 +199,7 @@ describe('Home Page', () => {
           .invoke('text')
           .should(
             'equal',
-            'Did you know I coded this website using TypeScript? I learned how to when I completed this course.'
+            'Did you know I coded this website using TypeScript? I learned all about it when I completed this course.'
           );
         cy.contains('this course').invoke('attr', 'href').should('equal', '/courses/TS');
       });
@@ -211,7 +211,7 @@ describe('Home Page', () => {
           .invoke('text')
           .should(
             'equal',
-            "Since I've started learning to code, it's been so much fun to learning new languages and get familiar with various tools and frameworks. Check out what I've learned over on the skills page."
+            "Since I've started learning to code, it's been so much fun learning new languages and get familiar with various tools and frameworks. Check out what I've learned over on the skills page."
           );
         cy.contains('skills page').invoke('attr', 'href').should('equal', '/skills');
       });

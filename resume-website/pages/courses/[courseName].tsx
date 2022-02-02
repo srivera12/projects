@@ -62,9 +62,11 @@ const CoursePage: NextPage = () => {
                   </Link>
                 </Button>
                 <Link href="/skills">
-                  <Button variant="outlined" data-cy="skills-button">
-                    Back to Skills
-                  </Button>
+                  <a>
+                    <Button variant="outlined" data-cy="skills-button">
+                      Back to Skills
+                    </Button>
+                  </a>
                 </Link>
               </div>
             </Grid>

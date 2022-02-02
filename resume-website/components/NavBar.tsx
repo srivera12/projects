@@ -49,6 +49,7 @@ const NavBar: FC = (): JSX.Element => {
                 onClick={() => {
                   setDrawerOpen(true);
                 }}
+                data-cy="menu-button"
               />
               <Drawer
                 open={drawerOpen}
