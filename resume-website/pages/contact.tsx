@@ -42,10 +42,15 @@ const ContactPage: NextPage = () => {
               {contactData.map((contact, i) => (
                 <h2 key={i}>
                   <span>{contact.contactType}</span>
-                  <a href={contact.contactLink}>{contact.contactText}</a>
+                  <a href={contact.contactLink} data-cy={`${contact.contactType.toLowerCase()}-link`}>
+                    {contact.contactText}
+                  </a>
                 </h2>
               ))}
-              <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
+              <a
+                href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website"
+                data-cy="contact-button"
+              >
                 <Button variant="contained" color="secondary" size="large">
                   Contact Me
                 </Button>

@@ -62,7 +62,7 @@ const coursePageData: CoursePageData[] = [
     instructor: 'Joseph Delgadillo',
     certPath: '/images/complete.png',
     blurb:
-      "This course included more recent functionalities of HTML5, CSS3, and JS6, but also added jQuery and Bootstrap. My personal favorite part of this course was the Pipboy from Bethesda's Fallout games, a project created with Bootstrap, jQuery, and vanilla Javascript.",
+      "This course included more recent functionalities of HTML5, CSS3, and JS6, but also added jQuery and Bootstrap. My favorite part of this course was the Pip-Boy from Bethesda's Fallout games, a project created with Bootstrap, jQuery, and vanilla Javascript.",
     skillsLearned: [
       'More recent/more semantic HTML.',
       'Bootstrap/using a CSS framework in general.',
@@ -152,7 +152,7 @@ const coursePageData: CoursePageData[] = [
     instructor: 'Stephen Grider',
     certPath: '/images/typescript.jpeg',
     blurb:
-      'This course covered Typescript comprehensively, from the foundational basics of simple type annotations all way to the complexities of using it with various JS libraries and web frameworks. It was exciting to be working on a course designed, not necessarily for beginners to software development, but rather developers who are beginners in this specific content. There was a lot of assumed knowledge, which made this course occasionally challenging, but ultimately was a great experience to move beyond basic tutorial.',
+      'This course covered Typescript comprehensively, from the foundational basics of simple type annotations all way to the complexities of using it with various JS libraries and web frameworks. It was exciting to be working on a course designed not necessarily for beginners to software development, but rather developers who are beginners in this specific content. There was a lot of assumed knowledge, which made this course occasionally challenging, but ultimately was a great experience to move beyond basic tutorial.',
     skillsLearned: [
       'Foundational type annotations - variables, functions, arrays, etc.',
       'How to type using interfacts, tuples, generics, etc.',

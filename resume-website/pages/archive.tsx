@@ -25,7 +25,7 @@ const ArchivePage: NextPage = () => {
               <div className={styles.previousSite}>
                 <h2>Retired: {site.retiredDate}</h2>
                 <img src={site.picPath} alt="homepage of old website" />
-                <a href={site.link} target="_blank" rel="noreferrer">
+                <a href={site.link} target="_blank" rel="noreferrer" data-cy={`${site.dataCy}-button`}>
                   <Button variant="contained" color="secondary">
                     Visit Site
                   </Button>

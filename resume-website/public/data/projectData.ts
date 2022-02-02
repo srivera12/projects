@@ -77,11 +77,11 @@ const projectData: ProjectData[] = [
       'This was designed to be in contrast with the first to-do app shown here, that was just JavaScript. This was a refactored version of a simple React to-do app created in a course, but this one uses hooks, contexts, and a dispatch.',
     challenges: [
       'One challenge was re-factoring this repeatedly. Once I was done switching everything to be functional components and use state with hooks, I needed to refactor again because we had been introduced to the concepts of a context, and so on.',
-      'This project gave me a chance to get familiar with using Material UI components. We had used them in a limited sense before, but using them extensively here let me better understand how to use them effectively, as well as how to customize the styles to fit what I wanted.',
+      'This project gave me a chance to get familiar with using Material UI components. I had used them in a limited sense before, but using them extensively here let me better understand how to use them effectively, as well as how to customize the styles to fit what I wanted.',
       'Having to change the method for syncing with local storage to fit each refactor helped me really understand how that process worked, which was very helpful for the next project I made.',
     ],
     reflections:
-      "This project definitely feels like an 'all grown up' version of my JavaScript to-do app. It has a lot of the same functionality and a similar appearance, but it looks a lot better and has all of the functionality I originally wanted the JavaScript one to have. Creating this was a great moment to take stock of my process, and how creating this far more complicated version felt less daunting than making the simpler one did months ago.",
+      "This project definitely feels like an 'all grown up' version of my JavaScript to-do app. It has a lot of the same functionality and a similar appearance, but it looks a lot better and has all of the functionality I originally wanted the JavaScript one to have. Creating this was a great moment to take stock of my process, and how creating this far more complicated version felt less daunting than making the simpler one did only 2 months before.",
   },
   {
     pathName: 'academic-tracker',
@@ -90,13 +90,13 @@ const projectData: ProjectData[] = [
     projectLink: 'https://awesome-gates-3270af.netlify.app',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:
-      'I made this for my little sister, who is in high school. She needed to keep tracker of completed assignments for each class as simply as possible, but also wanted some fun features.',
+      'I made this for my little sister, who is in high school. She needed to keep track of completed assignments for each class as simply as possible, but also wanted some fun features.',
     approach:
       'This was the first project that was completely my own from start to finish, so I chose to use what I had been working with most frequently - Create React App and Material UI. I also talked with my sister at length about what she needed from this app so that it would actually be useful for her.',
     challenges: [
       "My sister wanted things as simple as possible. She didn't want to have to enter in any information about the assignments, just the class and the number of assignments. She also wanted it to track week to week rather than daily or for the semester.",
       'My sister is a teenager, and she wanted the app to be fun and encouraging. So I needed to find tools that would allow for fun celebratory effects when she finished all the assignments for a class, or all her assignments for the week.',
-      "Once I completed the app, my sister requested the ability to customize the background with colors or images. This required using some tools I haven't used before, finding a way to dynamically render a background image, how to allow the user to switch between having a customized background image or background color, as well as how to save their customizations to local storage.",
+      "Once I completed the app, my sister requested the ability to customize the background with colors or images. This required using some tools I haven't used before, finding a way to dynamically render a background image, figuring out how to allow the user to switch between having a customized background image or background color, as well as how to save their customizations to local storage.",
     ],
     reflections:
       "This is my most recent project, so I don't have the same level of hindsight about it that I do for my other projects. However, I am very happy with how this turned out. It has all the features and functionality my sister requested, and she has been finding it useful to help keep track of her academic work.",

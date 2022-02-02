@@ -33,7 +33,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/1.png',
     funFact: (
       <>
-        Unlucky! If you'd like to practice, try using my <Link href="/project-pages/d20-roller">d20 roller app</Link>!
+        Unlucky! If you'd like to practice, try using my{' '}
+        <Link href="/project-pages/d20-roller">
+          <a>d20 roller app</a>
+        </Link>
+        !
       </>
     ),
   },
@@ -43,7 +47,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         Everyone has to start somewhere! Check out my earliest coding project, a{' '}
-        <Link href="/project-pages/JS-todo-app">to-do app using JavaScript</Link>!
+        <Link href="/project-pages/JS-todo-app">
+          <a>to-do app using JavaScript</a>
+        </Link>
+        !
       </>
     ),
   },
@@ -53,7 +60,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         Did you know that I started learning to code in April 2021? Check out the{' '}
-        <Link href="/courses/HTML-CSS-JS-cert">very first course</Link> I took!
+        <Link href="/courses/HTML-CSS-JS-cert">
+          <a>very first course</a>
+        </Link>{' '}
+        I took!
       </>
     ),
   },
@@ -63,7 +73,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         Did you know I used to be a teacher? Read all about it, and the great skills that experience taught me, on my{' '}
-        <Link href="/about">character sheet</Link>.
+        <Link href="/about">
+          <a>character sheet</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -72,8 +85,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/5.png',
     funFact: (
       <>
-        Feeling swamped? Why don't you try out my <Link href="/project-pages/react-todo-app">React To-Do App</Link> to
-        help keep track of things!
+        Feeling swamped? Why don't you try out my{' '}
+        <Link href="/project-pages/react-todo-app">
+          <a>React To-Do App</a>
+        </Link>{' '}
+        to help keep track of things!
       </>
     ),
   },
@@ -82,8 +98,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/6.png',
     funFact: (
       <>
-        When I was in college, I studied environmental science and geology. You can read all about it and more on the{' '}
-        <Link href="/about">about page</Link>.
+        When I was in college, I studied environmental science and geology. You can read all about it and more on my{' '}
+        <Link href="/about">
+          <a>character sheet</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -92,7 +111,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/7.png',
     funFact: (
       <>
-        You can check out previous versions of my portfolio website in the <Link href="/archive">archive</Link>.
+        You can check out previous versions of my portfolio website in the{' '}
+        <Link href="/archive">
+          <a>archive</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -101,7 +124,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/8.png',
     funFact: (
       <>
-        Would you like to take a look at some of the <Link href="/projects">projects</Link> I've made?
+        Would you like to take a look at some of the{' '}
+        <Link href="/projects">
+          <a>projects</a>
+        </Link>{' '}
+        I've made?
       </>
     ),
   },
@@ -111,7 +138,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         What do you like to do when you are offline? You can find out what I do in my spare time on the{' '}
-        <Link href="/about">about page</Link>.
+        <Link href="/about">
+          <a>about page</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -121,7 +151,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         Have you ever played a Fallout game? I made a mock Pip-Boy for{' '}
-        <Link href="/courses/complete-frontend">one of my coding courses</Link>.
+        <Link href="/courses/complete-frontend">
+          <a>one of my coding courses</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -131,7 +164,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         Did you know I made an academic tracker for my teenaged sister? Check it out{' '}
-        <Link href="/project-pages/academic-tracker">here</Link>!
+        <Link href="/project-pages/academic-tracker">
+          <a>here</a>
+        </Link>
+        !
       </>
     ),
   },
@@ -141,7 +177,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         I completed a JavaScript Bootcamp and made some pretty cool projects. Check them out{' '}
-        <Link href="/courses/JS-bootcamp">here</Link>!
+        <Link href="/courses/JS-bootcamp">
+          <a>here</a>
+        </Link>
+        !
       </>
     ),
   },
@@ -151,7 +190,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         If you'd like to jump straight to my code you can check it out{' '}
-        <Link href="https://github.com/srivera12">on GitHub</Link>.
+        <Link href="https://github.com/srivera12">
+          <a>on GitHub</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -160,8 +202,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/14.png',
     funFact: (
       <>
-        If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, you can over on the{' '}
-        <Link href="/contact">contact page</Link>.
+        If you'd like to contact me through email or LinkedIn, or even just check out my GitHub, head over to the{' '}
+        <Link href="/contact">
+          <a>contact page</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -171,7 +216,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         I've had practice making a variety of webpages during my{' '}
-        <Link href="/courses/build-20-websites">Build 20 Websites course</Link>!
+        <Link href="/courses/build-20-websites">
+          <a>Build 20 Websites course</a>
+        </Link>
+        !
       </>
     ),
   },
@@ -181,8 +229,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         It always feels great to make something that people find helpful. Check out this{' '}
-        <Link href="/project-pages/montessori-quotes-app">quote app</Link> I made for my mom, who is a Montessori
-        teacher.
+        <Link href="/project-pages/montessori-quotes-app">
+          <a>quote app</a>
+        </Link>{' '}
+        I made for my mom, who is a Montessori teacher.
       </>
     ),
   },
@@ -191,8 +241,11 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/17.png',
     funFact: (
       <>
-        Did you know I coded this website using TypeScript? I learned how to when I completed{' '}
-        <Link href="/courses/TS">this course</Link>.
+        Did you know I coded this website using TypeScript? I learned all about it when I completed{' '}
+        <Link href="/courses/TS">
+          <a>this course</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -201,8 +254,12 @@ const funFacts: d20Rolls[] = [
     d20PicPath: '/images/18.png',
     funFact: (
       <>
-        Since I've started learning to code, it's been so much fun to learning new languages and get familiar with
-        various tools and frameworks. Check out what I've learned over on the <Link href="/skills">skills page</Link>.
+        Since I've started learning to code, it's been so much fun learning new languages and get familiar with various
+        tools and frameworks. Check out what I've learned over on the{' '}
+        <Link href="/skills">
+          <a>skills page</a>
+        </Link>
+        .
       </>
     ),
   },
@@ -212,7 +269,10 @@ const funFacts: d20Rolls[] = [
     funFact: (
       <>
         React is a powerful and popular web framework. I learned how to use it for projects like this website through{' '}
-        <Link href="/courses/react-bootcamp">this bootcamp</Link>.
+        <Link href="/courses/react-bootcamp">
+          <a>this bootcamp</a>
+        </Link>
+        .
       </>
     ),
   },

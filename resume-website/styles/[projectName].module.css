@@ -4,7 +4,7 @@
 }
 
 .project img {
-  height: 500px;
+  height: 500px !important;
   padding-bottom: 2vh !important;
 }
 
@@ -29,6 +29,10 @@
 }
 
 @media (max-width: 500px) {
+  .project img {
+    height: 300px !important;
+  }
+
   .projectButtons button {
     margin-top: 20px;
   }
