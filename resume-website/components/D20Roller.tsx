@@ -37,7 +37,7 @@ const D20Roller: FC = (): JSX.Element => {
   }, [isRolling, hasRolled, rollState.funFact, rollState.rolledNumber]);
 
   function roll() {
-    const forcedRoll: object | undefined = window['Cypress' as any]['d20_roll' as any] || undefined;
+    const forcedRoll: object | undefined = window['Cypress' as any]?.['d20_roll' as any];
     setIsRolling(true);
     setHasRolled(true);
     const roll = forcedRoll ? forcedRoll : Math.floor(Math.random() * 20) + 1;
