@@ -6,15 +6,15 @@
 }
 
 .main {
-  margin-top: 9vh;
-  height: 79vh;
+  margin-top: 10vh;
+  height: 78vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .mobileMain {
-  margin-top: 9vh;
-  height: 91vh;
+  margin-top: 10vh;
+  height: 90vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }

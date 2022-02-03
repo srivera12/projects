@@ -33,29 +33,14 @@
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  .footer h4 {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-  }
-
-  .contact {
-    padding: 0 10%;
-  }
+.navbarSpacing {
+  height: 15vh;
 }
 
-@media (max-width: 400px) {
-  .contact a {
-    height: 30px;
-  }
+.mobileListItem {
+  justify-content: center;
+}
 
-  .contact svg {
-    height: 100%;
-    vertical-align: top;
-  }
-
-  .contact button {
-    vertical-align: top;
-    line-height: 1.25;
-  }
+.mobileListItem a {
+  display: flex;
 }

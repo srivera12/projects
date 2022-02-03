@@ -50,11 +50,14 @@ const theme = createTheme({
     },
     MuiDrawer: {
       styleOverrides: {
-        root: { width: 400 },
+        root: { height: '100vh' },
         paper: {
           backgroundColor: '#333',
           color: '#b5b8ff',
           fontSize: '30px',
+          '& p': {
+            fontSize: '20px',
+          },
         },
       },
     },

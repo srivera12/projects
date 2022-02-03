@@ -26,7 +26,7 @@ export function IsMobileProvider({ children }: ContextProps) {
     // };
     // window.addEventListener('resize', handleWindowResize);
     // if (windowSize.width < 500 || windowSize.height < 800) {
-    if (window.innerWidth < 500 || window.innerHeight < 800) {
+    if (window.innerWidth < 500 || window.innerHeight < 750) {
       setIsMobile(true);
       console.log('is mobile');
     } else {

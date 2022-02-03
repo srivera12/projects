@@ -20,13 +20,13 @@ const ContactPage: NextPage = () => {
           <Grid
             item
             container
-            xs={11}
+            xs={10}
             justifyContent="space-around"
             alignItems="center"
             className={styles.contactLinks}
             columnSpacing={5}
           >
-            <Grid item xs={3}>
+            <Grid item xs={5}>
               <div>
                 <img
                   src="/images/working.png"
@@ -38,7 +38,7 @@ const ContactPage: NextPage = () => {
             <Grid item xs={1}>
               <Divider orientation={!isMobile ? 'vertical' : 'horizontal'} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={5}>
               {contactData.map((contact, i) => (
                 <h2 key={i}>
                   <span>{contact.contactType}</span>

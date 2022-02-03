@@ -23,6 +23,7 @@ import pageData from '../public/data/pageData';
 import MenuIcon from '@mui/material/Menu';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import Footer from './Footer';
 
 const NavBar: FC = (): JSX.Element => {
   const router = useRouter();
@@ -30,9 +31,9 @@ const NavBar: FC = (): JSX.Element => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <AppBar className={styles.navbar} color="transparent">
+    <AppBar className={!isMobile ? styles.navbar : styles.mobileNavbar} color="transparent">
       <Toolbar>
-        <div className={styles.home}>
+        <div className={!isMobile ? styles.navHome : styles.mobileNavHome}>
           <Link href="/">
             <a data-cy="home-link">
               <FontAwesomeIcon icon={faDiceD20} />
@@ -41,7 +42,18 @@ const NavBar: FC = (): JSX.Element => {
           </Link>
         </div>
         <div className={styles.pages}>
-          {isMobile ? (
+          {!isMobile ? (
+            pageData.map((page, i) => (
+              <Link href={page.pageRoute} key={i}>
+                <a
+                  className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                  data-cy={`${page.pageName.toLowerCase()}-link`}
+                >
+                  {page.pageName}
+                </a>
+              </Link>
+            ))
+          ) : (
             <>
               <FontAwesomeIcon
                 icon={faBars}
@@ -63,7 +75,7 @@ const NavBar: FC = (): JSX.Element => {
                   {pageData.map((page, i) => (
                     <Link href={page.pageRoute} key={i}>
                       <a
-                        className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                        className={currentPath === page.pageRoute ? styles.mobileActiveLink : ''}
                         data-cy={`${page.pageName.toLowerCase()}-link`}
                       >
                         <ListItem
@@ -76,20 +88,10 @@ const NavBar: FC = (): JSX.Element => {
                       </a>
                     </Link>
                   ))}
+                  <Footer />
                 </List>
               </Drawer>
             </>
-          ) : (
-            pageData.map((page, i) => (
-              <Link href={page.pageRoute} key={i}>
-                <a
-                  className={currentPath === page.pageRoute ? styles.activeLink : ''}
-                  data-cy={`${page.pageName.toLowerCase()}-link`}
-                >
-                  {page.pageName}
-                </a>
-              </Link>
-            ))
           )}
         </div>
       </Toolbar>

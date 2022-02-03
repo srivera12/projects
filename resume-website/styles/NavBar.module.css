@@ -1,10 +1,20 @@
 .navbar {
   border-bottom: 2px solid #43e9e1;
-  height: 9vh;
+  height: 10vh;
   justify-content: center;
 }
 
 .navbar a {
+  margin: 0 20px 0 20px;
+}
+
+.mobileNavbar {
+  border-bottom: 2px solid #43e9e1;
+  height: 10vh;
+  justify-content: center;
+}
+
+.mobileNavbar a {
   margin: 0 20px 0 20px;
 }
 
@@ -13,18 +23,29 @@
   color: #1cef9e;
 }
 
-.home {
-  align-self: flex-start;
+.mobileActiveLink {
+  color: #1cef9e;
+  font-size: 30px;
+}
+
+.navHome {
   color: #43e9e1;
   padding: 20px;
   font-size: 1.5rem;
 }
 
-.home sup {
+.mobileNavHome {
+  color: #43e9e1;
+  padding-top: 2vh;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navHome sup {
   font-size: 15px;
 }
 
-.home svg {
+.navHome svg {
   margin-right: 10px;
 }
 
@@ -36,17 +57,4 @@
 
 .pages svg {
   color: #1cef9e;
-}
-
-@media (max-width: 500px) {
-  .home {
-    padding-top: 2vh;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .activeLink {
-    color: #1cef9e;
-    font-size: 30px;
-  }
 }
