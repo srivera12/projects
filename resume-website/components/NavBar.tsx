@@ -61,16 +61,20 @@ const NavBar: FC = (): JSX.Element => {
               >
                 <List>
                   {pageData.map((page, i) => (
-                    <ListItem key={i}>
-                      <Link href={page.pageRoute}>
-                        <a
-                          className={currentPath === page.pageRoute ? styles.activeLink : ''}
-                          data-cy={`${page.pageName.toLowerCase()}-link`}
+                    <Link href={page.pageRoute} key={i}>
+                      <a
+                        className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                        data-cy={`${page.pageName.toLowerCase()}-link`}
+                      >
+                        <ListItem
+                          onClick={() => {
+                            setDrawerOpen(false);
+                          }}
                         >
                           {page.pageName}
-                        </a>
-                      </Link>
-                    </ListItem>
+                        </ListItem>
+                      </a>
+                    </Link>
                   ))}
                 </List>
               </Drawer>

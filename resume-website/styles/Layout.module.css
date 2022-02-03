@@ -12,8 +12,13 @@
   overflow-x: hidden;
 }
 
-@media (max-width: 500px) {
-  .main::-webkit-scrollbar {
-    display: none;
-  }
+.mobileMain {
+  margin-top: 9vh;
+  height: 91vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.mobileMain::-webkit-scrollbar {
+  display: none;
 }

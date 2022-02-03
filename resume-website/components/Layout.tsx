@@ -2,6 +2,8 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import styles from '../styles/Layout.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useContext } from 'react';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 const theme = createTheme({
   palette: {
@@ -64,12 +66,13 @@ type LayoutProps = {
 };
 
 export default function DashboardLayout({ children }: LayoutProps) {
+  const { isMobile } = useContext(IsMobileContext);
   return (
     <div className={styles.layout}>
       <ThemeProvider theme={theme}>
         <NavBar />
-        <div className={styles.main}>{children}</div>
-        <Footer />
+        <div className={!isMobile ? styles.main : styles.mobileMain}>{children}</div>
+        {!isMobile ? <Footer /> : null}
       </ThemeProvider>
     </div>
   );
