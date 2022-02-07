@@ -1,4 +1,5 @@
-.archive {
+.archive,
+.mobileArchive {
   height: fit-content;
   padding-bottom: 20px;
 }
@@ -12,7 +13,17 @@
   margin-left: auto;
 }
 
-.archive h4 {
+.mobileArchive h1 {
+  color: #b5b8ff;
+  font-size: 40px;
+  margin-bottom: 2vh;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.archive h4,
+.mobileArchive h4 {
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
@@ -40,10 +51,4 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-}
-
-@media (max-width: 500px) {
-  .archive h1 {
-    font-size: 40px;
-  }
 }

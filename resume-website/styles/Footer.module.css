@@ -7,13 +7,15 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 
 .footer h4 {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nameLink {

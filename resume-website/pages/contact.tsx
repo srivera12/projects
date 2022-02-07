@@ -11,7 +11,7 @@ import { v4 } from 'uuid';
 const ContactPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <div className={styles.contactPage}>
+    <div className={!isMobile ? styles.contactPage : styles.mobileContactPage}>
       <Grid container justifyContent="center" alignItems="center" spacing={5}>
         <Grid item xs={11}>
           <h1 className={styles.title}>CONTACT ME</h1>
@@ -59,7 +59,7 @@ const ContactPage: NextPage = () => {
           </Grid>
         ) : (
           <Grid item container flexDirection="column" justifyContent="center" alignItems="center" xs={11}>
-            <div className={styles.contactLinks}>
+            <div className={styles.mobileContactLinks}>
               <Grid item xs={11}>
                 {contactData.map((contact, i) => (
                   <h2 key={i}>
@@ -67,7 +67,7 @@ const ContactPage: NextPage = () => {
                     <a href={contact.contactLink}>{contact.contactText}</a>
                   </h2>
                 ))}
-                <div className={styles.contactButton}>
+                <div className={styles.mobileContactButton}>
                   <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website">
                     <Button variant="contained" color="secondary" size="large">
                       Contact Me
@@ -76,7 +76,7 @@ const ContactPage: NextPage = () => {
                 </div>
               </Grid>
               <Grid item xs={12}>
-                <div className={styles.contactImg}>
+                <div className={styles.mobileContactImg}>
                   <img
                     src="/images/working.png"
                     alt="cartoon version of Sarah K Rivera walking and holding a briefcase"

@@ -1,4 +1,5 @@
-.project {
+.project,
+.mobileProject {
   height: fit-content;
   padding-bottom: 20px;
 }
@@ -8,19 +9,28 @@
   padding-bottom: 2vh !important;
 }
 
-.project h1 {
+.mobileProject img {
+  height: 300px !important;
+  padding-bottom: 2vh !important;
+}
+
+.project h1,
+.mobileProject h1 {
   color: #b8b5ff;
 }
 
-.project h3 {
+.project h3,
+.mobileProject h3 {
   color: #1cef9e;
 }
 
-.project h4 {
+.project h4,
+.mobileProject h4 {
   color: #43e9e1;
 }
 
-.project button {
+.project button,
+.mobileProject button {
   margin-right: 20px;
 }
 
@@ -28,12 +38,6 @@
   margin-top: 20px;
 }
 
-@media (max-width: 500px) {
-  .project img {
-    height: 300px !important;
-  }
-
-  .projectButtons button {
-    margin-top: 20px;
-  }
+.mobileProjectButtons button {
+  margin-top: 20px;
 }

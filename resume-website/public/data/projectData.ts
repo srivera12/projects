@@ -1,4 +1,4 @@
-interface ProjectData {
+export interface ProjectData {
   pathName: string;
   name: string;
   picPath: string;

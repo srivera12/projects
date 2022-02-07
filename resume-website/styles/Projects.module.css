@@ -1,4 +1,5 @@
-.projects {
+.projects,
+.mobileProjects {
   height: fit-content;
   padding-left: 20px;
   padding-right: 20px;
@@ -9,6 +10,13 @@
   color: #b8b5ff;
   margin-top: 2vh;
   font-size: 60px;
+}
+
+.mobileProjects h1 {
+  color: #b8b5ff;
+  margin-top: 2vh;
+  font-size: 40px;
+  margin-bottom: 0;
 }
 
 .idvProject {
@@ -43,7 +51,8 @@
   margin: 10px 0;
 }
 
-.projects button {
+.projects button,
+.mobileProjects button {
   margin: 20px 10px;
 }
 
@@ -55,11 +64,4 @@
 
 .idvProject p {
   color: #ddd;
-}
-
-@media (max-width: 500px) {
-  .projects h1 {
-    font-size: 40px;
-    margin-bottom: 0;
-  }
 }

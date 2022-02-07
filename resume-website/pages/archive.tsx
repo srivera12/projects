@@ -10,7 +10,7 @@ import { v4 } from 'uuid';
 const ArchivePage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <div className={styles.archive}>
+    <div className={!isMobile ? styles.archive : styles.mobileArchive}>
       <Grid container justifyContent="center" alignItems="center" rowSpacing={!isMobile ? 10 : 2}>
         <Grid item xs={11}>
           <h1>WEBSITE ARCHIVE</h1>

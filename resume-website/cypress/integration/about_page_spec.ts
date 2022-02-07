@@ -14,3 +14,5 @@ describe('About Page', () => {
     });
   });
 });
+
+export {};

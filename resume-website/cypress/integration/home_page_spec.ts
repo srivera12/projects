@@ -21,11 +21,11 @@ describe('Home Page', () => {
 
     describe('roll tests', () => {
       after(() => {
-        delete window['Cypress']['d20_roll'];
+        delete window['Cypress' as any]['d20_roll' as any];
       });
 
       it('should roll 1', () => {
-        window['Cypress']['d20_roll'] = 1;
+        window['Cypress' as any]['d20_roll'] = 1;
         cy.get('[data-cy="d20"]').click();
         cy.contains('Unlucky')
           .invoke('text')
@@ -239,3 +239,5 @@ describe('Home Page', () => {
     });
   });
 });
+
+export {};

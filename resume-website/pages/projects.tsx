@@ -11,7 +11,7 @@ import { v4 } from 'uuid';
 const ProjectsPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <div className={styles.projects}>
+    <div className={!isMobile ? styles.projects : styles.mobileProjects}>
       <Grid container justifyContent="center">
         <Grid
           item

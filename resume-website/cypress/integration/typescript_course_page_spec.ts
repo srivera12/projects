@@ -38,3 +38,5 @@ describe('Typescript Course Page', () => {
     cy.url().should('include', '/skills');
   });
 });
+
+export {};

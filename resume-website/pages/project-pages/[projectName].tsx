@@ -1,72 +1,127 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import projectData from '../../public/data/projectData';
+import projectData, { ProjectData } from '../../public/data/projectData';
 import { Grid, Typography, List, ListItem, Button } from '@mui/material';
 import Link from 'next/link';
 import styles from '../../styles/[projectName].module.css';
 import Image from 'next/image';
 import { v4 } from 'uuid';
+import { useContext } from 'react';
+import { IsMobileContext } from '../../contexts/isMobileContext';
 
-const ProjectPage: NextPage = () => {
-  const router = useRouter();
-  const pathName = router.query.projectName;
+type ProjectPage = {
+  children: React.ReactNode;
+  projectPageData: ProjectPageProps;
+};
+
+interface ProjectPageProps {
+  projectName: string;
+  singleProjectData: ProjectData;
+}
+
+const ProjectPage = ({ projectPageData }: ProjectPage) => {
+  const pageData = projectPageData.singleProjectData;
+  const { isMobile } = useContext(IsMobileContext);
   return (
     <>
-      {projectData
-        .filter((project) => project.pathName === pathName)
-        .map((p) => (
-          <Grid container justifyContent="center" spacing={1} className={styles.project} key={parseInt(v4())}>
-            <Grid item xs={11}>
-              <h1>{p.name}</h1>
-            </Grid>
-            <Grid item xs={10} md={6}>
-              <img src={p.picPath} alt={`${p.name} in use`} />
-            </Grid>
-            <Grid item xs={11}>
-              <Typography>{p.blurb}</Typography>
-            </Grid>
-            <Grid item xs={11}>
-              <Typography>{p.approach}</Typography>
-            </Grid>
-            <Grid item xs={10} md={8}>
-              <h4>Challenges:</h4>
-              <List>
-                {p.challenges.map((challenge) => (
-                  <ListItem key={parseInt(v4())}>{challenge}</ListItem>
-                ))}
-              </List>
-            </Grid>
-            <Grid item xs={10} md={8}>
-              <h4>Reflections:</h4>
-              <Typography>{p.reflections}</Typography>
-            </Grid>
-            <Grid item xs={10}>
-              <div className={styles.projectButtons}>
-                <Button variant="contained" color="secondary">
-                  <Link href={p.projectLink} passHref>
-                    <a target="_blank" data-cy={`${p.pathName}-project-button`}>
-                      See Project
-                    </a>
-                  </Link>
-                </Button>
-                <Button variant="contained" color="secondary">
-                  <Link href={p.githubLink} passHref>
-                    <a target="_blank" data-cy={`${p.pathName}-github-button`}>
-                      See Code
-                    </a>
-                  </Link>
-                </Button>
-                <Link href="/projects">
-                  <a data-cy="projects-button">
-                    <Button variant="outlined">Back to All Projects</Button>
-                  </a>
-                </Link>
-              </div>
-            </Grid>
-          </Grid>
-        ))}
+      <Grid
+        container
+        justifyContent="center"
+        spacing={1}
+        className={!isMobile ? styles.project : styles.mobileProject}
+        key={parseInt(v4())}
+      >
+        <Grid item xs={11}>
+          <h1>{pageData.name}</h1>
+        </Grid>
+        <Grid item xs={10} md={6}>
+          <img src={pageData.picPath} alt={`${pageData.name} in use`} />
+        </Grid>
+        <Grid item xs={11}>
+          <Typography>{pageData.blurb}</Typography>
+        </Grid>
+        <Grid item xs={11}>
+          <Typography>{pageData.approach}</Typography>
+        </Grid>
+        <Grid item xs={10} md={8}>
+          <h4>Challenges:</h4>
+          <List>
+            {pageData.challenges.map((challenge) => (
+              <ListItem key={parseInt(v4())}>{challenge}</ListItem>
+            ))}
+          </List>
+        </Grid>
+        <Grid item xs={10} md={8}>
+          <h4>Reflections:</h4>
+          <Typography>{pageData.reflections}</Typography>
+        </Grid>
+        <Grid item xs={10}>
+          <div className={!isMobile ? styles.projectButtons : styles.mobileProjectButtons}>
+            <Button variant="contained" color="secondary">
+              <Link href={pageData.projectLink} passHref>
+                <a target="_blank" data-cy={`${pageData.pathName}-project-button`}>
+                  See Project
+                </a>
+              </Link>
+            </Button>
+            <Button variant="contained" color="secondary">
+              <Link href={pageData.githubLink} passHref>
+                <a target="_blank" data-cy={`${pageData.pathName}-github-button`}>
+                  See Code
+                </a>
+              </Link>
+            </Button>
+            <Link href="/projects">
+              <a data-cy="projects-button">
+                <Button variant="outlined">Back to All Projects</Button>
+              </a>
+            </Link>
+          </div>
+        </Grid>
+      </Grid>
     </>
   );
 };
 
 export default ProjectPage;
+
+function getAllProjectPageIds() {
+  return projectData.map((project) => ({
+    params: {
+      projectName: project.pathName,
+    },
+  }));
+}
+
+export async function getStaticPaths() {
+  const paths = getAllProjectPageIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+function getProjectPageData(projectName: string) {
+  const singleProjectData = projectData.filter((project) => projectName === project.pathName).pop();
+  return {
+    projectName,
+    singleProjectData,
+  };
+}
+
+interface ProjectStaticProps {
+  params: ProjectParams;
+}
+
+interface ProjectParams {
+  projectName: string;
+}
+
+export async function getStaticProps({ params }: ProjectStaticProps) {
+  const projectPageData = getProjectPageData(params.projectName);
+  return {
+    props: {
+      projectPageData,
+    },
+  };
+}

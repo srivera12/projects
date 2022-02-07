@@ -1,4 +1,5 @@
-.skills {
+.skills,
+.mobileSkills {
   color: #b8b5ff;
   width: 100%;
   padding-bottom: 20px;
@@ -12,7 +13,16 @@
   margin-bottom: 1vh;
 }
 
-.skills h3 {
+.mobileSkills h1 {
+  font-size: 35px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1vh;
+}
+
+.skills h3,
+.mobileSkills h3 {
   color: #43e9e1;
   width: fit-content;
   margin-right: auto;
@@ -30,7 +40,7 @@
   border-radius: 10px;
 }
 
-.skills .mainSkill:hover {
+.mainSkill:hover {
   border: 3px solid #1cef9e;
 }
 
@@ -43,8 +53,25 @@
   padding: 50px 100px;
 }
 
-.skills .additionalSkills h1 {
+.mobileAdditionalSkills {
+  background-color: #b8b5ff;
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  margin-top: 5vh;
+  padding: 20px 50px;
+}
+
+.additionalSkills h1 {
   font-size: 35px;
+  color: #333;
+  margin: 0 auto 20px auto;
+  border-bottom: 5px solid #43e9e1;
+  padding: 0;
+}
+
+.mobileAdditionalSkills h1 {
+  font-size: 25px;
   color: #333;
   margin: 0 auto 20px auto;
   border-bottom: 5px solid #43e9e1;
@@ -53,18 +80,4 @@
 
 .skills .additionalSkills img:hover {
   cursor: default;
-}
-
-@media (max-width: 500px) {
-  .skills h1 {
-    font-size: 35px;
-  }
-
-  .additionalSkills {
-    padding: 20px 50px;
-  }
-
-  .skills .additionalSkills h1 {
-    font-size: 28px;
-  }
 }

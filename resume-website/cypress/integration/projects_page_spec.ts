@@ -112,3 +112,5 @@ describe('Projects Page', () => {
     });
   });
 });
+
+export {};

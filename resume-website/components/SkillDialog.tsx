@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Dialog, DialogContent, DialogTitle, Divider, Grid, Typography } from '@mui/material';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import skillData from '../public/data/skillData';
 import courseData from '../public/data/courseData';
 import styles from '../styles/SkillDialog.module.css';
@@ -10,6 +10,7 @@ import coursePageData from '../public/data/courseData';
 import Link from 'next/link';
 import Image from 'next/image';
 import { v4 } from 'uuid';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 interface SkillDialogProps {
   skill: string;
@@ -17,6 +18,7 @@ interface SkillDialogProps {
 }
 
 const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => {
+  const { isMobile } = useContext(IsMobileContext);
   return (
     <>
       {skillData
@@ -29,15 +31,25 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
               setSkill('');
             }}
           >
-            <DialogTitle data-cy={`${s.skillDataCy}-dialog`}>
-              <div className={styles.heading}>
-                <FontAwesomeIcon icon={s.icon} />
-                {s.name}
-              </div>
-              <Typography>{s.blurb}</Typography>
-            </DialogTitle>
+            {!isMobile ? (
+              <DialogTitle data-cy={`${s.skillDataCy}-dialog`}>
+                <div className={styles.heading}>
+                  <FontAwesomeIcon icon={s.icon} />
+                  {s.name}
+                </div>
+                <Typography>{s.blurb}</Typography>
+              </DialogTitle>
+            ) : (
+              <DialogTitle data-cy={`${s.skillDataCy}-dialog`}>
+                <div className={styles.heading}>
+                  <FontAwesomeIcon icon={s.icon} />
+                  {s.name}
+                </div>
+              </DialogTitle>
+            )}
             <Divider variant="middle" />
             <DialogContent>
+              {!isMobile ? null : <Typography>{s.blurb}</Typography>}
               <Grid container justifyContent="center" alignItems="center" rowSpacing={5}>
                 {courseData
                   .filter((course) => course.skill === skill)

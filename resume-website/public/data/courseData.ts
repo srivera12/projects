@@ -5,7 +5,7 @@ import build20 from '../images/build20.png';
 import typescript from '../images/typescript.jpeg';
 import reactBootcamp from '../images/reactBootcamp.png';
 
-interface CoursePageData {
+export interface CoursePageData {
   skill: string;
   skillDataCy: string;
   pathName: string;

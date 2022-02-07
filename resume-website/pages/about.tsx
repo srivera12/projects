@@ -9,16 +9,19 @@ import { faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import CharacterSheetParagraph from '../components/CharacterSheetParagraph';
 import { v4 } from 'uuid';
+import { useContext } from 'react';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 const AboutPage: NextPage = () => {
+  const { isMobile } = useContext(IsMobileContext);
   return (
-    <div className={styles.about}>
+    <div className={!isMobile ? styles.about : styles.mobileAbout}>
       <Grid container justifyContent="center" alignItems="center">
         <Grid item xs={11}>
           <h1>CHARACTER SHEET</h1>
         </Grid>
         <Grid item xs={11}>
-          <div className={styles.picture}>
+          <div className={!isMobile ? styles.picture : styles.mobilePicture}>
             <img
               src="/images/characterPic.png"
               alt="cartoon version of Sarah K Rivera casting a magic spell while smiling towards the viewer"
@@ -30,7 +33,7 @@ const AboutPage: NextPage = () => {
               </Button>
             </a>
           </div>
-          <div className={styles.characterText}>
+          <div className={!isMobile ? styles.characterText : styles.mobileCharacterText}>
             {characterSheetText.map((paragraph, i) => (
               <CharacterSheetParagraph
                 key={i}

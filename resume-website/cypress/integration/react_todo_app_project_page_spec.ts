@@ -24,3 +24,5 @@ describe('React To-Do App Project Page', () => {
     cy.url().should('include', '/projects');
   });
 });
+
+export {};

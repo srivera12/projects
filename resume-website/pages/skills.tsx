@@ -13,17 +13,19 @@ import mui from '../public/images/mui.png';
 import vscode from '../public/images/vscode.png';
 import nextjs from '../public/images/nextjs.png';
 import bootstrap from '../public/images/bootstrap.png';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import SkillDialog from '../components/SkillDialog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import skillData from '../public/data/skillData';
 import additionalSkillsData from '../public/data/additionalSkillsData';
 import { v4 } from 'uuid';
+import { IsMobileContext } from '../contexts/isMobileContext';
 
 const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
+  const { isMobile } = useContext(IsMobileContext);
   return (
-    <div className={styles.skills}>
+    <div className={!isMobile ? styles.skills : styles.mobileSkills}>
       <Grid container flexDirection="column">
         <div>
           <h1>SKILLS AND COURSES</h1>
@@ -51,7 +53,7 @@ const SkillsPage: NextPage = () => {
       </Grid>
       <Grid container justifyContent="center" alignItems="center" className={styles.additionalSkillsContainer}>
         <Grid item xs={11} md={6}>
-          <div className={styles.additionalSkills}>
+          <div className={!isMobile ? styles.additionalSkills : styles.mobileAdditionalSkills}>
             <h1>ADDITIONAL SKILLS</h1>
             <Grid container alignItems="center" justifyContent="center" columnSpacing={10} rowSpacing={5}>
               {additionalSkillsData.map((skill, i) => (

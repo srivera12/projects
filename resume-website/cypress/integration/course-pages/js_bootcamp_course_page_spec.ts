@@ -50,3 +50,5 @@ describe('JS Bootcamp Course Page', () => {
     cy.url().should('include', '/skills');
   });
 });
+
+export {};
