@@ -2,6 +2,7 @@
   border-bottom: 2px solid #43e9e1;
   height: 8vh;
   justify-content: center;
+  background-color: #333 !important;
 }
 
 .navbar a {
@@ -12,6 +13,7 @@
   border-bottom: 2px solid #43e9e1;
   height: 10vh;
   justify-content: center;
+  background-color: #333 !important;
 }
 
 .mobileNavbar a {

@@ -31,7 +31,7 @@ const NavBar: FC = (): JSX.Element => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isMobile } = useContext(IsMobileContext);
   return (
-    <AppBar className={!isMobile ? styles.navbar : styles.mobileNavbar} color="transparent">
+    <AppBar className={!isMobile ? styles.navbar : styles.mobileNavbar}>
       <Toolbar>
         <div className={!isMobile ? styles.navHome : styles.mobileNavHome}>
           <Link href="/">

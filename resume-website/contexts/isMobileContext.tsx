@@ -23,6 +23,7 @@ export function IsMobileProvider({ children }: ContextProps) {
     };
     window.addEventListener('resize', checkForMobile);
     window.addEventListener('load', checkForMobile);
+    checkForMobile();
   }, []);
   return <IsMobileContext.Provider value={{ isMobile, setIsMobile }}>{children}</IsMobileContext.Provider>;
 }
