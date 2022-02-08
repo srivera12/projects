@@ -14,5 +14,3 @@ describe('About Page', () => {
     });
   });
 });
-
-export {};

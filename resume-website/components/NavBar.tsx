@@ -36,7 +36,7 @@ const NavBar: FC = (): JSX.Element => {
         <div className={!isMobile ? styles.navHome : styles.mobileNavHome}>
           <Link href="/">
             <a data-cy="home-link">
-              <FontAwesomeIcon icon={faDiceD20} />
+              <FontAwesomeIcon icon={faDiceD20} className={styles.icon} />
               HOME <sup>(beta)</sup>
             </a>
           </Link>

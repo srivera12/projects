@@ -40,7 +40,7 @@
 }
 
 .mobileListItem {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .mobileListItem a {

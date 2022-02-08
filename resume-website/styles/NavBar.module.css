@@ -41,12 +41,9 @@
   margin: 0;
 }
 
-.navHome sup {
+.navHome sup,
+.mobileNavHome sup {
   font-size: 15px;
-}
-
-.navHome svg {
-  margin-right: 10px;
 }
 
 .pages {
@@ -57,4 +54,12 @@
 
 .pages svg {
   color: #1cef9e;
+}
+
+.icon {
+  min-height: 22px;
+  min-width: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  margin-right: 10px;
 }

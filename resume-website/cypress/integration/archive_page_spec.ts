@@ -13,5 +13,3 @@ describe('Archive Page', () => {
       .should('equal', 'https://dazzling-bassi-9c5808.netlify.app');
   });
 });
-
-export {};
