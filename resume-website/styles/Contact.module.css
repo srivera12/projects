@@ -21,6 +21,10 @@
   margin: 5vh 0;
 }
 
+.contactPage h2 {
+  font-size: 20px;
+}
+
 .contactPage span,
 .mobileContactPage span {
   color: #43e9e1;

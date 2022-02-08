@@ -13,26 +13,16 @@ type ContextProps = {
 
 export function IsMobileProvider({ children }: ContextProps) {
   const [isMobile, setIsMobile] = useState(false);
-  const [windowSize, setWindowSize] = useState({
-    width: 1366,
-    height: 1024,
-  });
   useEffect(() => {
-    // const handleWindowResize = () => {
-    //   setWindowSize({
-    //     width: window.innerWidth,
-    //     height: window.innerHeight,
-    //   });
-    // };
-    // window.addEventListener('resize', handleWindowResize);
-    // if (windowSize.width < 500 || windowSize.height < 800) {
-    if (window.innerWidth < 500 || window.innerHeight < 750) {
-      setIsMobile(true);
-      console.log('is mobile');
-    } else {
-      setIsMobile(false);
-      console.log('is not mobile');
-    }
+    const handleWindowResize = () => {
+      console.log('resized to: ', window.innerWidth, 'x', window.innerHeight);
+      if (window.innerWidth < 750 || window.innerHeight < 750) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener('resize', handleWindowResize);
   }, []);
   return <IsMobileContext.Provider value={{ isMobile, setIsMobile }}>{children}</IsMobileContext.Provider>;
 }
