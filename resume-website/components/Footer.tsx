@@ -1,13 +1,14 @@
-import styles from '../styles/Footer.module.css';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { Button, BottomNavigation, Typography, Grid, ListItem, List } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, ListItem } from '@mui/material';
+import Link from 'next/link';
 import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <>
       {!isMobile ? (

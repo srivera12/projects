@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import courseData, { CoursePageData } from '../../public/data/courseData';
-import { Grid, List, ListItem, Typography } from '@mui/material';
-import styles from '../../styles/[courseName].module.css';
+import { Button, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
-import { Button } from '@mui/material';
-import Image from 'next/image';
+import React, { useContext } from 'react';
 import { v4 } from 'uuid';
 import { IsMobileContext } from '../../contexts/isMobileContext';
+import courseData, { CoursePageData } from '../../public/data/courseData';
+import styles from '../../styles/[courseName].module.css';
 
 type CoursePage = {
   children: React.ReactNode;
@@ -23,6 +19,7 @@ interface CoursePageProps {
 const CoursePage = ({ coursePageData }: CoursePage) => {
   const pageData = coursePageData.singleCourseData;
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <>
       <Grid container justifyContent="center" spacing={1} className={styles.course} key={parseInt(v4())}>

@@ -24,5 +24,3 @@ describe('Montessori Quotes App Project Page', () => {
     cy.url().should('include', '/projects');
   });
 });
-
-export {};

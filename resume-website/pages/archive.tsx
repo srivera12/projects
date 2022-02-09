@@ -1,14 +1,14 @@
 import { Button, Grid } from '@mui/material';
 import type { NextPage } from 'next';
+import { useContext } from 'react';
+import { v4 } from 'uuid';
+import { IsMobileContext } from '../contexts/isMobileContext';
 import previousWebsitesData from '../public/data/previousWebsitesData';
 import styles from '../styles/Archive.module.css';
-import Image from 'next/image';
-import { useContext } from 'react';
-import { IsMobileContext } from '../contexts/isMobileContext';
-import { v4 } from 'uuid';
 
 const ArchivePage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <div className={!isMobile ? styles.archive : styles.mobileArchive}>
       <Grid container justifyContent="center" alignItems="center" rowSpacing={!isMobile ? 10 : 2}>

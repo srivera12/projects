@@ -47,5 +47,3 @@ describe('HTML/CSS/JS Cert Course Page', () => {
     cy.url().should('include', '/skills');
   });
 });
-
-export {};

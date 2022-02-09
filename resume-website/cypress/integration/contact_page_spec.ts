@@ -29,5 +29,3 @@ describe('Contact Page', () => {
       .should('equal', 'mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website');
   });
 });
-
-export {};

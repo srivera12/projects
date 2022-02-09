@@ -47,5 +47,3 @@ describe('React Bootcamp Course Page', () => {
     cy.url().should('include', '/skills');
   });
 });
-
-export {};

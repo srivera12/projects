@@ -24,5 +24,3 @@ describe('JS To-Do App Project Page', () => {
     cy.url().should('include', '/projects');
   });
 });
-
-export {};

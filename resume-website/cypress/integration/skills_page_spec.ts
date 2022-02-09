@@ -64,5 +64,3 @@ describe('Skills Page', () => {
     });
   });
 });
-
-export {};

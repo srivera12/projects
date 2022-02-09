@@ -1,10 +1,7 @@
 import React, { FC, useContext, useEffect, useState } from 'react';
-import Image from 'next/image';
-import styles from '../styles/D20Roller.module.css';
-import funFacts from '../public/data/funFacts';
-import { Button } from '@mui/material';
-import d20 from '../public/images/d20Pic.png';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import funFacts from '../public/data/funFacts';
+import styles from '../styles/D20Roller.module.css';
 
 const D20Roller: FC = (): JSX.Element => {
   const { isMobile } = useContext(IsMobileContext);
@@ -23,7 +20,7 @@ const D20Roller: FC = (): JSX.Element => {
     } else if (!hasRolled && !isRolling) {
       setRollText(
         <>
-          <h1>Click the d20 to roll it!</h1>
+          <h1>Click the d20 to roll!</h1>
         </>
       );
     } else if (hasRolled && !isRolling) {

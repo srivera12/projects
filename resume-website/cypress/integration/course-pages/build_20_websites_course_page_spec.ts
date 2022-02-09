@@ -47,5 +47,3 @@ describe('Build 20 Websites Course Page', () => {
     cy.url().should('include', '/skills');
   });
 });
-
-export {};

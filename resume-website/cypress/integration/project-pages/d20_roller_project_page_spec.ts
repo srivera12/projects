@@ -24,5 +24,3 @@ describe('D20 Roller Project Page', () => {
     cy.url().should('include', '/projects');
   });
 });
-
-export {};

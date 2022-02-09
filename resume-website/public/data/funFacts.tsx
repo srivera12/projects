@@ -1,23 +1,3 @@
-import roll1 from '../images/1.png';
-import roll2 from '../images/2.png';
-import roll3 from '../images/3.png';
-import roll4 from '../images/4.png';
-import roll5 from '../images/5.png';
-import roll6 from '../images/6.png';
-import roll7 from '../images/7.png';
-import roll8 from '../images/8.png';
-import roll9 from '../images/9.png';
-import roll10 from '../images/10.png';
-import roll11 from '../images/11.png';
-import roll12 from '../images/12.png';
-import roll13 from '../images/13.png';
-import roll14 from '../images/14.png';
-import roll15 from '../images/15.png';
-import roll16 from '../images/16.png';
-import roll17 from '../images/17.png';
-import roll18 from '../images/18.png';
-import roll19 from '../images/19.png';
-import roll20 from '../images/20.png';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import Link from 'next/link';
 

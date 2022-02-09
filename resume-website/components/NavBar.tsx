@@ -1,28 +1,12 @@
-import styles from '../styles/NavBar.module.css';
-import React, { FC, useContext } from 'react';
-import Link from 'next/link';
-import NavLink from 'next/link';
+import { faBars, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Container,
-  Grid,
-  useMediaQuery,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-} from '@mui/material';
+import { AppBar, Drawer, List, ListItem, Toolbar } from '@mui/material';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useTheme } from '@emotion/react';
-import pageData from '../public/data/pageData';
-import MenuIcon from '@mui/material/Menu';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import React, { FC, useContext, useState } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import pageData from '../public/data/pageData';
+import styles from '../styles/NavBar.module.css';
 import Footer from './Footer';
 
 const NavBar: FC = (): JSX.Element => {
@@ -30,6 +14,7 @@ const NavBar: FC = (): JSX.Element => {
   const currentPath = router.pathname;
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <AppBar className={!isMobile ? styles.navbar : styles.mobileNavbar}>
       <Toolbar>

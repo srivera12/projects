@@ -1,16 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Dialog, DialogContent, DialogTitle, Divider, Grid, Typography } from '@mui/material';
-import React, { FC, useContext } from 'react';
-import skillData from '../public/data/skillData';
-import courseData from '../public/data/courseData';
-import styles from '../styles/SkillDialog.module.css';
-import { ClassNames } from '@emotion/react';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
-import coursePageData from '../public/data/courseData';
 import Link from 'next/link';
-import Image from 'next/image';
+import React, { FC, useContext } from 'react';
 import { v4 } from 'uuid';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import courseData from '../public/data/courseData';
+import skillData from '../public/data/skillData';
+import styles from '../styles/SkillDialog.module.css';
 
 interface SkillDialogProps {
   skill: string;
@@ -19,6 +15,7 @@ interface SkillDialogProps {
 
 const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <>
       {skillData

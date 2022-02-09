@@ -1,9 +1,9 @@
-import NavBar from './NavBar';
-import Footer from './Footer';
-import styles from '../styles/Layout.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import styles from '../styles/Layout.module.css';
+import Footer from './Footer';
+import NavBar from './NavBar';
 
 const theme = createTheme({
   palette: {

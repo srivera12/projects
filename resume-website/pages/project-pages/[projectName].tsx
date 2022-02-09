@@ -1,13 +1,10 @@
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import projectData, { ProjectData } from '../../public/data/projectData';
-import { Grid, Typography, List, ListItem, Button } from '@mui/material';
+import { Button, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
-import styles from '../../styles/[projectName].module.css';
-import Image from 'next/image';
-import { v4 } from 'uuid';
 import { useContext } from 'react';
+import { v4 } from 'uuid';
 import { IsMobileContext } from '../../contexts/isMobileContext';
+import projectData, { ProjectData } from '../../public/data/projectData';
+import styles from '../../styles/[projectName].module.css';
 
 type ProjectPage = {
   children: React.ReactNode;
@@ -22,6 +19,7 @@ interface ProjectPageProps {
 const ProjectPage = ({ projectPageData }: ProjectPage) => {
   const pageData = projectPageData.singleProjectData;
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <>
       <Grid

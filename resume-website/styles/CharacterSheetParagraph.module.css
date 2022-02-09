@@ -2,8 +2,6 @@
   margin-bottom: 25px;
 }
 
-@media (max-width: 500px) {
-  .paragraph {
-    margin-bottom: 0;
-  }
+.mobileParagraph {
+  margin-bottom: 0;
 }

@@ -1,15 +1,13 @@
-import { Button, Grid, Divider } from '@mui/material';
+import { Button, Divider, Grid } from '@mui/material';
 import type { NextPage } from 'next';
-import styles from '../styles/Contact.module.css';
-import Image from 'next/image';
-import working from '../public/images/working.png';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
 import contactData from '../public/data/contactData';
-import { v4 } from 'uuid';
+import styles from '../styles/Contact.module.css';
 
 const ContactPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <div className={!isMobile ? styles.contactPage : styles.mobileContactPage}>
       <Grid container justifyContent="center" alignItems="center" spacing={5}>

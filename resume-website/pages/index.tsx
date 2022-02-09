@@ -1,15 +1,13 @@
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import d20 from '../public/images/d20Pic.png';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import D20Roller from '../components/D20Roller';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <div className={!isMobile ? styles.home : styles.mobileHome}>
       <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>

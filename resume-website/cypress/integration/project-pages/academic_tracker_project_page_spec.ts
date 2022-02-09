@@ -24,5 +24,3 @@ describe('Academic Tracker Project Page', () => {
     cy.url().should('include', '/projects');
   });
 });
-
-export {};

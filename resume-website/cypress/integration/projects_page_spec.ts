@@ -8,8 +8,9 @@ describe('Projects Page', () => {
   });
 
   it('provides website design plan', () => {
-    cy.get('[data-cy="design-plan-button"]').click();
-    // add test to confirm design plan is provided
+    cy.get('[data-cy="design-plan-button"]')
+      .invoke('attr', 'href')
+      .should('equal', '/projects/website-design-plan.pdf');
   });
 
   describe('JS To-Do App Info', () => {
@@ -112,5 +113,3 @@ describe('Projects Page', () => {
     });
   });
 });
-
-export {};

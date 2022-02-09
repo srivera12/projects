@@ -1,10 +1,3 @@
-import beginner from '../images/beginner.png';
-import complete from '../images/complete.png';
-import jsBootcamp from '../images/jsBootcamp.png';
-import build20 from '../images/build20.png';
-import typescript from '../images/typescript.jpeg';
-import reactBootcamp from '../images/reactBootcamp.png';
-
 export interface CoursePageData {
   skill: string;
   skillDataCy: string;
@@ -152,7 +145,7 @@ const coursePageData: CoursePageData[] = [
     instructor: 'Stephen Grider',
     certPath: '/images/typescript.jpeg',
     blurb:
-      'This course covered Typescript comprehensively, from the foundational basics of simple type annotations all way to the complexities of using it with various JS libraries and web frameworks. It was exciting to be working on a course designed not necessarily for beginners to software development, but rather developers who are beginners in this specific content. There was a lot of assumed knowledge, which made this course occasionally challenging, but ultimately was a great experience to move beyond basic tutorial.',
+      'This course covered Typescript comprehensively, from the foundational basics of simple type annotations all way to the complexities of using it with various JS libraries and web frameworks. It was exciting to be working on a course designed not necessarily for beginners to software development, but rather developers who are beginners in this specific content. There was a lot of assumed knowledge, which made this course occasionally challenging, but ultimately a great experience to move beyond basic tutorial.',
     skillsLearned: [
       'Foundational type annotations - variables, functions, arrays, etc.',
       'How to type using interfacts, tuples, generics, etc.',

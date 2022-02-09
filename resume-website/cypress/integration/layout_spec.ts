@@ -106,5 +106,3 @@ describe('Layout', () => {
     });
   });
 });
-
-export {};

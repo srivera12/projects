@@ -239,5 +239,3 @@ describe('Home Page', () => {
     });
   });
 });
-
-export {};

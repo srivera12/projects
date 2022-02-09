@@ -1,15 +1,14 @@
+import { Button, Grid, Typography } from '@mui/material';
 import type { NextPage } from 'next';
-import styles from '../styles/Projects.module.css';
-import { Button, Grid, List, Typography } from '@mui/material';
-import projectData from '../public/data/projectData';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useContext } from 'react';
 import { IsMobileContext } from '../contexts/isMobileContext';
-import { v4 } from 'uuid';
+import projectData from '../public/data/projectData';
+import styles from '../styles/Projects.module.css';
 
 const ProjectsPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <div className={!isMobile ? styles.projects : styles.mobileProjects}>
       <Grid container justifyContent="center">
@@ -26,8 +25,8 @@ const ProjectsPage: NextPage = () => {
             <h1>MY PROJECTS</h1>
           </Grid>
           <Grid item xs={11} md={2} lg={3} xl={3}>
-            <a href="">
-              <Button variant="contained" color="secondary" data-cy="design-plan-button">
+            <a href="/projects/website-design-plan.pdf" target="_blank" data-cy="design-plan-button">
+              <Button variant="contained" color="secondary">
                 Website Design Plan
               </Button>
             </a>

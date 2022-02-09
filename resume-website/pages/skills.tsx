@@ -1,29 +1,16 @@
-import { Dialog, Grid, DialogContent, Typography, DialogTitle } from '@mui/material';
+import { Grid } from '@mui/material';
 import type { NextPage } from 'next';
-import styles from '../styles/Skills.module.css';
-import react from '../public/images/react.png';
-import Image from 'next/image';
-import js from '../public/images/js.png';
-import tsAndJS from '../public/images/tsAndJS.jpeg';
-import htmlAndCss from '../public/images/htmlAndCss.png';
-import ts from '../public/images/ts.png';
-import git from '../public/images/git.png';
-import node from '../public/images/node.png';
-import mui from '../public/images/mui.png';
-import vscode from '../public/images/vscode.png';
-import nextjs from '../public/images/nextjs.png';
-import bootstrap from '../public/images/bootstrap.png';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import SkillDialog from '../components/SkillDialog';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import skillData from '../public/data/skillData';
-import additionalSkillsData from '../public/data/additionalSkillsData';
-import { v4 } from 'uuid';
 import { IsMobileContext } from '../contexts/isMobileContext';
+import additionalSkillsData from '../public/data/additionalSkillsData';
+import skillData from '../public/data/skillData';
+import styles from '../styles/Skills.module.css';
 
 const SkillsPage: NextPage = () => {
   const [skillDialogType, setSkillDialogType] = useState('');
   const { isMobile } = useContext(IsMobileContext);
+
   return (
     <div className={!isMobile ? styles.skills : styles.mobileSkills}>
       <Grid container flexDirection="column">

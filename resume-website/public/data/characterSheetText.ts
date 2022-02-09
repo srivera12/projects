@@ -1,5 +1,5 @@
-import { faCommentAlt, faUserGraduate, faSchool, faLaptopCode, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { faCommentAlt, faDiceD20, faLaptopCode, faSchool, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 interface Paragraph {
   icon: IconDefinition;
