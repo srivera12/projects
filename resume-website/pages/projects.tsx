@@ -10,7 +10,7 @@ const ProjectsPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.projects : styles.mobileProjects}>
+    <div className={`${styles.projects} ${isMobile && styles.mobileProjects}`}>
       <Grid container justifyContent="center">
         <Grid
           item
@@ -20,7 +20,7 @@ const ProjectsPage: NextPage = () => {
           alignItems="center"
           flexDirection={isMobile ? 'column' : 'row'}
         >
-          {!isMobile ? <Grid item xs={3} md={3} lg={4} xl={5}></Grid> : null}
+          {!isMobile && <Grid item xs={3} md={3} lg={4} xl={5}></Grid>}
           <Grid item xs={11} md={6} lg={5} xl={4}>
             <h1>MY PROJECTS</h1>
           </Grid>

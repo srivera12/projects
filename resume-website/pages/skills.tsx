@@ -12,7 +12,7 @@ const SkillsPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.skills : styles.mobileSkills}>
+    <div className={`${styles.skills} ${isMobile && styles.mobileSkills}`}>
       <Grid container flexDirection="column">
         <div>
           <h1>SKILLS AND COURSES</h1>
@@ -20,7 +20,7 @@ const SkillsPage: NextPage = () => {
         </div>
       </Grid>
       <Grid container justifyContent="center" spacing={7} alignItems="center">
-        {skillData.map((s, i) => (
+        {skillData.map((skill, i) => (
           <Grid
             key={i}
             item
@@ -28,19 +28,22 @@ const SkillsPage: NextPage = () => {
             md={3}
             xl={4}
             onClick={() => {
-              setSkillDialogType(s.skill);
+              setSkillDialogType(skill.skill);
             }}
-            data-cy={`${s.skillDataCy}-icon`}
+            data-cy={`${skill.skillDataCy}-icon`}
           >
             <div className={styles.mainSkill}>
-              <img src={s.picPath} alt={`read more about ${s.name} and completed courses relevant to that skill`} />
+              <img
+                src={skill.picPath}
+                alt={`read more about ${skill.name} and completed courses relevant to that skill`}
+              />
             </div>
           </Grid>
         ))}
       </Grid>
       <Grid container justifyContent="center" alignItems="center" className={styles.additionalSkillsContainer}>
         <Grid item xs={11} md={6}>
-          <div className={!isMobile ? styles.additionalSkills : styles.mobileAdditionalSkills}>
+          <div className={`${styles.additionalSkills} ${isMobile && styles.mobileAdditionalSkills}`}>
             <h1>ADDITIONAL SKILLS</h1>
             <Grid container alignItems="center" justifyContent="center" columnSpacing={10} rowSpacing={5}>
               {additionalSkillsData.map((skill, i) => (

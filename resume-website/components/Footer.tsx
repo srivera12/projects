@@ -9,78 +9,53 @@ import styles from '../styles/Footer.module.css';
 export default function Footer() {
   const { isMobile } = useContext(IsMobileContext);
 
+  const nameLink = (
+    <Link href="/about">
+      <a className={styles.nameLink} data-cy="name-link">
+        Sarah K Rivera
+      </a>
+    </Link>
+  );
+  const gitHub = (
+    <a href="https://github.com/srivera12" target="_blank" rel="noreferrer" data-cy="github-icon">
+      <FontAwesomeIcon icon={faGithub} />
+    </a>
+  );
+  const linkedIn = (
+    <a href="https://www.linkedin.com/in/sarahkrivera/" target="_blank" rel="noreferrer" data-cy="linkedin-icon">
+      <FontAwesomeIcon icon={faLinkedin} />
+    </a>
+  );
+  const contactButton = (
+    <a href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website" data-cy="contact-button">
+      <Button variant="contained" color="secondary">
+        CONTACT ME
+      </Button>
+    </a>
+  );
+
   return (
     <>
       {!isMobile ? (
         <div className={styles.footer}>
-          <h4>
-            Hand-coded by{' '}
-            <Link href="/about">
-              <a className={styles.nameLink} data-cy="name-link">
-                Sarah K Rivera
-              </a>
-            </Link>{' '}
-            in 2022
-          </h4>
+          <h4>Hand-coded by {nameLink} in 2022</h4>
           <div className={styles.contact}>
-            <a href="https://github.com/srivera12" target="_blank" rel="noreferrer" data-cy="github-icon">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
-              href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website"
-              data-cy="contact-button"
-            >
-              <Button variant="contained" color="secondary">
-                CONTACT ME
-              </Button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sarahkrivera/"
-              target="_blank"
-              rel="noreferrer"
-              data-cy="linkedin-icon"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
+            {gitHub}
+            {contactButton}
+            {linkedIn}
           </div>
         </div>
       ) : (
         <>
           <ListItem className={styles.navbarSpacing}></ListItem>
-          <ListItem className={styles.mobileListItem}>
-            <a
-              href="mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website"
-              data-cy="contact-button"
-            >
-              <Button variant="contained" color="secondary">
-                CONTACT ME
-              </Button>
-            </a>
-          </ListItem>
-          <ListItem className={styles.mobileListItem}>
-            <a href="https://github.com/srivera12" target="_blank" rel="noreferrer" data-cy="github-icon">
-              <FontAwesomeIcon icon={faGithub} size="2x" />
-            </a>
-          </ListItem>
-          <ListItem className={styles.mobileListItem}>
-            <a
-              href="https://www.linkedin.com/in/sarahkrivera/"
-              target="_blank"
-              rel="noreferrer"
-              data-cy="linkedin-icon"
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
-            </a>
-          </ListItem>
+          <ListItem className={styles.mobileListItem}>{contactButton}</ListItem>
+          <ListItem className={styles.mobileListItem}>{gitHub}</ListItem>
+          <ListItem className={styles.mobileListItem}>{linkedIn}</ListItem>
           <ListItem>
             {' '}
             <p>
               Hand-coded by <br />
-              <Link href="/about">
-                <a className={styles.nameLink} data-cy="name-link">
-                  Sarah K Rivera
-                </a>
-              </Link>
+              {nameLink}
               <br />
               in 2022
             </p>

@@ -1,7 +1,7 @@
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 
-interface SkillData {
+export interface SkillData {
   skill: string;
   skillDataCy: string;
   name: string;

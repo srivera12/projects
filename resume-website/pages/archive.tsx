@@ -10,7 +10,7 @@ const ArchivePage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.archive : styles.mobileArchive}>
+    <div className={`${styles.archive} ${isMobile && styles.mobileArchive}`}>
       <Grid container justifyContent="center" alignItems="center" rowSpacing={!isMobile ? 10 : 2}>
         <Grid item xs={11}>
           <h1>WEBSITE ARCHIVE</h1>
@@ -20,8 +20,8 @@ const ArchivePage: NextPage = () => {
           </h4>
         </Grid>
         <Grid item container justifyContent="center" alignItems="center">
-          {previousWebsitesData.map((site) => (
-            <Grid item xs={11} md={4} key={parseInt(v4())}>
+          {previousWebsitesData.map((site, i) => (
+            <Grid item xs={11} md={4} key={i}>
               <div className={styles.previousSite}>
                 <h2>Retired: {site.retiredDate}</h2>
                 <img src={site.picPath} alt="homepage of old website" />

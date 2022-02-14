@@ -16,7 +16,7 @@ const CharacterSheetParagraph: FC<ParagraphProps> = ({ icon, subtitle, text }): 
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.paragraph : styles.mobileParagraph}>
+    <div className={`${styles.paragraph} ${isMobile && styles.mobileParagraph}`}>
       <Typography variant="h3">
         <FontAwesomeIcon icon={icon} />
         {subtitle}

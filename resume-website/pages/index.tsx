@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.home : styles.mobileHome}>
+    <div className={`${styles.home} ${isMobile && styles.mobileHome}`}>
       <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>
         {!isMobile ? (
           <div className={styles.hero}>

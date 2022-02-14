@@ -1,5 +1,4 @@
-.contactPage,
-.mobileContactPage {
+.contactPage {
   height: fit-content;
   padding-bottom: 20px;
 }
@@ -16,8 +15,11 @@
   font-size: 40px;
 }
 
-.contactPage h2,
-.mobileContactPage h2 {
+.mobileContactPage h1 {
+  margin-bottom: 0;
+}
+
+.contactPage h2 {
   margin: 5vh 0;
 }
 
@@ -25,14 +27,12 @@
   font-size: 20px;
 }
 
-.contactPage span,
-.mobileContactPage span {
+.contactPage span {
   color: #43e9e1;
   margin-right: 10px;
 }
 
-.contactPage h2 a,
-.mobileContactPage h2 a {
+.contactPage h2 a {
   text-decoration: underline;
   letter-spacing: 0.5px;
   color: #b5b8ff;
@@ -51,23 +51,11 @@
   border-radius: 10px;
 }
 
-.mobileContactPage h1 {
-  font-size: 40px;
-  margin-bottom: 0;
-  color: #b5b8ff;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .mobileContactLinks {
   border: 2px solid #43e9e1;
   margin-left: 0;
   padding: 20px;
   border-radius: 10px;
-}
-
-.mobileContactLinks {
   font-size: 12px;
 }
 

@@ -16,9 +16,9 @@ const NavBar: FC = (): JSX.Element => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <AppBar className={!isMobile ? styles.navbar : styles.mobileNavbar}>
+    <AppBar className={`${styles.navbar} ${isMobile && styles.mobileNavbar}`}>
       <Toolbar>
-        <div className={!isMobile ? styles.navHome : styles.mobileNavHome}>
+        <div className={`${styles.navHome} ${isMobile && styles.mobileNavHome}`}>
           <Link href="/">
             <a data-cy="home-link">
               <FontAwesomeIcon icon={faDiceD20} className={styles.icon} />
@@ -31,7 +31,7 @@ const NavBar: FC = (): JSX.Element => {
             pageData.map((page, i) => (
               <Link href={page.pageRoute} key={i}>
                 <a
-                  className={currentPath === page.pageRoute ? styles.activeLink : ''}
+                  className={currentPath === page.pageRoute ? styles.activeLink : undefined}
                   data-cy={`${page.pageName.toLowerCase()}-link`}
                 >
                   {page.pageName}
@@ -60,7 +60,7 @@ const NavBar: FC = (): JSX.Element => {
                   {pageData.map((page, i) => (
                     <Link href={page.pageRoute} key={i}>
                       <a
-                        className={currentPath === page.pageRoute ? styles.mobileActiveLink : ''}
+                        className={currentPath === page.pageRoute ? styles.mobileActiveLink : undefined}
                         data-cy={`${page.pageName.toLowerCase()}-link`}
                       >
                         <ListItem

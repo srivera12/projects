@@ -10,13 +10,13 @@ const AboutPage: NextPage = () => {
   const { isMobile } = useContext(IsMobileContext);
 
   return (
-    <div className={!isMobile ? styles.about : styles.mobileAbout}>
+    <div className={`${styles.about} ${isMobile && styles.mobileAbout}`}>
       <Grid container justifyContent="center" alignItems="center">
         <Grid item xs={11}>
           <h1>CHARACTER SHEET</h1>
         </Grid>
         <Grid item xs={11}>
-          <div className={!isMobile ? styles.picture : styles.mobilePicture}>
+          <div className={`${styles.picture} ${isMobile && styles.mobilePicture}`}>
             <img
               src="/images/characterPic.png"
               alt="cartoon version of Sarah K Rivera casting a magic spell while smiling towards the viewer"
@@ -28,7 +28,7 @@ const AboutPage: NextPage = () => {
               </Button>
             </a>
           </div>
-          <div className={!isMobile ? styles.characterText : styles.mobileCharacterText}>
+          <div className={`${styles.characterText} ${isMobile && styles.mobileCharacterText}`}>
             {characterSheetText.map((paragraph, i) => (
               <CharacterSheetParagraph
                 key={i}

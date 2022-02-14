@@ -26,8 +26,7 @@ const ProjectPage = ({ projectPageData }: ProjectPage) => {
         container
         justifyContent="center"
         spacing={1}
-        className={!isMobile ? styles.project : styles.mobileProject}
-        key={parseInt(v4())}
+        className={`${styles.project} ${isMobile && styles.mobileProject}`}
       >
         <Grid item xs={11}>
           <h1>{pageData.name}</h1>
@@ -54,7 +53,7 @@ const ProjectPage = ({ projectPageData }: ProjectPage) => {
           <Typography>{pageData.reflections}</Typography>
         </Grid>
         <Grid item xs={10}>
-          <div className={!isMobile ? styles.projectButtons : styles.mobileProjectButtons}>
+          <div className={`${styles.projectButtons} ${isMobile && styles.mobileProjectButtons}`}>
             <Button variant="contained" color="secondary">
               <Link href={pageData.projectLink} passHref>
                 <a target="_blank" data-cy={`${pageData.pathName}-project-button`}>

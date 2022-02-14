@@ -22,7 +22,7 @@ const CoursePage = ({ coursePageData }: CoursePage) => {
 
   return (
     <>
-      <Grid container justifyContent="center" spacing={1} className={styles.course} key={parseInt(v4())}>
+      <Grid container justifyContent="center" spacing={1} className={styles.course}>
         <Grid item xs={11}>
           <h1>{pageData.name}</h1>
         </Grid>
@@ -58,7 +58,7 @@ const CoursePage = ({ coursePageData }: CoursePage) => {
           </List>
         </Grid>
         <Grid item xs={10}>
-          <div className={!isMobile ? styles.courseButtons : styles.mobileCourseButtons}>
+          <div className={`${styles.courseButtons} ${isMobile && styles.mobileCourseButtons}`}>
             <Button variant="contained" color="secondary">
               <Link href={pageData.githubLink} passHref>
                 <a target="_blank" data-cy="github-link">

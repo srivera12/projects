@@ -15,13 +15,8 @@ export function IsMobileProvider({ children }: ContextProps) {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkForMobile = () => {
-      if (window.innerWidth < 750 || window.innerHeight < 750) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 750 || window.innerHeight < 750);
     };
-    window.addEventListener('resize', checkForMobile);
     window.addEventListener('load', checkForMobile);
     checkForMobile();
   }, []);

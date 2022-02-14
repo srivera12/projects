@@ -74,7 +74,7 @@ export default function DashboardLayout({ children }: LayoutProps) {
     <div className={styles.layout}>
       <ThemeProvider theme={theme}>
         <NavBar />
-        <div className={!isMobile ? styles.main : styles.mobileMain}>{children}</div>
+        <div className={`${styles.main} ${isMobile && styles.mobileMain}`}>{children}</div>
         {!isMobile ? <Footer /> : null}
       </ThemeProvider>
     </div>

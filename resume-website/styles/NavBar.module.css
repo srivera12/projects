@@ -10,14 +10,7 @@
 }
 
 .mobileNavbar {
-  border-bottom: 2px solid #43e9e1;
   height: 10vh;
-  justify-content: center;
-  background-color: #333 !important;
-}
-
-.mobileNavbar a {
-  margin: 0 20px 0 20px;
 }
 
 .activeLink {
@@ -37,14 +30,12 @@
 }
 
 .mobileNavHome {
-  color: #43e9e1;
   padding-top: 2vh;
   padding-left: 0;
   margin: 0;
 }
 
-.navHome sup,
-.mobileNavHome sup {
+.navHome sup {
   font-size: 15px;
 }
 

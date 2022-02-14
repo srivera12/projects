@@ -46,3 +46,10 @@
 .mobileListItem a {
   display: flex;
 }
+
+.mobileListItem svg {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  max-width: 50px;
+}

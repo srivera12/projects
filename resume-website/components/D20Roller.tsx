@@ -38,19 +38,21 @@ const D20Roller: FC = (): JSX.Element => {
     setIsRolling(true);
     setHasRolled(true);
     const roll = forcedRoll ? forcedRoll : Math.floor(Math.random() * 20) + 1;
-    const rollResult = funFacts.filter((fact) => fact.rolledNumber === roll);
-    setRollState({
-      rolledNumber: rollResult[0].rolledNumber,
-      funFact: rollResult[0].funFact,
-      imgSrc: rollResult[0].d20PicPath,
-    });
-    setTimeout(() => {
-      setIsRolling(false);
-    }, 500);
+    const rollResult = funFacts.find((fact) => fact.rolledNumber === roll);
+    if (rollResult) {
+      setRollState({
+        rolledNumber: rollResult.rolledNumber,
+        funFact: rollResult.funFact,
+        imgSrc: rollResult.d20PicPath,
+      });
+      setTimeout(() => {
+        setIsRolling(false);
+      }, 500);
+    }
   }
 
   return (
-    <div className={!isMobile ? styles.roller : styles.mobileRoller}>
+    <div className={`${styles.roller} ${isMobile && styles.mobileRoller}`}>
       <div className={isRolling || !hasRolled ? styles.preRolledText : styles.rolledText}>{rollText}</div>
       <div onClick={roll} className={isRolling ? styles.d20Rolling : undefined} data-cy="d20">
         <img

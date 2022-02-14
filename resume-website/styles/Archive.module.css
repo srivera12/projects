@@ -1,5 +1,4 @@
-.archive,
-.mobileArchive {
+.archive {
   height: fit-content;
   padding-bottom: 20px;
 }
@@ -14,16 +13,10 @@
 }
 
 .mobileArchive h1 {
-  color: #b5b8ff;
   font-size: 40px;
-  margin-bottom: 2vh;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
 }
 
-.archive h4,
-.mobileArchive h4 {
+.archive h4 {
   width: fit-content;
   margin-right: auto;
   margin-left: auto;

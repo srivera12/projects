@@ -11,14 +11,7 @@
 
 .mobileRoller {
   height: 500px;
-  width: 70vw;
-  border: 2px solid #43e9e1;
-  border-radius: 10px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  color: #ddd;
 }
 
 .mobileRoller .rolledText {
@@ -65,8 +58,7 @@
   color: #1cef9e;
 }
 
-.roller img,
-.mobileRoller img {
+.roller img {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;

@@ -15,8 +15,6 @@
 .mobileMain {
   margin-top: 10vh;
   height: 90vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .mobileMain::-webkit-scrollbar {
