@@ -1,43 +1,43 @@
-.project,
-.mobileProject {
-  height: fit-content;
-  padding-bottom: 20px;
-}
+.project, 
+.mobileProject { 
+  height: fit-content; 
+  padding-bottom: 20px; 
+} 
 
-.project img {
-  height: 500px !important;
-  padding-bottom: 2vh !important;
-}
+.project img { 
+  height: 500px !important; 
+  padding-bottom: 2vh !important; 
+} 
 
-.mobileProject img {
-  height: 300px !important;
-  padding-bottom: 2vh !important;
-}
+.mobileProject img { 
+  height: 300px !important; 
+  padding-bottom: 2vh !important; 
+} 
 
-.project h1,
-.mobileProject h1 {
-  color: #b8b5ff;
-}
+.project h1, 
+.mobileProject h1 { 
+  color: #b8b5ff; 
+} 
 
-.project h3,
-.mobileProject h3 {
-  color: #1cef9e;
-}
+.project h3, 
+.mobileProject h3 { 
+  color: #1cef9e; 
+} 
 
-.project h4,
-.mobileProject h4 {
-  color: #43e9e1;
-}
+.project h4, 
+.mobileProject h4 { 
+  color: #43e9e1; 
+} 
 
-.project button,
-.mobileProject button {
-  margin-right: 20px;
-}
+.project button, 
+.mobileProject button { 
+  margin-right: 20px; 
+} 
 
-.projectButtons {
-  margin-top: 20px;
-}
+.projectButtons { 
+  margin-top: 20px; 
+} 
 
-.mobileProjectButtons button {
-  margin-top: 20px;
-}
+.mobileProjectButtons button { 
+  margin-top: 20px; 
+} 

@@ -1,68 +1,68 @@
-.about h1 {
-  font-size: 60px;
-  color: #b8b5ff;
-  margin-top: 3vh;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+.about h1 { 
+  font-size: 60px; 
+  color: #b8b5ff; 
+  margin-top: 3vh; 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+} 
 
-.mobileAbout h1 {
-  font-size: 35px;
-  color: #b8b5ff;
-  margin-top: 3vh;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+.mobileAbout h1 { 
+  font-size: 35px; 
+  color: #b8b5ff; 
+  margin-top: 3vh; 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+} 
 
-.picture {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  align-items: center;
-  border: 2px solid #43e9e1;
-  border-radius: 10px;
-  font-style: italic;
-  float: left;
-  margin: 0 25px 25px 0;
-  padding: 10px;
-}
+.picture { 
+  display: flex; 
+  flex-direction: column; 
+  width: 30vw; 
+  align-items: center; 
+  border: 2px solid #43e9e1; 
+  border-radius: 10px; 
+  font-style: italic; 
+  float: left; 
+  margin: 0 25px 25px 0; 
+  padding: 10px; 
+} 
 
-.mobilePicture {
-  width: 100%;
-  align-items: center;
-  border: 2px solid #43e9e1;
-  border-radius: 10px;
-  font-style: italic;
-  float: left;
-  margin: 0 25px 25px 0;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
+.mobilePicture { 
+  width: 100%; 
+  align-items: center; 
+  border: 2px solid #43e9e1; 
+  border-radius: 10px; 
+  font-style: italic; 
+  float: left; 
+  margin: 0 25px 25px 0; 
+  padding: 10px; 
+  display: flex; 
+  flex-direction: column; 
+} 
 
-.characterText h3 {
-  color: #b8b5ff;
-  font-size: 30px;
-}
+.characterText h3 { 
+  color: #b8b5ff; 
+  font-size: 30px; 
+} 
 
-.mobileCharacterText h3 {
-  color: #b8b5ff;
-}
+.mobileCharacterText h3 { 
+  color: #b8b5ff; 
+} 
 
-.characterText h3 svg,
-.mobileCharacterText h3 svg {
-  margin-right: 10px;
-  color: #43e9e1;
-  min-height: 40px;
-  min-width: 40px;
-  max-width: 40px;
-  max-height: 40px;
-}
+.characterText h3 svg, 
+.mobileCharacterText h3 svg { 
+  margin-right: 10px; 
+  color: #43e9e1; 
+  min-height: 40px; 
+  min-width: 40px; 
+  max-width: 40px; 
+  max-height: 40px; 
+} 
 
-.characterText hr,
-.mobileCharacterText hr {
-  height: 40px;
-  border-color: transparent;
-}
+.characterText hr, 
+.mobileCharacterText hr { 
+  height: 40px; 
+  border-color: transparent; 
+} 

@@ -1,88 +1,88 @@
-.contactPage,
-.mobileContactPage {
-  height: fit-content;
-  padding-bottom: 20px;
-}
+.contactPage, 
+.mobileContactPage { 
+  height: fit-content; 
+  padding-bottom: 20px; 
+} 
 
-.contactPage .title {
-  font-size: 60px;
-}
+.contactPage .title { 
+  font-size: 60px; 
+} 
 
-.contactPage h1 {
-  color: #b5b8ff;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 40px;
-}
+.contactPage h1 { 
+  color: #b5b8ff; 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+  font-size: 40px; 
+} 
 
-.contactPage h2,
-.mobileContactPage h2 {
-  margin: 5vh 0;
-}
+.contactPage h2, 
+.mobileContactPage h2 { 
+  margin: 5vh 0; 
+} 
 
-.contactPage h2 {
-  font-size: 20px;
-}
+.contactPage h2 { 
+  font-size: 20px; 
+} 
 
-.contactPage span,
-.mobileContactPage span {
-  color: #43e9e1;
-  margin-right: 10px;
-}
+.contactPage span, 
+.mobileContactPage span { 
+  color: #43e9e1; 
+  margin-right: 10px; 
+} 
 
-.contactPage h2 a,
-.mobileContactPage h2 a {
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  color: #b5b8ff;
-}
+.contactPage h2 a, 
+.mobileContactPage h2 a { 
+  text-decoration: underline; 
+  letter-spacing: 0.5px; 
+  color: #b5b8ff; 
+} 
 
-.contactPage hr {
-  border-color: #43e9e1;
-  height: 400px;
-  border-right-width: 2px;
-}
+.contactPage hr { 
+  border-color: #43e9e1; 
+  height: 400px; 
+  border-right-width: 2px; 
+} 
 
-.contactLinks {
-  border: 2px solid #43e9e1;
-  margin-left: 30px;
-  padding: 40px;
-  border-radius: 10px;
-}
+.contactLinks { 
+  border: 2px solid #43e9e1; 
+  margin-left: 30px; 
+  padding: 40px; 
+  border-radius: 10px; 
+} 
 
-.mobileContactPage h1 {
-  font-size: 40px;
-  margin-bottom: 0;
-  color: #b5b8ff;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+.mobileContactPage h1 { 
+  font-size: 40px; 
+  margin-bottom: 0; 
+  color: #b5b8ff; 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+} 
 
-.mobileContactLinks {
-  border: 2px solid #43e9e1;
-  margin-left: 0;
-  padding: 20px;
-  border-radius: 10px;
-}
+.mobileContactLinks { 
+  border: 2px solid #43e9e1; 
+  margin-left: 0; 
+  padding: 20px; 
+  border-radius: 10px; 
+} 
 
-.mobileContactLinks {
-  font-size: 12px;
-}
+.mobileContactLinks { 
+  font-size: 12px; 
+} 
 
-.mobileContactImg {
-  margin-top: 30px;
-}
+.mobileContactImg { 
+  margin-top: 30px; 
+} 
 
-.mobileContactLinks h1 {
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+.mobileContactLinks h1 { 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+} 
 
-.mobileContactButton {
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-}
+.mobileContactButton { 
+  width: fit-content; 
+  margin-right: auto; 
+  margin-left: auto; 
+} 

@@ -1,67 +1,67 @@
-.navbar {
-  border-bottom: 2px solid #43e9e1;
-  height: 8vh;
-  justify-content: center;
-  background-color: #333 !important;
-}
+.navbar { 
+  border-bottom: 2px solid #43e9e1; 
+  height: 8vh; 
+  justify-content: center; 
+  background-color: #333 !important; 
+} 
 
-.navbar a {
-  margin: 0 20px 0 20px;
-}
+.navbar a { 
+  margin: 0 20px 0 20px; 
+} 
 
-.mobileNavbar {
-  border-bottom: 2px solid #43e9e1;
-  height: 10vh;
-  justify-content: center;
-  background-color: #333 !important;
-}
+.mobileNavbar { 
+  border-bottom: 2px solid #43e9e1; 
+  height: 10vh; 
+  justify-content: center; 
+  background-color: #333 !important; 
+} 
 
-.mobileNavbar a {
-  margin: 0 20px 0 20px;
-}
+.mobileNavbar a { 
+  margin: 0 20px 0 20px; 
+} 
 
-.activeLink {
-  font-size: 1.2rem;
-  color: #1cef9e;
-}
+.activeLink { 
+  font-size: 1.2rem; 
+  color: #1cef9e; 
+} 
 
-.mobileActiveLink {
-  color: #1cef9e;
-  font-size: 30px;
-}
+.mobileActiveLink { 
+  color: #1cef9e; 
+  font-size: 30px; 
+} 
 
-.navHome {
-  color: #43e9e1;
-  padding: 20px;
-  font-size: 1.5rem;
-}
+.navHome { 
+  color: #43e9e1; 
+  padding: 20px; 
+  font-size: 1.5rem; 
+} 
 
-.mobileNavHome {
-  color: #43e9e1;
-  padding-top: 2vh;
-  padding-left: 0;
-  margin: 0;
-}
+.mobileNavHome { 
+  color: #43e9e1; 
+  padding-top: 2vh; 
+  padding-left: 0; 
+  margin: 0; 
+} 
 
-.navHome sup,
-.mobileNavHome sup {
-  font-size: 15px;
-}
+.navHome sup, 
+.mobileNavHome sup { 
+  font-size: 15px; 
+} 
 
-.pages {
-  color: #b8b5ff;
-  padding: 20px;
-  margin: 0 20px 0 auto;
-}
+.pages { 
+  color: #b8b5ff; 
+  padding: 20px; 
+  margin: 0 20px 0 auto; 
+} 
 
-.pages svg {
-  color: #1cef9e;
-}
+.pages svg { 
+  color: #1cef9e; 
+} 
 
-.icon {
-  min-height: 22px;
-  min-width: 22px;
-  max-width: 22px;
-  max-height: 22px;
-  margin-right: 10px;
-}
+.icon { 
+  min-height: 22px; 
+  min-width: 22px; 
+  max-width: 22px; 
+  max-height: 22px; 
+  margin-right: 10px; 
+} 

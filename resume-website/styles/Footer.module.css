@@ -1,48 +1,48 @@
-.footer {
-  width: 100vw;
-  margin-bottom: 0px;
-  border-top: 2px solid #43e9e1;
-  color: #b8b5ff;
-  height: 12vh;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding-bottom: 20px;
-}
+.footer { 
+  width: 100vw; 
+  margin-bottom: 0px; 
+  border-top: 2px solid #43e9e1; 
+  color: #b8b5ff; 
+  height: 12vh; 
+  position: fixed; 
+  left: 0; 
+  bottom: 0; 
+  padding-bottom: 20px; 
+} 
 
-.footer h4 {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+.footer h4 { 
+  width: fit-content; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+} 
 
-.nameLink {
-  color: #43e9e1;
-}
+.nameLink { 
+  color: #43e9e1; 
+} 
 
-.contact {
-  width: 100%;
-  padding: 0 30%;
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.contact { 
+  width: 100%; 
+  padding: 0 30%; 
+  font-size: 2.5rem; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
 
-.contact svg:hover {
-  cursor: pointer;
-}
+.contact svg:hover { 
+  cursor: pointer; 
+} 
 
-.navbarSpacing {
-  height: 15vh;
-}
+.navbarSpacing { 
+  height: 15vh; 
+} 
 
-.mobileListItem {
-  justify-content: center !important;
-}
+.mobileListItem { 
+  justify-content: center !important; 
+} 
 
-.mobileListItem a {
-  display: flex;
-}
+.mobileListItem a { 
+  display: flex; 
+} 

@@ -1,38 +1,38 @@
-.course {
-  height: fit-content;
-  padding-bottom: 20px;
-}
+.course { 
+  height: fit-content; 
+  padding-bottom: 20px; 
+} 
 
-.course img {
-  padding-bottom: 2vh !important;
-}
+.course img { 
+  padding-bottom: 2vh !important; 
+} 
 
-.course h1 {
-  color: #b8b5ff;
-  margin-bottom: 0;
-}
+.course h1 { 
+  color: #b8b5ff; 
+  margin-bottom: 0; 
+} 
 
-.course h3 {
-  color: #1cef9e;
-}
+.course h3 { 
+  color: #1cef9e; 
+} 
 
-.course h4 {
-  color: #43e9e1;
-}
+.course h4 { 
+  color: #43e9e1; 
+} 
 
-.course button {
-  margin-right: 20px;
-}
+.course button { 
+  margin-right: 20px; 
+} 
 
-.course li a {
-  color: #1cef9e;
-}
+.course li a { 
+  color: #1cef9e; 
+} 
 
-.courseButtons,
-.mobileCourseButtons {
-  margin-top: 20px;
-}
+.courseButtons, 
+.mobileCourseButtons { 
+  margin-top: 20px; 
+} 
 
-.mobileCourseButtons button {
-  margin-top: 20px;
-}
+.mobileCourseButtons button { 
+  margin-top: 20px; 
+} 
