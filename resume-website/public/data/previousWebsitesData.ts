@@ -8,7 +8,7 @@ interface previousWebsite {
 const previousWebsitesData: previousWebsite[] = [
   {
     dataCy: 'web1',
-    retiredDate: 'TBD',
+    retiredDate: '02.15.2022',
     picPath: '/images/website1.png',
     link: 'https://dazzling-bassi-9c5808.netlify.app',
   },

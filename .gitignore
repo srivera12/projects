@@ -6,4 +6,3 @@ build/
 *.bak
 *.prettierrc
 .firebase/
-cypress/integration
