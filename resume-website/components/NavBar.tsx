@@ -22,7 +22,7 @@ const NavBar: FC = (): JSX.Element => {
           <Link href="/">
             <a data-cy="home-link">
               <FontAwesomeIcon icon={faDiceD20} className={styles.icon} />
-              HOME <sup>(beta)</sup>
+              HOME
             </a>
           </Link>
         </div>

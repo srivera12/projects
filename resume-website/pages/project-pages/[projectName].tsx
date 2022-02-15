@@ -1,7 +1,6 @@
 import { Button, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { v4 } from 'uuid';
 import { IsMobileContext } from '../../contexts/isMobileContext';
 import projectData, { ProjectData } from '../../public/data/projectData';
 import styles from '../../styles/[projectName].module.css';
@@ -43,8 +42,8 @@ const ProjectPage = ({ projectPageData }: ProjectPage) => {
         <Grid item xs={10} md={8}>
           <h4>Challenges:</h4>
           <List>
-            {pageData.challenges.map((challenge) => (
-              <ListItem key={parseInt(v4())}>{challenge}</ListItem>
+            {pageData.challenges.map((challenge, i) => (
+              <ListItem key={i}>{challenge}</ListItem>
             ))}
           </List>
         </Grid>

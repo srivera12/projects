@@ -1,7 +1,6 @@
 import { Button, Grid } from '@mui/material';
 import type { NextPage } from 'next';
 import { useContext } from 'react';
-import { v4 } from 'uuid';
 import { IsMobileContext } from '../contexts/isMobileContext';
 import previousWebsitesData from '../public/data/previousWebsitesData';
 import styles from '../styles/Archive.module.css';

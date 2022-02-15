@@ -1,7 +1,6 @@
 import { Button, Grid, List, ListItem, Typography } from '@mui/material';
 import Link from 'next/link';
 import React, { useContext } from 'react';
-import { v4 } from 'uuid';
 import { IsMobileContext } from '../../contexts/isMobileContext';
 import courseData, { CoursePageData } from '../../public/data/courseData';
 import styles from '../../styles/[courseName].module.css';
@@ -38,8 +37,8 @@ const CoursePage = ({ coursePageData }: CoursePage) => {
         <Grid item xs={10} md={8}>
           <h4>Skills Learned:</h4>
           <List>
-            {pageData.skillsLearned.map((skill) => (
-              <ListItem key={parseInt(v4())}>{skill}</ListItem>
+            {pageData.skillsLearned.map((skill, i) => (
+              <ListItem key={i}>{skill}</ListItem>
             ))}
           </List>
         </Grid>

@@ -17,7 +17,7 @@ export function IsMobileProvider({ children }: ContextProps) {
     const checkForMobile = () => {
       setIsMobile(window.innerWidth < 750 || window.innerHeight < 750);
     };
-    window.addEventListener('load', checkForMobile);
+    window.addEventListener('resize', checkForMobile);
     checkForMobile();
   }, []);
   return <IsMobileContext.Provider value={{ isMobile, setIsMobile }}>{children}</IsMobileContext.Provider>;

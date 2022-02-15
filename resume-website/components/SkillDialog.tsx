@@ -1,13 +1,12 @@
+import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Dialog, DialogContent, DialogTitle, Divider, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
 import React, { FC, useContext, useEffect, useState } from 'react';
-import { v4 } from 'uuid';
 import { IsMobileContext } from '../contexts/isMobileContext';
 import courseData from '../public/data/courseData';
 import skillData, { SkillData } from '../public/data/skillData';
 import styles from '../styles/SkillDialog.module.css';
-import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 
 interface SkillDialogProps {
   skill: string;
@@ -35,7 +34,6 @@ const SkillDialog: FC<SkillDialogProps> = ({ skill, setSkill }): JSX.Element => 
   return (
     <>
       <Dialog
-        key={parseInt(v4())}
         open={skill !== ''}
         onClose={() => {
           setSkill('');
