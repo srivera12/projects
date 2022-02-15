@@ -61,8 +61,6 @@ describe('Layout', () => {
   describe('Mobile Layout', () => {
     beforeEach(() => {
       cy.viewport(450, 750);
-      // remove when fixed resize issue
-      cy.reload();
     });
 
     describe('Mobile Navbar', () => {
@@ -101,7 +99,26 @@ describe('Layout', () => {
           cy.url().should('include', '/archive');
         });
 
-        // INCLUDE LINKS AND BUTTON ONCE MOVED FROM FOOTER
+        it('links to about', () => {
+          cy.get('[data-cy="name-link"]').click();
+          cy.url().should('include', '/about');
+        });
+
+        it('links to github', () => {
+          cy.get('[data-cy="github-icon"]').invoke('attr', 'href').should('equal', 'https://github.com/srivera12');
+        });
+
+        it('opens email', () => {
+          cy.get('[data-cy="contact-button"]')
+            .invoke('attr', 'href')
+            .should('equal', 'mailto:sarahkrivera@gmail.com?subject=Requested Contact from Portfolio Website');
+        });
+
+        it('links to linkedIn', () => {
+          cy.get('[data-cy="linkedin-icon"]')
+            .invoke('attr', 'href')
+            .should('equal', 'https://www.linkedin.com/in/sarahkrivera/');
+        });
       });
     });
   });
