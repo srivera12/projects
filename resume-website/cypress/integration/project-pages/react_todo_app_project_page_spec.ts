@@ -10,7 +10,7 @@ describe('React To-Do App Project Page', () => {
   it('has functional project button', () => {
     cy.get('[data-cy="react-todo-app-project-button"]')
       .invoke('attr', 'href')
-      .should('equal', 'https://objective-goldstine-cc2c68.netlify.app');
+      .should('equal', 'https://react-todo.srivera.dev');
   });
 
   it('has functional github button', () => {

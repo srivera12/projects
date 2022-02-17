@@ -10,7 +10,7 @@ describe('Academic Tracker Project Page', () => {
   it('has functional project button', () => {
     cy.get('[data-cy="academic-tracker-project-button"]')
       .invoke('attr', 'href')
-      .should('equal', 'https://awesome-gates-3270af.netlify.app');
+      .should('equal', 'https://academic-tracker.srivera.dev');
   });
 
   it('has functional github button', () => {

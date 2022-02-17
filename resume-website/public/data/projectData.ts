@@ -51,7 +51,7 @@ const projectData: ProjectData[] = [
     pathName: 'd20-roller',
     name: 'D20 Roller',
     picPath: '/images/D20Roller.png',
-    projectLink: 'https://cocky-volhard-99fcb6.netlify.app',
+    projectLink: 'https://d20.srivera.dev',
     githubLink: 'https://github.com/srivera12/projects/tree/master/d20-roller',
     blurb:
       "In an online class, the project was to make a dice roller in React. Being the fan of DnD that I am, I had to make it a d20 and add in the DM's response to the roll. It's been used for playing DnD in a pinch.",
@@ -69,7 +69,7 @@ const projectData: ProjectData[] = [
     pathName: 'react-todo-app',
     name: 'React To-Do App',
     picPath: '/images/reactTodo.png',
-    projectLink: 'https://objective-goldstine-cc2c68.netlify.app',
+    projectLink: 'https://react-todo.srivera.dev',
     githubLink: 'https://github.com/srivera12/projects/tree/master/react-todo',
     blurb:
       'The newer and more complex version of my first task tracker. Made in React with hooks and a context, it has all of the features of the JS one, but with the addition of some new features.',
@@ -87,7 +87,7 @@ const projectData: ProjectData[] = [
     pathName: 'academic-tracker',
     name: 'Academic Tracker',
     picPath: '/images/academicTracker.png',
-    projectLink: 'https://awesome-gates-3270af.netlify.app',
+    projectLink: 'https://academic-tracker.srivera.dev',
     githubLink: 'https://github.com/srivera12/projects/tree/master/academic-tracker',
     blurb:
       'I made this for my little sister, who is in high school. She needed to keep track of completed assignments for each class as simply as possible, but also wanted some fun features.',

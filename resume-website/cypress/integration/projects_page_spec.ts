@@ -55,9 +55,7 @@ describe('Projects Page', () => {
 
   describe('D20 Roller App Info', () => {
     it('has functional project button', () => {
-      cy.get('[data-cy="d20-roller-project-button"]')
-        .invoke('attr', 'href')
-        .should('equal', 'https://cocky-volhard-99fcb6.netlify.app');
+      cy.get('[data-cy="d20-roller-project-button"]').invoke('attr', 'href').should('equal', 'https://d20.srivera.dev');
     });
 
     it('has functional github button', () => {
@@ -77,7 +75,7 @@ describe('Projects Page', () => {
     it('has functional project button', () => {
       cy.get('[data-cy="react-todo-app-project-button"]')
         .invoke('attr', 'href')
-        .should('equal', 'https://objective-goldstine-cc2c68.netlify.app');
+        .should('equal', 'https://react-todo.srivera.dev');
     });
 
     it('has functional github button', () => {
@@ -97,7 +95,7 @@ describe('Projects Page', () => {
     it('has functional project button', () => {
       cy.get('[data-cy="academic-tracker-project-button"]')
         .invoke('attr', 'href')
-        .should('equal', 'https://awesome-gates-3270af.netlify.app');
+        .should('equal', 'https://academic-tracker.srivera.dev');
     });
 
     it('has functional github button', () => {
