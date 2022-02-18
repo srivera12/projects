@@ -1,8 +1,8 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import { SubjectContext } from './contexts/subjectContext';
+import { NavBarDialog } from './NavBarDialog';
 import './styles/NavBar.css';
-import { TrackerDialog } from './TrackerDialog';
 
 export function NavBar() {
   // stateful variables
@@ -35,7 +35,7 @@ export function NavBar() {
         >
           RESET
         </Button>
-        {dialogType !== '' ? <TrackerDialog dialogType={dialogType} setDialogType={setDialogType} /> : null}
+        {dialogType !== '' && <NavBarDialog dialogType={dialogType} setDialogType={setDialogType} />}
       </Toolbar>
     </AppBar>
   );

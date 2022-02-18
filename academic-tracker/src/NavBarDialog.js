@@ -3,11 +3,11 @@ import React, { useContext, useState } from 'react';
 import { CustomizationContext } from './contexts/customizationContext';
 import { SubjectContext } from './contexts/subjectContext';
 import { Customizer } from './Customizer';
-import './styles/TrackerDialog.css';
+import './styles/NavBarDialog.css';
 
-export function TrackerDialog({ dialogType, setDialogType }) {
+export function NavBarDialog({ dialogType, setDialogType }) {
   // stateful variables
-  const { resetSubjects } = useContext(SubjectContext);
+  const { resetSubjects, resetWeek } = useContext(SubjectContext);
   const { background, setBackground } = useContext(CustomizationContext);
   //   used to move from choice between color and image and actually selecting those options
   const [madeSelection, setMadeSelection] = useState(false);
@@ -74,18 +74,23 @@ export function TrackerDialog({ dialogType, setDialogType }) {
           <DialogTitle>Are you sure you want to reset?</DialogTitle>
           <DialogContent>
             <DialogContentText className="dialog-content-text">This action cannot be undone.</DialogContentText>
-            <Button variant="contained" color="secondary" onClick={resetAndClose}>
-              Yes, reset
-            </Button>
-            <Button
-              className="TrackerDialog-button"
-              variant="contained"
-              color="error"
-              onClick={() => {
-                setDialogType('');
-              }}
-            >
-              No, cancel
+            <div>
+              <Button variant="contained" color="success" onClick={resetAndClose}>
+                Yes, reset
+              </Button>
+              <Button
+                className="NavBarDialog-button"
+                variant="contained"
+                color="error"
+                onClick={() => {
+                  setDialogType('');
+                }}
+              >
+                No, cancel
+              </Button>
+            </div>
+            <Button className="NavBarDialog-soft-button" variant="contained" color="primary" onClick={resetWeek}>
+              Just Reset Week
             </Button>
           </DialogContent>
         </Dialog>

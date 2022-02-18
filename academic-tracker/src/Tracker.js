@@ -1,30 +1,39 @@
 import { Button, Grid, Paper, Typography } from '@mui/material';
 import { emojisplosions } from 'emojisplosion';
 import React, { useContext, useEffect, useState } from 'react';
+import { AssignmentDialog } from './AssignmentDialog';
 import { CustomizationContext } from './contexts/customizationContext';
 import { SubjectContext } from './contexts/subjectContext';
 import { NavBar } from './NavBar';
 import './styles/Tracker.css';
+import { SubjectForm } from './SubjectForm';
 import { SubjectList } from './SubjectList';
-import { TrackerForm } from './TrackerForm';
 
 export function Tracker() {
   // stateful variables
-  const { subjects } = useContext(SubjectContext);
+  const { subjects, totalAssignments, hasStartedWeek } = useContext(SubjectContext);
   const { background } = useContext(CustomizationContext);
-  const [showAddForm, setShowAddForm] = useState(false);
-  // this variable needs to be outside useEffect() so that it can be used below
-  const incompleteSubjects = subjects.filter((subject) => subject.assignmentsLeft !== 0);
+  const [showSubjectForm, setShowSubjectForm] = useState(false);
+  const [showAssignmentDialog, setShowAssignmentDialog] = useState(totalAssignments === 0);
+
+  const totalCompletedAssignments =
+    subjects
+      .map((subject) => subject.assignmentsCompleted)
+      .reduce((a, b) => {
+        return a + b;
+      }) || 0;
 
   useEffect(() => {
     // saving subject list and background customizations in local storage
     window.localStorage.setItem('subjects', JSON.stringify(subjects));
+    window.localStorage.setItem('totalAssignments', JSON.stringify(totalAssignments));
     window.localStorage.setItem('background', JSON.stringify(background));
-    // determining completion of list
-    if (subjects.length !== 0 && incompleteSubjects.length === 0) {
+    window.localStorage.setItem('hasStartedWeek', JSON.stringify(hasStartedWeek));
+    // determining completion assignments for week
+    if (totalCompletedAssignments === totalAssignments && hasStartedWeek === true) {
       emojisplosions();
     }
-  }, [subjects, incompleteSubjects.length, background]);
+  }, [subjects, background, totalCompletedAssignments, totalAssignments, hasStartedWeek]);
 
   return (
     <>
@@ -37,33 +46,54 @@ export function Tracker() {
         }}
       >
         <NavBar />
+        <AssignmentDialog
+          showAssignmentDialog={showAssignmentDialog}
+          setShowAssignmentDialog={setShowAssignmentDialog}
+        />
         <Grid container justifyContent="center" className="grid-container">
-          <Grid item xs={11} md={8} lg={6} className="grid-item">
-            {/* no subjects state */}
-            {subjects.length === 0 ? (
-              <Typography variant="h4">Use the button below to start adding classes. Have a great week!</Typography>
-            ) : null}
+          <Grid item xs={11} md={9} lg={7} className="grid-item">
             {/* list completed or not */}
-            {subjects.length !== 0 && incompleteSubjects.length === 0 ? (
+            {totalCompletedAssignments === totalAssignments && hasStartedWeek === true && (
               <Typography variant="h3">YOU FINISHED EVERYTHING FOR THIS WEEK! FANTASTIC JOB!</Typography>
+            )}
+            {/* no subjects state */}
+            {subjects.filter((subject) => subject.name === 'emptySubject').length === 1 ? (
+              <Typography variant="h4">Use the buttons below to start adding classes. Have a great week!</Typography>
             ) : (
-              <SubjectList />
+              <SubjectList totalCompletedAssignments={totalCompletedAssignments} />
             )}
             {/* adding classes or not */}
-            {showAddForm ? (
-              <TrackerForm setShowAddForm={setShowAddForm} />
+            {showSubjectForm ? (
+              <SubjectForm setShowSubjectForm={setShowSubjectForm} />
             ) : (
-              <Button
-                className="Tracker-button"
-                onClick={() => {
-                  setShowAddForm(true);
-                }}
-                variant="contained"
-                color="secondary"
-                disabled={subjects.length !== 0 && incompleteSubjects.length === 0}
-              >
-                Add A Class!!
-              </Button>
+              <>
+                <Button
+                  className="Tracker-button"
+                  onClick={() => {
+                    setShowSubjectForm(true);
+                  }}
+                  variant="contained"
+                  color="secondary"
+                  disabled={totalCompletedAssignments === totalAssignments && hasStartedWeek === true}
+                >
+                  Add A Class
+                </Button>
+                <Button
+                  className="Tracker-button"
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => {
+                    setShowAssignmentDialog(true);
+                  }}
+                >
+                  Change Number of Assignments
+                </Button>
+              </>
+            )}
+            {totalAssignments !== 0 && (
+              <Typography variant="subtitle1">
+                You have completed {totalCompletedAssignments} out of {totalAssignments} assignments for the week.
+              </Typography>
             )}
           </Grid>
         </Grid>
