@@ -22,15 +22,8 @@ const AboutPage: NextPage = () => {
               alt="cartoon version of Sarah K Rivera casting a magic spell while smiling towards the viewer"
             />
             <p>Feared by bugs far and wide.</p>
-            <a href="">
-              <Button
-                variant="contained"
-                color="secondary"
-                data-cy="resume-button"
-                onClick={() => {
-                  alert('Coming soon! Stay tuned to this space.');
-                }}
-              >
+            <a data-cy="resume-button" href="/resume.pdf" target="_blank">
+              <Button variant="contained" color="secondary">
                 View My Resume
               </Button>
             </a>

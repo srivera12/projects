@@ -9,8 +9,7 @@ describe('About Page', () => {
 
   describe('Resume button', () => {
     it('provides resume', () => {
-      cy.get('[data-cy="resume-button"').click();
-      //   add test to confirm resume is provided
+      cy.get('[data-cy="resume-button"').invoke('attr', 'href').should('equal', '/resume.pdf');
     });
   });
 });
