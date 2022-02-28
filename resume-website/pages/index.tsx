@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import { useContext } from 'react';
 import D20Roller from '../components/D20Roller';
 import { IsMobileContext } from '../contexts/isMobileContext';
@@ -10,6 +11,14 @@ const Home: NextPage = () => {
 
   return (
     <div className={`${styles.home} ${isMobile && styles.mobileHome}`}>
+      <Head>
+        <title>Sarah Rivera Portfolio Website</title>
+        <meta
+          name="og:description"
+          content="Sarah Rivera is a React and TypeScript software developer. Here you can check out her coding projects, coursework and certifications, and more!"
+        />
+        <meta name="og:image" content="/images/homePage.png" />
+      </Head>
       <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>
         {!isMobile ? (
           <div className={styles.hero}>
