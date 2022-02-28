@@ -14,10 +14,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Sarah Rivera Portfolio Website</title>
         <meta
-          name="og:description"
+          property="og:description"
           content="Sarah Rivera is a React and TypeScript software developer. Here you can check out her coding projects, coursework and certifications, and more!"
         />
-        <meta name="og:image" content="/images/homePage.png" />
+        <meta property="og:image" content="/images/homePage.png" />
       </Head>
       <Grid container justifyContent="center" alignItems="space-between" rowSpacing={5}>
         {!isMobile ? (
