@@ -6,3 +6,5 @@ build/
 *.bak
 *.prettierrc
 .firebase/
+shufflingSolutions.js
+tios-interview.js
