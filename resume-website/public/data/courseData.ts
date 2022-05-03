@@ -53,7 +53,7 @@ const coursePageData: CoursePageData[] = [
     pathName: 'complete-frontend',
     name: 'The Complete Front-End Web Development Course!',
     instructor: 'Joseph Delgadillo',
-    certPath: '/images/complete.png',
+    certPath: '/images/completeFrontEnd.png',
     blurb:
       "This course included more recent functionalities of HTML5, CSS3, and JS6, but also added jQuery and Bootstrap. My favorite part of this course was the Pip-Boy from Bethesda's Fallout games, a project created with Bootstrap, jQuery, and vanilla Javascript.",
     skillsLearned: [
@@ -196,6 +196,36 @@ const coursePageData: CoursePageData[] = [
       },
     ],
     githubLink: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/modern-react-bootcamp',
+  },
+  {
+    skill: 'TS/JS',
+    skillDataCy: 'TS/JS',
+    pathName: 'complete-node',
+    name: 'The Complete Node.js Developer Course',
+    instructor: 'Andrew Mead',
+    certPath: '/images/completeNode.jpeg',
+    blurb:
+      'This was the first course I completed that focused on backend development. Since I had almost entirely learned solely frontend skills up to this point, there were times when this course was challenging. However, the projects completed in this course gave me the chance to gain the confidence in these skills I need to use them in my own applications.',
+    skillsLearned: [
+      'How to use Node.js to build backends for applications.',
+      'How to make use of Promises and async/await functions.',
+      'How to use MongoDB and Mongoose.',
+    ],
+    projectHighlights: [
+      {
+        name: 'Weather App',
+        link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/complete-node/web-server',
+      },
+      {
+        name: 'Task Manager App',
+        link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/complete-node/task-manager',
+      },
+      {
+        name: 'Chat App With Socket.io',
+        link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/complete-node/chat-app',
+      },
+    ],
+    githubLink: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/complete-node',
   },
 ];
 
