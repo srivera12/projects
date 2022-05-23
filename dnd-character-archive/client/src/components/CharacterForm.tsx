@@ -124,7 +124,8 @@ const CharacterForm: FC<FormProps> = ({
           id="in-use-checkbox"
           label="I'm currently using this character in a game."
           checked={inUseData}
-          onChange={() => {
+          onChange={(e) => {
+            console.log('clicked', inUseData);
             setCharacterData({ ...characterData, inUseData: !inUseData });
           }}
         />

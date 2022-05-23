@@ -37,7 +37,7 @@ const Character: FC<CharacterProps> = ({
           }
           footer={
             <>
-              <EuiText>{`Created on: ${createdAt}`}</EuiText>
+              <EuiText>{`Created on: ${new Date(createdAt).toLocaleString()}`}</EuiText>
               <EuiText>Character {!inUse && 'Not'} In Use</EuiText>
               <EuiFlexGroup gutterSize="s" alignItems="center" justifyContent="center">
                 <EuiFlexItem grow={false}>
