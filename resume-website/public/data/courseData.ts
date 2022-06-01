@@ -227,6 +227,32 @@ const coursePageData: CoursePageData[] = [
     ],
     githubLink: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/complete-node',
   },
+  {
+    skill: 'TS/JS',
+    skillDataCy: 'TS/JS',
+    pathName: 'SQL-and-postgreSQL',
+    name: "SQL and PostgreSQL: The Complete Developer's Guide",
+    instructor: 'Stephen Grider',
+    certPath: '/images/sqlAndPostgreSQL.jpeg',
+    blurb:
+      'This course introduced me to both SQL and PostgreSQL. The first half centered around learning SQL syntax and how to write a variety of queries, including those that make use of unions, views, groupings, and aggregations. In the second half of the course, we wrote a couple simple web applications to access, display, and alter in the information stored in PostgreSQL databases.',
+    skillsLearned: [
+      'How to write a variety of SQL queries.',
+      'How to write and use database migrations.',
+      'Created web apps that accessed and interacted with Postgres databases.',
+    ],
+    projectHighlights: [
+      {
+        name: 'Post with Location Listing',
+        link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/sql-and-postgresql/ig',
+      },
+      {
+        name: 'Store and Display Users with CRUD Operations',
+        link: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/sql-and-postgresql/api/social-repo',
+      },
+    ],
+    githubLink: 'https://github.com/srivera12/learn-to-code/tree/master/udemy/sql-and-postgresql',
+  },
 ];
 
 export default coursePageData;
