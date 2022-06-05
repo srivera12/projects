@@ -1,6 +1,12 @@
+import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 import CharacterProps from './CharacterInterface';
-import axios from 'axios';
+
+export type FilteringProps = {
+  isFiltering: boolean;
+  characterRace: string;
+  characterClass: string;
+};
 
 interface CharacterContextProps {
   isLoading: boolean;
@@ -9,9 +15,12 @@ interface CharacterContextProps {
   deleteCharacter?: Function;
   editCharacter?: Function;
   clearCharacters?: Function;
+  filterCharacters?: Function;
+  isFiltering: boolean;
+  setIsFiltering?: Function;
 }
 
-export const CharacterContext = createContext<CharacterContextProps>({ isLoading: true });
+export const CharacterContext = createContext<CharacterContextProps>({ isLoading: true, isFiltering: false });
 
 type ContextProps = {
   children: React.ReactNode;
@@ -20,29 +29,65 @@ type ContextProps = {
 export function CharacterProvider({ children }: ContextProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [characters, setCharacters] = useState();
+  const [isFiltering, setIsFiltering] = useState(false);
 
   useEffect(() => {
     syncStateToDB();
-  }, []);
+  }, [isFiltering]);
 
-  const syncStateToDB = () => {
-    setIsLoading(true);
-    axios
-      .get('http://localhost:3001/characters')
-      .then((res) => {
-        setCharacters(res.data);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const syncStateToDB = (characterRace?: string, characterClass?: string) => {
+    if (characterRace && characterClass) {
+      setIsLoading(true);
+      axios
+        .get(`http://localhost:3001/characters?dndRace=${characterRace}&dndClass=${characterClass}`)
+        .then((res) => {
+          setCharacters(res.data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else if (characterRace && !characterClass) {
+      setIsLoading(true);
+      axios
+        .get(`http://localhost:3001/characters?dndRace=${characterRace}`)
+        .then((res) => {
+          setCharacters(res.data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else if (!characterRace && characterClass) {
+      setIsLoading(true);
+      axios
+        .get(`http://localhost:3001/characters?dndClass=${characterClass}`)
+        .then((res) => {
+          setCharacters(res.data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      setIsLoading(true);
+      axios
+        .get(`http://localhost:3001/characters`)
+        .then((res) => {
+          setCharacters(res.data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   const addCharacter = (newCharacter: CharacterProps) => {
     axios
       .post('http://localhost:3001/characters', newCharacter)
       .then((res) => {
-        console.log(res);
+        setIsFiltering(false);
         syncStateToDB();
       })
       .catch((err) => {
@@ -54,7 +99,7 @@ export function CharacterProvider({ children }: ContextProps) {
     axios
       .delete(`http://localhost:3001/characters/${id}`)
       .then((res) => {
-        console.log(res);
+        setIsFiltering(false);
         syncStateToDB();
       })
       .catch((err) => {
@@ -66,7 +111,7 @@ export function CharacterProvider({ children }: ContextProps) {
     axios
       .patch(`http://localhost:3001/characters/${id}`, updatedCharacter)
       .then((res) => {
-        console.log(res);
+        setIsFiltering(false);
         syncStateToDB();
       })
       .catch((err) => {
@@ -79,7 +124,7 @@ export function CharacterProvider({ children }: ContextProps) {
     axios
       .delete('http://localhost:3001/characters')
       .then((res) => {
-        console.log(res);
+        setIsFiltering(false);
       })
       .catch((err) => {
         console.log(err);
@@ -88,9 +133,23 @@ export function CharacterProvider({ children }: ContextProps) {
     window.location.reload();
   };
 
+  const filterCharacters = (characterRace?: string, characterClass?: string) => {
+    syncStateToDB(characterRace, characterClass);
+  };
+
   return (
     <CharacterContext.Provider
-      value={{ isLoading, characters, addCharacter, deleteCharacter, editCharacter, clearCharacters }}
+      value={{
+        isLoading,
+        characters,
+        addCharacter,
+        deleteCharacter,
+        editCharacter,
+        clearCharacters,
+        filterCharacters,
+        isFiltering,
+        setIsFiltering,
+      }}
     >
       {children}
     </CharacterContext.Provider>

@@ -2,8 +2,8 @@ import { EuiButton, EuiCard, EuiFlexGroup, EuiFlexItem, EuiSpacer, EuiText } fro
 import React, { FC, useContext, useState } from 'react';
 import ReactHTMLParser from 'react-html-parser';
 import { CharacterContext } from '../utils/CharacterContext';
-import CharacterForm from './CharacterForm';
 import CharacterProps from '../utils/CharacterInterface';
+import CharacterForm from './CharacterForm';
 
 const Character: FC<CharacterProps> = ({
   createdAt,
@@ -29,7 +29,7 @@ const Character: FC<CharacterProps> = ({
           description={
             <>
               <EuiText>
-                {characterClass} {characterRace}
+                {characterRace} {characterClass}
               </EuiText>
               <EuiSpacer size="s" />
               <EuiText>{ReactHTMLParser(backstory)}</EuiText>

@@ -7,5 +7,4 @@ export default interface CharacterProps {
   characterClass: string;
   inUse: boolean;
   updatedAt: string;
-  __v: number;
 }

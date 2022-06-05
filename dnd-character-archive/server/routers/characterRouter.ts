@@ -16,8 +16,20 @@ characterRouter.post('/characters', async (req, res) => {
 
 characterRouter.get('/characters', async (req, res) => {
   try {
-    const characters = await Character.find();
-    res.send(characters);
+    if (req.query.dndRace && req.query.dndClass) {
+      const characters = await Character.find({ characterRace: req.query.dndRace, characterClass: req.query.dndClass });
+      console.log(characters);
+      res.send(characters);
+    } else if (req.query.dndRace && !req.query.dndClass) {
+      const characters = await Character.find({ characterRace: req.query.dndRace });
+      res.send(characters);
+    } else if (!req.query.dndRace && req.query.dndClass) {
+      const characters = await Character.find({ characterClass: req.query.dndClass });
+      res.send(characters);
+    } else {
+      const characters = await Character.find();
+      res.send(characters);
+    }
   } catch (err) {
     res.status(500).send(err);
   }
